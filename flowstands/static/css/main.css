@@ -1,0 +1,84 @@
+/* Global Styles */
+
+/*Реалізація прилипаючого футера рядки з 4 по 32 */
+html, body, .container {
+height: 100%;}
+
+body > .container {
+height: auto;
+min-height: 97%;
+}
+
+#content-columns {
+	
+  	padding-bottom: 80px;}  /* відступ повинен бути рівним висоті футера */
+
+#footer {
+	position: relative;
+	margin-top: -80px; /* від'ємне значення висоти футера */
+	display: block;
+	display: inline-block;
+   	height: 80px;
+	width: 90%;
+	clear:both;
+	margin-left: 50px;
+	margin-right: 0px;
+	padding-left: 3%;
+	padding-top: 15px;
+	border-top: 2px solid #ddd;
+}
+
+ 
+/*Клас clearfix присвоєно блоку основного контенту content-columns */
+.clearfix:after {
+	content: ".";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+	}
+.clearfix {
+	display: inline-block;
+	}
+	/* Hides from IE-mac \*/
+* html .clearfix { height: 1%;}
+.clearfix {
+	display: block;
+	}
+/* End hide from IE-mac */
+
+
+
+h1, h2, h3, h4, h5, h6 {
+color: brown;
+font-weight: bold;
+}
+
+th, td {
+text-align: center;
+}
+
+/* знайшли елемент футера по його унікальному ідентифікатору footer */
+/*#footer {*/
+/* задаємо верхню межу елемента: ширина лінії, тип лінії, колір лінії */
+/*border-top: 1px solid #ddd;*/
+/* задаємо внутрішню відстань елемента до верхнього краю */
+/*padding-top: 10px;*/
+/*}*/
+
+/* Groups Selector */
+
+#region-selector {
+margin-top: 5px;
+padding-left: 200px;
+}
+
+#region-selector select {
+margin: 0;
+width: 170px;
+background-color: #ffffff;
+border: 1px solid #cccccc;
+height: 30px;
+line-height: 30px;
+color: #555555;
+}

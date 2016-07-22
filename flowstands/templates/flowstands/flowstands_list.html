@@ -1,0 +1,58 @@
+{% extends "flowstands/base.html" %}
+
+{% load static from staticfiles %}
+
+{% block meta_title %}База еталонів{% endblock meta_title %}
+
+{% block title %}Робочі еталони{% endblock title %}
+
+	{% block content %}
+			
+			<!-- Start Flow Standards Listing -->
+			<table class="table table-hover table-striped table-condensed">
+				<thead>
+					<tr>
+						<th width="3%">№</th>
+						<th width="15%">Область</th>
+						<th width="25%">Власник</th>
+						<th width="10%">Назва</th>
+						<th width="5%">Діапазон</th>
+						<th width="7%">Зав. номер</th>
+						<th width="20%">Виробник</th>
+						<th width="10%">Сертифікат</th>
+						<th width="10%">Простежуваність</th>
+					</tr>
+				</thead>
+										
+				<!--Тіло таблиці списку еталонів-->						
+				<tbody>
+				{% for flowstand in flowstands %} <!-- Наповнення таблиці циклом -->
+					<tr>
+						<td>{% if is_paginated %}
+								{{ page_obj.start_index|add:forloop.counter0 }}
+							{% else %}
+								{{ forloop.counter }}
+							{% endif %}</td>
+						<td>{{ flowstand.region }}</td>
+						<td>{{ flowstand.customer }} </td>
+						<td>{{ flowstand.name }}</td>
+						<td>{{ flowstand.flow_range }}</td>
+						<td>{{ flowstand.serial_number }}</td>
+						<td>{{ flowstand.manufactor }}</td>
+						<td>{{ flowstand.certificate }}</td>
+						<td>{{ flowstand.traceability }}</td>
+					</tr>
+				{% endfor %}
+				</tbody>
+			</table>
+
+	<!-- End Content Columns -->	
+
+	<!-- Pagination -->
+		{% with object_list=flowstands %}
+			{% include "flowstands/pagination.html" %}
+		{% endwith %}
+	<!-- End of Pagination-->
+	{% endblock content %}
+	
+	

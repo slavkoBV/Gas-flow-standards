@@ -1,0 +1,59 @@
+{% extends "flowstands/base.html" %}
+
+{% load static from staticfiles %}
+
+{% block meta_title %}Еталони витрати газу{% endblock meta_title %}
+
+{% block title %}Виробники{% endblock title %}
+
+{% block content %}
+		{% block selector %}
+		{% endblock selector%}	
+		
+			<!-- Start Content Columns -->
+			<div class="row" id="content-columns">
+				
+				<div class="col-xs-12" id="content-column">
+
+				
+	<!-- Start Customers Listing -->
+<table class="table table-hover table-striped table-condensed">
+	<thead>
+		<tr>
+			<th width="2%">№</th>
+			<th width="30%">Назва</th>
+			<th width="30%">Адреса</th>
+			<th width="27%">Представник</th>
+			<th width="20%">Контакти</th>
+
+	</thead>
+						
+						
+<!--Тіло таблиці списку споживачів-->						
+	<tbody>
+		{% for manufactor in manufactors %} <!-- Наповнення таблиці циклом -->
+		<tr>
+			<td>{% if is_paginated %}
+					{{ page_obj.start_index|add:forloop.counter0 }}
+				{% else %}
+					{{ forloop.counter }}
+				{% endif %}</td>
+			<td> {{ manufactor.name }}</td>
+			<td>{{ manufactor.address }}</td>
+			<td>{{ manufactor.agent }}</td>
+			<td>{{ manufactor.contacts }}</br>{{ manufactor.email }}</td>
+		</tr>
+		{% endfor %}
+	
+	</tbody>
+					
+</table>
+</div>
+</div>
+<!-- End Content Columns -->
+<!-- Pagination -->
+					{% with object_list=manufactors %}
+						{% include "flowstands/pagination.html" %}
+					{% endwith %}
+<!-- End of Pagination-->
+{% endblock content %}

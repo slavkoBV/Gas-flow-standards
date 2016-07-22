@@ -1,0 +1,53 @@
+{% extends "flowstands/base.html" %}
+
+{% load static from staticfiles %}
+
+{% block meta_title %}Еталони витрати газу{% endblock meta_title %}
+
+{% block title %}Власники{% endblock title %}
+
+{% block content %}
+			
+<!-- Start Customers Listing -->
+<table class="table table-hover table-striped table-condensed">
+	<thead>
+		<tr>
+			<th width="5%">№</th>
+			<th width="15%">Область</th>
+			<th width="20%">Назва</th>
+			<th width="30%">Адреса</th>
+			<th width="15%">Представник</th>
+			<th width="15%">Контакти</th>
+
+	</thead>
+						
+						
+<!--Тіло таблиці списку споживачів-->						
+	<tbody>
+		{% for customer in customers %} <!-- Наповнення таблиці циклом -->
+		<tr>
+			<td>{% if is_paginated %}
+					{{ page_obj.start_index|add:forloop.counter0 }}
+				{% else %}
+					{{ forloop.counter }}
+					{% endif %}</td>
+			<td>{{ customer.region }}</td>
+			<td><a title="Редагувати" href=""> {{ customer.name }}</a></td>
+			<td>{{ customer.address }}</td>
+			<td>{{ customer.agent }}</td>
+			<td>{{ customer.contacts }}</br>{{ customer.email }}</td>
+		</tr>
+		{% endfor %}
+	
+	</tbody>
+					
+</table>
+						
+					<!-- End Content Columns -->
+<!-- Pagination -->
+					{% with object_list=customers %}
+						{% include "flowstands/pagination.html" %}
+					{% endwith %}
+<!-- End of Pagination-->
+					
+{% endblock content %}

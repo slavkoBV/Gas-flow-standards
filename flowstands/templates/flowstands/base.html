@@ -1,0 +1,109 @@
+{% load static from staticfiles %}
+
+<!DOCTYPE html>
+<html lang="uk">
+	<head>
+		<meta charset='UTF-8'/>
+		<title>Еталони витрати газу України - {% block meta_title %}{% endblock meta_title %}</title>
+		<meta name="description" value="Еталони витрати газу України" />
+		<meta name="viewport" content="width=device-width, initial-sale=1">
+	
+		<!-- Include Styles -->
+		
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" 
+		integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+		
+		<link rel="stylesheet" href="{{ PORTAL_URL }}{% static "css/main.css" %}">
+	
+		{% block extra_css %}{% endblock extra_css %}		
+	
+	</head>
+	
+	<body>
+		
+		<!-- Start Container -->
+		<div class="container">
+		
+			<!-- Start Header -->
+			<div class="row" id="header">
+				
+				<!-- Start Logo -->
+				<div class="col-xs-8">
+					<h1>Еталони витрати газу</h1>
+				</div>
+			
+			</div>	
+			<!-- End Header -->
+			
+			<!-- Start SubHeader -->
+			<div class="row" id="sub-header">
+			
+					<div class="col-xs-6">
+						<ul class="nav nav-pills nav-justified" role="tablist"> 
+							<li role="presentation" {% if request.path == '/' %}class="active"{% endif %}>
+								<a href="{% url "home" %}">Робочі еталони</a>
+							</li>
+							<li role="presentation" {% if '/manufactors' in request.path %}class="active"{% endif %}>
+								<a href="{% url "manufactors" %}">Виробники</a>
+							</li>
+							<li role="presentation" {% if '/customers' in request.path %}class="active" {% endif %}>
+								<a href="{% url "customers" %}">Власники</a>
+							</li>
+						</ul>
+					</div>
+				
+					<!-- Region Selector -->
+					{% block selector %}
+			
+					<div class="col-xs-6" id="region-selector">
+						<strong>Область: </strong>
+						<select>
+							<option value="">Усі області</option>
+							{% for region in REGIONS %}
+							<option value="{{ region.id }}"{% if region.selected %} selected="1"{% endif %}>
+								{{region.name}}</option>
+							{% endfor %}
+						</select>
+					</div>
+					{% endblock selector %}
+				
+			</div>
+			<!-- End SubHeader -->
+			
+			<!-- Start Content Columns -->
+					
+			<div class="row clearfix" id="content-columns">
+				
+				<div class="col-xs-12" id="content-column">
+					
+					<h2>{% block title %}{% endblock title %}</h2> 
+					{% block content %}{% endblock content %}
+				</div>
+			</div>			
+			<!-- End Content Columns -->
+			
+		</div>
+		<!-- End Container -->
+		
+		<!-- Start Footer -->
+		<div class="row" id="footer">
+			<div class="col-xs-12">
+				&copy; 2016 ДП "Івано-Франківськстандартметрологія"
+			</div>				
+		</div>
+		<!-- End Footer -->
+			
+		
+			
+		<!-- Javascripts Section -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+		<script src ="{{ PORTAL_URL }}{% static "js/jquery.cookie.js" %}"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"
+		integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
+		crossorigin="anonymous"></script>
+		<script src="{{ PORTAL_URL }}{% static "js/main.js" %}"></script>
+		{% block extra_js %}{% endblock extra_js %}
+	
+	</body>
+	
+</html>
