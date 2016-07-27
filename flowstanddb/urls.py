@@ -3,6 +3,7 @@
 from django.conf.urls import include, url
 from django.contrib import admin
 
+
 urlpatterns = [
    
    url(r'^$', 'flowstands.views.flowstands_list', name='home'),

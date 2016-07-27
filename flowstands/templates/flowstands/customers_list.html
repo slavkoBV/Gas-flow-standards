@@ -26,11 +26,7 @@
 	<tbody>
 		{% for customer in customers %} <!-- Наповнення таблиці циклом -->
 		<tr>
-			<td>{% if is_paginated %}
-					{{ page_obj.start_index|add:forloop.counter0 }}
-				{% else %}
-					{{ forloop.counter }}
-					{% endif %}</td>
+			<td>{{ forloop.counter0|add:customers.start_index }}</td>
 			<td>{{ customer.region }}</td>
 			<td><a title="Редагувати" href=""> {{ customer.name }}</a></td>
 			<td>{{ customer.address }}</td>
@@ -45,9 +41,35 @@
 						
 					<!-- End Content Columns -->
 <!-- Pagination -->
-					{% with object_list=customers %}
-						{% include "flowstands/pagination.html" %}
-					{% endwith %}
+					{% if customers.has_other_pages %}
+<nav>
+	<ul class="pagination">
+		<li class="arrow">
+			{% if customers.has_previous %}
+				<a href="?page={{ customers.previous_page_number }}">
+					&laquo;
+				</a>
+			{% else %}
+				<li class="arrow unavailable"><a href="">&laquo;</a></li>
+			{% endif %}
+		</li>
+		{% for p in customers.paginator.page_range %}
+		<li {% if customers.number == p %}class="active"{% endif %}>
+			<a href="?page={{ p }}"> {{ p }} </a>
+		</li>
+		{% endfor %}
+		<li class="arrow">
+			{% if customers.has_next %}
+				<a href="?page={{ customers.next_page_number }}">
+					&raquo;
+				</a>
+			{% else %}
+				<li class="arrow unavailable"><a href="">&raquo;</a></li>
+			{% endif %}
+			</li>
+		</ul>
+</nav>
+{% endif %}
 <!-- End of Pagination-->
 					
 {% endblock content %}

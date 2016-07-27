@@ -60,6 +60,11 @@ class Flowstand(models.Model):
 			verbose_name = u"Виробник",
 			on_delete=models.PROTECT)
 		
+		date_calibr = models.DateField(
+			blank = True,
+			null = True,
+			verbose_name = u"Дата калібрування")
+		
 		certificate = models.CharField(
 			max_length = 256,
 			blank = True,

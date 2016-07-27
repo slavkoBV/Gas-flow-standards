@@ -2,24 +2,34 @@
 
 from django.contrib import admin
 from .models import Region, Flowstand, Manufactor, Customer
+from django.contrib.admin import AdminSite
 
 from django.core.urlresolvers import reverse
 
 class FlowAdmin(admin.ModelAdmin):
-	list_display = ['name', 'customer','serial_number', 'flow_range', 'manufactor']
+	fieldsets = [
+		(None, {'fields':['name','serial_number','flow_range','region','customer', 'manufactor']}),
+		(u'Калібрування', {'fields':['date_calibr', 'certificate', 'traceability']})
+		]
+	
+	list_display = ['name', 'customer','serial_number', 'flow_range', 'date_calibr']
 	ordering = ['region']
-	list_filter = ['region', 'customer', 'manufactor']
-	list_per_page = 15
-	search_fields = ['name', 'customer']
+	list_filter = ['region', 'customer', 'manufactor','date_calibr']
+	list_per_page = 20
+	search_fields = ['name', 'customer__name']
 	
 class CustomerAdmin(admin.ModelAdmin):
 	list_display = ['name', 'agent','address', 'contacts']
 	ordering = ['region']
 	list_filter = ['region']
-	list_per_page = 15
+	list_per_page = 20
 	search_fields = ['name', 'agent', 'address']
+
+AdminSite.site_header = u'База еталонів витрати газу'
+AdminSite.site_title =u'Адміністрування'
 	
 admin.site.register(Region)
 admin.site.register(Flowstand, FlowAdmin)
 admin.site.register(Manufactor)
 admin.site.register(Customer, CustomerAdmin)
+

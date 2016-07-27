@@ -13,14 +13,13 @@
 				<thead>
 					<tr>
 						<th width="3%">№</th>
-						<th width="15%">Область</th>
+						<th width="20%">Область</th>
 						<th width="25%">Власник</th>
 						<th width="10%">Назва</th>
-						<th width="5%">Діапазон</th>
-						<th width="7%">Зав. номер</th>
-						<th width="20%">Виробник</th>
-						<th width="10%">Сертифікат</th>
-						<th width="10%">Простежуваність</th>
+						<th width="10%">Діапазон</th>
+						<th width="12%">Зав. номер</th>
+						<th width="5%">Сертифікат</th>
+						<th width="15%">Дата калібрування</th>
 					</tr>
 				</thead>
 										
@@ -28,19 +27,19 @@
 				<tbody>
 				{% for flowstand in flowstands %} <!-- Наповнення таблиці циклом -->
 					<tr>
-						<td>{% if is_paginated %}
-								{{ page_obj.start_index|add:forloop.counter0 }}
-							{% else %}
-								{{ forloop.counter }}
-							{% endif %}</td>
+					
+						<td>
+						
+							{{ forloop.counter0|add:flowstands.start_index }}
+										
+						</td>
 						<td>{{ flowstand.region }}</td>
 						<td>{{ flowstand.customer }} </td>
 						<td>{{ flowstand.name }}</td>
 						<td>{{ flowstand.flow_range }}</td>
 						<td>{{ flowstand.serial_number }}</td>
-						<td>{{ flowstand.manufactor }}</td>
 						<td>{{ flowstand.certificate }}</td>
-						<td>{{ flowstand.traceability }}</td>
+						<td>{{ flowstand.date_calibr }}</td>
 					</tr>
 				{% endfor %}
 				</tbody>
@@ -49,10 +48,34 @@
 	<!-- End Content Columns -->	
 
 	<!-- Pagination -->
-		{% with object_list=flowstands %}
-			{% include "flowstands/pagination.html" %}
-		{% endwith %}
+{% if flowstands.has_other_pages %}
+<nav>
+	<ul class="pagination">
+		<li class="arrow">
+			{% if flowstands.has_previous %}
+				<a href="{% url "home" %}?page={{ flowstands.previous_page_number }}">
+					&laquo;
+				</a>
+			{% else %}
+				<li class="arrow unavailable"><a href="">&laquo;</a></li>
+			{% endif %}
+		</li>
+		{% for p in flowstands.paginator.page_range %}
+		<li {% if flowstands.number == p %}class="active"{% endif %}>
+			<a href="{% url "home" %}?page={{ p }}"> {{ p }} </a>
+		</li>
+		{% endfor %}
+		<li class="arrow">
+			{% if flowstands.has_next %}
+				<a href="{% url "home" %}?page={{ flowstands.next_page_number }}">
+					&raquo;
+				</a>
+			{% else %}
+				<li class="arrow unavailable"><a href="">&raquo;</a></li>
+			{% endif %}
+			</li>
+		</ul>
+</nav>
+{% endif %}
 	<!-- End of Pagination-->
 	{% endblock content %}
-	
-	

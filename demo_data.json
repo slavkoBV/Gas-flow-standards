@@ -1,0 +1,3208 @@
+[
+{
+    "fields": {
+        "username": "admin",
+        "first_name": "",
+        "last_name": "",
+        "is_active": true,
+        "is_superuser": true,
+        "is_staff": true,
+        "last_login": "2016-07-27T05:39:27.541Z",
+        "groups": [],
+        "user_permissions": [],
+        "password": "pbkdf2_sha256$20000$wpOn1FEhJrSX$W6SqH5W/BIBtxMUqXG6uj1/wAOZ/Ylzb2JA5Y/Ztlts=",
+        "email": "admin@localhost.com",
+        "date_joined": "2016-06-14T07:54:13.818Z"
+    },
+    "model": "auth.user",
+    "pk": 1
+},
+{
+    "fields": {
+        "expire_date": "2016-08-03T04:43:10.832Z",
+        "session_data": "NGFiYTkzYzI0YTI2NTM4MzhjYTMxNWY3ZTBmNzc1NGNjYmMxMWFiMjp7Il9hdXRoX3VzZXJfaGFzaCI6IjQxZTg0NjM2NzUwYzUwZjYzMGU4M2JlNTAwMzBmYmNmYTUzMDE3NzgiLCJfYXV0aF91c2VyX2JhY2tlbmQiOiJkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZCIsIl9hdXRoX3VzZXJfaWQiOiIxIn0="
+    },
+    "model": "sessions.session",
+    "pk": "ybpt6jdwy1c1gqbrjqsxttnon11ekvcz"
+},
+{
+    "fields": {
+        "name": "\u0412\u0456\u043d\u043d\u0438\u0446\u044c\u043a\u0430"
+    },
+    "model": "flowstands.region",
+    "pk": 4
+},
+{
+    "fields": {
+        "name": "\u0412\u043e\u043b\u0438\u043d\u0441\u044c\u043a\u0430"
+    },
+    "model": "flowstands.region",
+    "pk": 5
+},
+{
+    "fields": {
+        "name": "\u0414\u043d\u0456\u043f\u0440\u043e\u043f\u0435\u0442\u0440\u043e\u0432\u0441\u044c\u043a\u0430"
+    },
+    "model": "flowstands.region",
+    "pk": 6
+},
+{
+    "fields": {
+        "name": "\u0414\u043e\u043d\u0435\u0446\u044c\u043a\u0430"
+    },
+    "model": "flowstands.region",
+    "pk": 7
+},
+{
+    "fields": {
+        "name": "\u0416\u0438\u0442\u043e\u043c\u0438\u0440\u0441\u044c\u043a\u0430"
+    },
+    "model": "flowstands.region",
+    "pk": 8
+},
+{
+    "fields": {
+        "name": "\u0417\u0430\u043a\u0430\u0440\u043f\u0430\u0442\u0441\u044c\u043a\u0430"
+    },
+    "model": "flowstands.region",
+    "pk": 9
+},
+{
+    "fields": {
+        "name": "\u0417\u0430\u043f\u043e\u0440\u0456\u0437\u044c\u043a\u0430"
+    },
+    "model": "flowstands.region",
+    "pk": 10
+},
+{
+    "fields": {
+        "name": "\u0406\u0432\u0430\u043d\u043e-\u0424\u0440\u0430\u043d\u043a\u0456\u0432\u0441\u044c\u043a\u0430"
+    },
+    "model": "flowstands.region",
+    "pk": 11
+},
+{
+    "fields": {
+        "name": "\u041a\u0438\u0457\u0432\u0441\u044c\u043a\u0430"
+    },
+    "model": "flowstands.region",
+    "pk": 12
+},
+{
+    "fields": {
+        "name": "\u041a\u0438\u0457\u0432"
+    },
+    "model": "flowstands.region",
+    "pk": 13
+},
+{
+    "fields": {
+        "name": "\u041a\u0456\u0440\u043e\u0432\u043e\u0433\u0440\u0430\u0434\u0441\u044c\u043a\u0430"
+    },
+    "model": "flowstands.region",
+    "pk": 14
+},
+{
+    "fields": {
+        "name": "\u041b\u0443\u0433\u0430\u043d\u0441\u044c\u043a\u0430"
+    },
+    "model": "flowstands.region",
+    "pk": 15
+},
+{
+    "fields": {
+        "name": "\u041b\u044c\u0432\u0456\u0432\u0441\u044c\u043a\u0430"
+    },
+    "model": "flowstands.region",
+    "pk": 16
+},
+{
+    "fields": {
+        "name": "\u041c\u0438\u043a\u043e\u043b\u0430\u0457\u0432\u0441\u044c\u043a\u0430"
+    },
+    "model": "flowstands.region",
+    "pk": 17
+},
+{
+    "fields": {
+        "name": "\u041e\u0434\u0435\u0441\u044c\u043a\u0430"
+    },
+    "model": "flowstands.region",
+    "pk": 18
+},
+{
+    "fields": {
+        "name": "\u041f\u043e\u043b\u0442\u0430\u0432\u0441\u044c\u043a\u0430"
+    },
+    "model": "flowstands.region",
+    "pk": 19
+},
+{
+    "fields": {
+        "name": "\u0420\u0456\u0432\u043d\u0435\u043d\u0441\u044c\u043a\u0430"
+    },
+    "model": "flowstands.region",
+    "pk": 20
+},
+{
+    "fields": {
+        "name": "\u0421\u0443\u043c\u0441\u044c\u043a\u0430"
+    },
+    "model": "flowstands.region",
+    "pk": 21
+},
+{
+    "fields": {
+        "name": "\u0422\u0435\u0440\u043d\u043e\u043f\u0456\u043b\u044c\u0441\u044c\u043a\u0430"
+    },
+    "model": "flowstands.region",
+    "pk": 22
+},
+{
+    "fields": {
+        "name": "\u0425\u0430\u0440\u043a\u0456\u0432\u0441\u044c\u043a\u0430"
+    },
+    "model": "flowstands.region",
+    "pk": 23
+},
+{
+    "fields": {
+        "name": "\u0425\u0435\u0440\u0441\u043e\u043d\u0441\u044c\u043a\u0430"
+    },
+    "model": "flowstands.region",
+    "pk": 24
+},
+{
+    "fields": {
+        "name": "\u0425\u043c\u0435\u043b\u044c\u043d\u0438\u0446\u044c\u043a\u0430"
+    },
+    "model": "flowstands.region",
+    "pk": 25
+},
+{
+    "fields": {
+        "name": "\u0427\u0435\u0440\u043a\u0430\u0441\u044c\u043a\u0430"
+    },
+    "model": "flowstands.region",
+    "pk": 26
+},
+{
+    "fields": {
+        "name": "\u0427\u0435\u0440\u043d\u0456\u0432\u0435\u0446\u044c\u043a\u0430"
+    },
+    "model": "flowstands.region",
+    "pk": 27
+},
+{
+    "fields": {
+        "name": "\u0427\u0435\u0440\u043d\u0456\u0433\u0456\u0432\u0441\u044c\u043a\u0430"
+    },
+    "model": "flowstands.region",
+    "pk": 28
+},
+{
+    "fields": {
+        "customer": 2,
+        "traceability": "\u0414\u041f \"\u0406\u0432\u0430\u043d\u043e-\u0424\u0440\u0430\u043d\u043a\u0456\u0432\u0441\u044c\u043a\u0441\u0442\u0430\u043d\u0434\u0430\u0440\u0442\u043c\u0435\u0442\u0440\u043e\u043b\u043e\u0433\u0456\u044f\"",
+        "name": "\u041f\u0423\u041b\u0413-1",
+        "certificate": "133\u041f-04/15 \u0432\u0456\u0434 08.09.2015",
+        "region": 11,
+        "date_calibr": null,
+        "serial_number": "\u0431/\u043d",
+        "flow_range": "0.25 - 2500",
+        "manufactor": 3
+    },
+    "model": "flowstands.flowstand",
+    "pk": 1
+},
+{
+    "fields": {
+        "customer": 2,
+        "traceability": "\u0414\u041f \"\u0406\u0432\u0430\u043d\u043e-\u0424\u0440\u0430\u043d\u043a\u0456\u0432\u0441\u044c\u043a\u0441\u0442\u0430\u043d\u0434\u0430\u0440\u0442\u043c\u0435\u0442\u0440\u043e\u043b\u043e\u0433\u0456\u044f\"",
+        "name": "PVT-6M",
+        "certificate": "121\u041f-04/15 \u0432\u0456\u0434 03.08.2015",
+        "region": 11,
+        "date_calibr": null,
+        "serial_number": "\u0431/\u043d",
+        "flow_range": "0.016 - 10",
+        "manufactor": 4
+    },
+    "model": "flowstands.flowstand",
+    "pk": 2
+},
+{
+    "fields": {
+        "customer": 3,
+        "traceability": "\u0414\u041f \"\u0406\u0432\u0430\u043d\u043e-\u0424\u0440\u0430\u043d\u043a\u0456\u0432\u0441\u044c\u043a\u0441\u0442\u0430\u043d\u0434\u0430\u0440\u0442\u043c\u0435\u0442\u0440\u043e\u043b\u043e\u0433\u0456\u044f\"",
+        "name": "\u0423\u041f\u041b\u0413-1000",
+        "certificate": "032-04/16",
+        "region": 25,
+        "date_calibr": null,
+        "serial_number": "006",
+        "flow_range": "0.25 - 1000 ",
+        "manufactor": 2
+    },
+    "model": "flowstands.flowstand",
+    "pk": 3
+},
+{
+    "fields": {
+        "customer": 3,
+        "traceability": "\u0414\u041f \"\u0423\u043a\u0440\u043c\u0435\u0442\u0440\u0442\u0435\u0441\u0442\u0441\u0442\u0430\u043d\u0434\u0430\u0440\u0442\"",
+        "name": "\u0420\u0415\u041e\u0412\u0413-0,2",
+        "certificate": "",
+        "region": 25,
+        "date_calibr": null,
+        "serial_number": "012",
+        "flow_range": "0.016 - 16",
+        "manufactor": 2
+    },
+    "model": "flowstands.flowstand",
+    "pk": 4
+},
+{
+    "fields": {
+        "customer": 2,
+        "traceability": "\u0414\u041f \"\u0406\u0432\u0430\u043d\u043e-\u0424\u0440\u0430\u043d\u043a\u0456\u0432\u0441\u044c\u043a\u0441\u0442\u0430\u043d\u0434\u0430\u0440\u0442\u043c\u0435\u0442\u0440\u043e\u043b\u043e\u0433\u0456\u044f\"",
+        "name": "\u0406\u0424\u0413\u0410\u0417-1",
+        "certificate": "021\u041f-04/15 \u0432\u0456\u0434 13.03.2015",
+        "region": 11,
+        "date_calibr": null,
+        "serial_number": "\u0431/\u043d",
+        "flow_range": "0.016 - 10",
+        "manufactor": 4
+    },
+    "model": "flowstands.flowstand",
+    "pk": 5
+},
+{
+    "fields": {
+        "customer": 2,
+        "traceability": "\u0414\u041f \"\u0406\u0432\u0430\u043d\u043e-\u0424\u0440\u0430\u043d\u043a\u0456\u0432\u0441\u044c\u043a\u0441\u0442\u0430\u043d\u0434\u0430\u0440\u0442\u043c\u0435\u0442\u0440\u043e\u043b\u043e\u0433\u0456\u044f\"",
+        "name": "\u0406\u0424\u0413\u0410\u0417-2",
+        "certificate": "120\u041f-04/15 \u0432\u0456\u0434 03.08.2015",
+        "region": 11,
+        "date_calibr": null,
+        "serial_number": "\u0431/\u043d",
+        "flow_range": "0.016 - 16",
+        "manufactor": 4
+    },
+    "model": "flowstands.flowstand",
+    "pk": 6
+},
+{
+    "fields": {
+        "customer": 16,
+        "traceability": "\u0414\u041f \"\u0406\u0432\u0430\u043d\u043e-\u0424\u0440\u0430\u043d\u043a\u0456\u0432\u0441\u044c\u043a\u0441\u0442\u0430\u043d\u0434\u0430\u0440\u0442\u043c\u0435\u0442\u0440\u043e\u043b\u043e\u0433\u0456\u044f\"",
+        "name": "\u0406\u0424\u0413\u0410\u0417-PVT",
+        "certificate": "145\u041f-04/15 \u0432\u0456\u0434 15.10.2015",
+        "region": 11,
+        "date_calibr": null,
+        "serial_number": "\u0431/\u043d",
+        "flow_range": "0.016 - 10",
+        "manufactor": 4
+    },
+    "model": "flowstands.flowstand",
+    "pk": 7
+},
+{
+    "fields": {
+        "customer": 17,
+        "traceability": "\u0414\u041f \"\u0406\u0432\u0430\u043d\u043e-\u0424\u0440\u0430\u043d\u043a\u0456\u0432\u0441\u044c\u043a\u0441\u0442\u0430\u043d\u0434\u0430\u0440\u0442\u043c\u0435\u0442\u0440\u043e\u043b\u043e\u0433\u0456\u044f\"",
+        "name": "\u0406\u0424\u0413\u0410\u0417-PVT",
+        "certificate": "144\u041f-04/15 \u0432\u0456\u0434 12.10.2015",
+        "region": 11,
+        "date_calibr": null,
+        "serial_number": "\u0431/\u043d",
+        "flow_range": "0.016 - 10",
+        "manufactor": 4
+    },
+    "model": "flowstands.flowstand",
+    "pk": 8
+},
+{
+    "fields": {
+        "customer": 18,
+        "traceability": "\u0414\u041f \"\u0406\u0432\u0430\u043d\u043e-\u0424\u0440\u0430\u043d\u043a\u0456\u0432\u0441\u044c\u043a\u0441\u0442\u0430\u043d\u0434\u0430\u0440\u0442\u043c\u0435\u0442\u0440\u043e\u043b\u043e\u0433\u0456\u044f\"",
+        "name": "\"\u0422\u0415\u041c\u041f\u041e-11\"",
+        "certificate": "114\u041f-04/15",
+        "region": 11,
+        "date_calibr": "2015-07-27",
+        "serial_number": "\u041f\u041c-08-001",
+        "flow_range": "0.4 - 1250",
+        "manufactor": 1
+    },
+    "model": "flowstands.flowstand",
+    "pk": 9
+},
+{
+    "fields": {
+        "customer": 18,
+        "traceability": "\u0414\u041f \"\u0406\u0432\u0430\u043d\u043e-\u0424\u0440\u0430\u043d\u043a\u0456\u0432\u0441\u044c\u043a\u0441\u0442\u0430\u043d\u0434\u0430\u0440\u0442\u043c\u0435\u0442\u0440\u043e\u043b\u043e\u0433\u0456\u044f\"",
+        "name": "\u0420\u041a\u0414\u0423-2,8",
+        "certificate": "116\u041f-04/15",
+        "region": 11,
+        "date_calibr": "2015-08-03",
+        "serial_number": "\u0431/\u043d",
+        "flow_range": "80 - 6500",
+        "manufactor": 6
+    },
+    "model": "flowstands.flowstand",
+    "pk": 10
+},
+{
+    "fields": {
+        "customer": 18,
+        "traceability": "\u0414\u041f \"\u0406\u0432\u0430\u043d\u043e-\u0424\u0440\u0430\u043d\u043a\u0456\u0432\u0441\u044c\u043a\u0441\u0442\u0430\u043d\u0434\u0430\u0440\u0442\u043c\u0435\u0442\u0440\u043e\u043b\u043e\u0433\u0456\u044f\"",
+        "name": "\u0420\u041a\u0414\u0423-0,44",
+        "certificate": "140\u041f-04/13",
+        "region": 11,
+        "date_calibr": "2013-09-17",
+        "serial_number": "\u0431/\u043d",
+        "flow_range": "10 - 1000",
+        "manufactor": 6
+    },
+    "model": "flowstands.flowstand",
+    "pk": 11
+},
+{
+    "fields": {
+        "customer": 18,
+        "traceability": "\u0414\u041f \"\u0406\u0432\u0430\u043d\u043e-\u0424\u0440\u0430\u043d\u043a\u0456\u0432\u0441\u044c\u043a\u0441\u0442\u0430\u043d\u0434\u0430\u0440\u0442\u043c\u0435\u0442\u0440\u043e\u043b\u043e\u0433\u0456\u044f\"",
+        "name": "\u0420\u0415\u041e\u0412\u0413-0,5",
+        "certificate": "099\u041f-04/15",
+        "region": 11,
+        "date_calibr": "2015-07-08",
+        "serial_number": "\u0431/\u043d",
+        "flow_range": "0.16 - 10",
+        "manufactor": 2
+    },
+    "model": "flowstands.flowstand",
+    "pk": 12
+},
+{
+    "fields": {
+        "customer": 18,
+        "traceability": "\u0414\u041f \"\u0406\u0432\u0430\u043d\u043e-\u0424\u0440\u0430\u043d\u043a\u0456\u0432\u0441\u044c\u043a\u0441\u0442\u0430\u043d\u0434\u0430\u0440\u0442\u043c\u0435\u0442\u0440\u043e\u043b\u043e\u0433\u0456\u044f\"",
+        "name": "\u0423\u041f\u041a - 2500",
+        "certificate": "006\u041f-04/15",
+        "region": 11,
+        "date_calibr": "2015-02-14",
+        "serial_number": "003",
+        "flow_range": "3 - 2500",
+        "manufactor": 2
+    },
+    "model": "flowstands.flowstand",
+    "pk": 13
+},
+{
+    "fields": {
+        "customer": 19,
+        "traceability": "\u0414\u041f \"\u0406\u0432\u0430\u043d\u043e-\u0424\u0440\u0430\u043d\u043a\u0456\u0432\u0441\u044c\u043a\u0441\u0442\u0430\u043d\u0434\u0430\u0440\u0442\u043c\u0435\u0442\u0440\u043e\u043b\u043e\u0433\u0456\u044f\"",
+        "name": "\u0422\u0435\u043c\u043f-6",
+        "certificate": "088\u041f-04/15",
+        "region": 11,
+        "date_calibr": "2015-06-02",
+        "serial_number": "01",
+        "flow_range": "0.4 - 400",
+        "manufactor": 1
+    },
+    "model": "flowstands.flowstand",
+    "pk": 14
+},
+{
+    "fields": {
+        "customer": 20,
+        "traceability": "\u0414\u041f \"\u0406\u0432\u0430\u043d\u043e-\u0424\u0440\u0430\u043d\u043a\u0456\u0432\u0441\u044c\u043a\u0441\u0442\u0430\u043d\u0434\u0430\u0440\u0442\u043c\u0435\u0442\u0440\u043e\u043b\u043e\u0433\u0456\u044f\"",
+        "name": "\u0422\u0435\u043c\u043f\u043e-1",
+        "certificate": "003\u041f-04/15 \u0432\u0456\u0434 23.01.2015",
+        "region": 11,
+        "date_calibr": "2016-03-01",
+        "serial_number": "1",
+        "flow_range": "0.016 - 10",
+        "manufactor": 1
+    },
+    "model": "flowstands.flowstand",
+    "pk": 15
+},
+{
+    "fields": {
+        "customer": 20,
+        "traceability": "\u0414\u041f \"\u0406\u0432\u0430\u043d\u043e-\u0424\u0440\u0430\u043d\u043a\u0456\u0432\u0441\u044c\u043a\u0441\u0442\u0430\u043d\u0434\u0430\u0440\u0442\u043c\u0435\u0442\u0440\u043e\u043b\u043e\u0433\u0456\u044f\"",
+        "name": "\u0422\u0435\u043c\u043f\u043e-2",
+        "certificate": "004\u041f-04/15",
+        "region": 11,
+        "date_calibr": "2015-01-23",
+        "serial_number": "2",
+        "flow_range": "0.5 - 16 ",
+        "manufactor": 1
+    },
+    "model": "flowstands.flowstand",
+    "pk": 16
+},
+{
+    "fields": {
+        "customer": 21,
+        "traceability": "\u0414\u041f \"\u0406\u0432\u0430\u043d\u043e-\u0424\u0440\u0430\u043d\u043a\u0456\u0432\u0441\u044c\u043a\u0441\u0442\u0430\u043d\u0434\u0430\u0440\u0442\u043c\u0435\u0442\u0440\u043e\u043b\u043e\u0433\u0456\u044f\"",
+        "name": "\u0422\u0435\u043c\u043f\u043e-3 \u041c\u0420",
+        "certificate": "069\u041f-04/14",
+        "region": 11,
+        "date_calibr": "2014-06-02",
+        "serial_number": "05-07",
+        "flow_range": "0.016 - 40",
+        "manufactor": 1
+    },
+    "model": "flowstands.flowstand",
+    "pk": 17
+},
+{
+    "fields": {
+        "customer": 22,
+        "traceability": "",
+        "name": "\u0423\u041f\u041b\u0413 - 1200",
+        "certificate": "071\u041f-04/15",
+        "region": 11,
+        "date_calibr": "2015-05-26",
+        "serial_number": "001",
+        "flow_range": "0.05 - 1200",
+        "manufactor": 7
+    },
+    "model": "flowstands.flowstand",
+    "pk": 18
+},
+{
+    "fields": {
+        "email": "tempo_if@ukr.net",
+        "contacts": "",
+        "name": "\u0422\u0437\u041e\u0412 \"\u0406\u0412\u0424 \"\u0422\u0435\u043c\u043f\u043e\"",
+        "agent": "\u0420\u0443\u0434\u0435\u043d\u043a\u043e \u041c\u0438\u0445\u0430\u0439\u043b\u043e \u0412\u0430\u0441\u0438\u043b\u044c\u043e\u0432\u0438\u0447",
+        "address": "\u043c. \u0406\u0432\u0430\u043d\u043e-\u0424\u0440\u0430\u043d\u043a\u0456\u0432\u0441\u044c\u043a, \u0432\u0443\u043b. \u0413. \u0425\u043e\u0442\u043a\u0435\u0432\u0438\u0447\u0430, 88"
+    },
+    "model": "flowstands.manufactor",
+    "pk": 1
+},
+{
+    "fields": {
+        "email": "",
+        "contacts": "",
+        "name": "\u0422\u0437\u041e\u0412 \"\u0406\u0432\u0430\u043d\u043e-\u0424\u0440\u0430\u043d\u043a\u0456\u0432\u0441\u044c\u043a\u0435 \u0421\u041a\u0411 \u0417\u0410\"",
+        "agent": "\u0412\u043e\u0449\u0438\u043d\u0441\u044c\u043a\u0438\u0439 \u0412\u0456\u043a\u0442\u043e\u0440 \u0421\u0442\u0430\u043d\u0456\u0441\u043b\u0430\u0432\u043e\u0432\u0438\u0447",
+        "address": "\u043c. \u0406\u0432\u0430\u043d\u043e-\u0424\u0440\u0430\u043d\u043a\u0456\u0432\u0441\u044c\u043a, \u0432\u0443\u043b. \u041c\u0435\u043b\u044c\u043d\u0438\u043a\u0430"
+    },
+    "model": "flowstands.manufactor",
+    "pk": 2
+},
+{
+    "fields": {
+        "email": "",
+        "contacts": "",
+        "name": "\u0422\u0437\u041e\u0412 \"\u041d\u0412\u0426 \"\u041d\u043e\u0432\u0430\u0442\u043e\u0440\"",
+        "agent": "\u0420\u0430\u0434\u0438\u0448 \u0421\u0435\u0440\u0433\u0456\u0439 \u0412\u0430\u0441\u0438\u043b\u044c\u043e\u0432\u0438\u0447",
+        "address": "\u043c. \u0406\u0432\u0430\u043d\u043e-\u0424\u0440\u0430\u043d\u043a\u0456\u0432\u0441\u044c\u043a, \u0432\u0443\u043b. \u0413\u043b\u0456\u0431\u043e\u0432\u0430, 11"
+    },
+    "model": "flowstands.manufactor",
+    "pk": 3
+},
+{
+    "fields": {
+        "email": "pat@ifgas.com.ua",
+        "contacts": "(0342)50-16-22",
+        "name": "\u041f\u0410\u0422 \"\u0406\u0432\u0430\u043d\u043e-\u0424\u0440\u0430\u043d\u043a\u0456\u0432\u0441\u044c\u043a\u0433\u0430\u0437\"",
+        "agent": "\u0428\u0443\u043b\u044c\u0433\u0430 \u0412\u0456\u0442\u0430\u043b\u0456\u0439 \u0410\u043d\u0430\u0442\u043e\u043b\u0456\u0439\u043e\u0432\u0438\u0447",
+        "address": "\u043c. \u0406\u0432\u0430\u043d\u043e-\u0424\u0440\u0430\u043d\u043a\u0456\u0432\u0441\u044c\u043a, \u0432\u0443\u043b. \u041b\u0435\u043d\u043a\u0430\u0432\u0441\u044c\u043a\u043e\u0433\u043e, 20"
+    },
+    "model": "flowstands.manufactor",
+    "pk": 4
+},
+{
+    "fields": {
+        "email": "",
+        "contacts": "067-753-76-17",
+        "name": "\u0422\u0437\u041e\u0412 \"\u041d\u0412\u041f \"\u0412\u0435\u043a\u0442\u043e\u0440\"",
+        "agent": "\u0423\u0441\u0435\u043d\u043a\u043e \u041e\u043b\u0435\u043a\u0441\u0456\u0439 \u0414\u0430\u043d\u0438\u043b\u043e\u0432\u0438\u0447",
+        "address": "\u043c. \u0421\u0432\u0456\u0442\u043b\u043e\u0432\u043e\u0434\u0441\u044c\u043a"
+    },
+    "model": "flowstands.manufactor",
+    "pk": 5
+},
+{
+    "fields": {
+        "email": "prylad@prylad.com.ua",
+        "contacts": "",
+        "name": "\u041f\u0410\u0422 \"\u0406\u0432\u0430\u043d\u043e-\u0424\u0440\u0430\u043d\u043a\u0456\u0432\u0441\u044c\u043a\u0438\u0439 \u0437\u0430\u0432\u043e\u0434 \"\u041f\u0440\u043e\u043c\u043f\u0440\u0438\u043b\u0430\u0434\"",
+        "agent": "\u041a\u043e\u043b\u0456\u0441\u043d\u0438\u043a \u0412.\u0406.",
+        "address": "\u043c. \u0406\u0432\u0430\u043d\u043e-\u0424\u0440\u0430\u043d\u043a\u0456\u0432\u0441\u044c\u043a, \u0432\u0443\u043b. \u0421\u0430\u0445\u0430\u0440\u043e\u0432\u0430, 23"
+    },
+    "model": "flowstands.manufactor",
+    "pk": 6
+},
+{
+    "fields": {
+        "email": "",
+        "contacts": "",
+        "name": "\u0422\u041e\u0412 \u041d\u0412\u0426 \"\u0406\u043d\u0444\u043e\u0440\u043c\u0430\u0446\u0456\u0439\u043d\u043e-\u0432\u0438\u043c\u0456\u0440\u044e\u0432\u0430\u043b\u044c\u043d\u0456 \u0442\u0435\u0445\u043d\u043e\u043b\u043e\u0433\u0456\u0457\"",
+        "agent": "\u0428\u0430\u0448\u043a\u043e\u0432 \u0422\u0430\u0440\u0430\u0441",
+        "address": "\u043c. \u0406\u0432\u0430\u043d\u043e-\u0424\u0440\u0430\u043d\u043a\u0456\u0432\u0441\u044c\u043a, \u0432\u0443\u043b. \u0423\u043a\u0440\u0430\u0457\u043d\u0441\u044c\u043a\u043e\u0457 \u0414\u0438\u0432\u0456\u0437\u0456\u0457"
+    },
+    "model": "flowstands.manufactor",
+    "pk": 7
+},
+{
+    "fields": {
+        "name": "\u041f\u0410\u0422 \"\u0406\u0432\u0430\u043d\u043e-\u0424\u0440\u0430\u043d\u043a\u0456\u0432\u0441\u044c\u043a\u0433\u0430\u0437\"",
+        "contacts": "(0342)50-16-22",
+        "region": 11,
+        "agent": "\u0428\u0443\u043b\u044c\u0433\u0430 \u0412\u0456\u0442\u0430\u043b\u0456\u0439 \u0410\u043d\u0430\u0442\u043e\u043b\u0456\u0439\u043e\u0432\u0438\u0447",
+        "address": "\u043c. \u0406\u0432\u0430\u043d\u043e-\u0424\u0440\u0430\u043d\u043a\u0456\u0432\u0441\u044c\u043a, \u0432\u0443\u043b. \u041b\u0435\u043d\u043a\u0430\u0432\u0441\u044c\u043a\u043e\u0433\u043e, 20",
+        "email": "pat@ifgas.com.ua"
+    },
+    "model": "flowstands.customer",
+    "pk": 2
+},
+{
+    "fields": {
+        "name": "\u041f\u0410\u0422 \"\u0425\u043c\u0435\u043b\u044c\u043d\u0438\u0446\u044c\u043a\u0433\u0430\u0437\"",
+        "contacts": "(0382)71-04-50",
+        "region": 25,
+        "agent": "\u042e\u0440\u0447\u0435\u043d\u043a\u043e \u041c\u0438\u0445\u0430\u0439\u043b\u043e \u0411\u043e\u0440\u0438\u0441\u043e\u0432\u0438\u0447",
+        "address": "\u043c. \u0425\u043c\u0435\u043b\u044c\u043d\u0438\u0446\u044c\u043a\u0438\u0439, \u043f\u0440. \u041c\u0438\u0440\u0443, 41",
+        "email": "office@kmgas.com.ua"
+    },
+    "model": "flowstands.customer",
+    "pk": 3
+},
+{
+    "fields": {
+        "name": "\u041f\u0410\u0422 \"\u0412\u0456\u043d\u043d\u0438\u0446\u044f\u0433\u0430\u0437\"",
+        "contacts": "(04322)78092 (04322)78882",
+        "region": 4,
+        "agent": "\u041a\u0440\u0438\u0432\u0430\u043a \u041e\u043b\u0435\u043a\u0441\u0430\u043d\u0434\u0440 \u0410\u043d\u0434\u0440\u0456\u0439\u043e\u0432\u0438\u0447",
+        "address": "\u043c. \u0412\u0456\u043d\u043d\u0438\u0446\u044f, \u043f\u0440\u043e\u0432. \u0429\u043e\u0440\u0441\u0430 24",
+        "email": "office@vngas.com.ua"
+    },
+    "model": "flowstands.customer",
+    "pk": 4
+},
+{
+    "fields": {
+        "name": "\u041f\u0410\u0422 \"\u0412\u043e\u043b\u0438\u043d\u044c\u0433\u0430\u0437\"",
+        "contacts": "(0332)77-69-00",
+        "region": 5,
+        "agent": "\u041a\u043e\u0440\u043e\u0442\u044f \u041c\u0438\u0440\u043e\u0441\u043b\u0430\u0432 \u0406\u0432\u0430\u043d\u043e\u0432\u0438\u0447",
+        "address": "\u043c. \u041b\u0443\u0446\u044c\u043a, \u0432\u0443\u043b. \u0406. \u0424\u0440\u0430\u043d\u043a\u0430, 12",
+        "email": "office@vlgas.com.ua"
+    },
+    "model": "flowstands.customer",
+    "pk": 5
+},
+{
+    "fields": {
+        "name": "\u041f\u0410\u0422 \"\u0417\u0430\u043a\u0430\u0440\u043f\u0430\u0442\u0433\u0430\u0437\"",
+        "contacts": "(0312)61-94-02",
+        "region": 9,
+        "agent": "\u0428\u0430\u0442\u0438\u043b\u043e \u0412\u0456\u0442\u0430\u043b\u0456\u0439 \u041c\u0430\u0440\u0446\u0456\u043d\u043e\u0432\u0438\u0447",
+        "address": "\u043c. \u0423\u0436\u0433\u043e\u0440\u043e\u0434, \u0432\u0443\u043b. \u041f\u043e\u0433\u043e\u0440\u0454\u043b\u043e\u0432\u0430, 2 ",
+        "email": "office@zkgas.com.ua"
+    },
+    "model": "flowstands.customer",
+    "pk": 6
+},
+{
+    "fields": {
+        "name": "\u041f\u0410\u0422 \"\u0422\u0435\u0440\u043d\u043e\u043f\u0456\u043b\u044c\u0433\u0430\u0437\"",
+        "contacts": "+380 (352) 52-51-24",
+        "region": 22,
+        "agent": "\u041a\u0430\u0440\u0430\u0432\u0430\u043d\u0441\u044c\u043a\u0438\u0439 \u041e\u043b\u0435\u0433 \u0406\u0432\u0430\u043d\u043e\u0432\u0438\u0447",
+        "address": " \u043c. \u0422\u0435\u0440\u043d\u043e\u043f\u0456\u043b\u044c, \u0432\u0443\u043b. \u0427\u0435\u0440\u043d\u0456\u0432\u0435\u0446\u044c\u043a\u0430, 54",
+        "email": "disp@tgaz.te.ua"
+    },
+    "model": "flowstands.customer",
+    "pk": 7
+},
+{
+    "fields": {
+        "name": "\u041f\u0410\u0422 \"\u0427\u0435\u0440\u043d\u0456\u0432\u0446\u0456\u0433\u0430\u0437\"",
+        "contacts": "(0372)54-90-04",
+        "region": 27,
+        "agent": "\u0413\u043e\u0440\u0434\u0430 \u0412\u0456\u043a\u0442\u043e\u0440 \u0404\u0432\u0433\u0435\u043d\u043e\u0432\u0438\u0447 ",
+        "address": "\u043c. \u0427\u0435\u0440\u043d\u0456\u0432\u0446\u0456, \u0432\u0443\u043b. \u0412\u0438\u043d\u043d\u0438\u0447\u0435\u043d\u043a\u0430, 9\u0410",
+        "email": "office@cvgas.cv.ua"
+    },
+    "model": "flowstands.customer",
+    "pk": 8
+},
+{
+    "fields": {
+        "name": "\u041f\u0410\u0422 \"\u0420\u0456\u0432\u043d\u0435\u0433\u0430\u0437\"",
+        "contacts": "(0362)28-07-23",
+        "region": 20,
+        "agent": "\u0414\u0443\u0431\u0430\u0441 \u041f\u0435\u0442\u0440\u043e \u0410\u043d\u0434\u0440\u0456\u0439\u043e\u0432\u0438\u0447",
+        "address": "\u043c. \u0420\u0456\u0432\u043d\u0435, \u0432\u0443\u043b. \u0406\u0432\u0430\u043d\u0430 \u0412\u0438\u0448\u0435\u043d\u0441\u044c\u043a\u043e\u0433\u043e, 4",
+        "email": "office@rvgas.com.ua"
+    },
+    "model": "flowstands.customer",
+    "pk": 9
+},
+{
+    "fields": {
+        "name": "\u041f\u0410\u0422 \"\u0416\u0438\u0442\u043e\u043c\u0438\u0440\u0433\u0430\u0437\"",
+        "contacts": "(0412)42-27-42 (0412)47-06-10",
+        "region": 8,
+        "agent": "\u042e\u0449\u0435\u043d\u043a\u043e \u0412\u0430\u043b\u0435\u043d\u0442\u0438\u043d \u0406\u0432\u0430\u043d\u043e\u0432\u0438\u0447",
+        "address": "\u043c. \u0416\u0438\u0442\u043e\u043c\u0438\u0440, \u0432\u0443\u043b. \u0424\u0435\u0449\u0435\u043d\u043a\u043e-\u0427\u043e\u043f\u0456\u0432\u0441\u044c\u043a\u043e\u0433\u043e, 35",
+        "email": "office@ztgas.com.ua"
+    },
+    "model": "flowstands.customer",
+    "pk": 10
+},
+{
+    "fields": {
+        "name": "\u041f\u0410\u0422 \"\u041a\u0438\u0457\u0432\u043e\u0431\u043b\u0433\u0430\u0437\"",
+        "contacts": "(044) 2055341",
+        "region": 12,
+        "agent": "\u041c\u0430\u0448\u0442\u0430\u043b\u0456\u0440\u0443\u043a \u0412\u043e\u043b\u043e\u0434\u0438\u043c\u0438\u0440 \u041e\u043b\u0435\u043a\u0441\u0456\u0439\u043e\u0432\u0438\u0447",
+        "address": "\u043c. \u0411\u043e\u044f\u0440\u043a\u0430, \u0432\u0443\u043b. \u0428\u0435\u0432\u0447\u0435\u043d\u043a\u0430, 178",
+        "email": ""
+    },
+    "model": "flowstands.customer",
+    "pk": 11
+},
+{
+    "fields": {
+        "name": "\u041f\u0410\u0422 \"\u041a\u0438\u0457\u0432\u0433\u0430\u0437\"",
+        "contacts": "(044) 495-04-04",
+        "region": 13,
+        "agent": "\u0413\u043e\u0440\u043e\u0432\u0438\u0439 \u0421\u0435\u0440\u0433\u0456\u0439 \u041e\u043b\u0435\u043a\u0441\u0430\u043d\u0434\u0440\u043e\u0432\u0438\u0447",
+        "address": "\u043c. \u041a\u0438\u0457\u0432, \u0432\u0443\u043b. \u041a\u0456\u043a\u0432\u0456\u0434\u0437\u0435, 4-\u0431",
+        "email": "contact@kyivgaz.com"
+    },
+    "model": "flowstands.customer",
+    "pk": 12
+},
+{
+    "fields": {
+        "name": "\u041f\u0410\u0422 \"\u0422\u0435\u0440\u043d\u043e\u043f\u0456\u043b\u044c\u043c\u0456\u0441\u044c\u043a\u0433\u0430\u0437\"",
+        "contacts": "(0352) 25-04-92",
+        "region": 22,
+        "agent": "\u0411\u043e\u0431\u0440\u0456\u0432\u0435\u0446\u044c \u0412\u043e\u043b\u043e\u0434\u0438\u043c\u0438\u0440 \u041b\u0435\u043e\u043d\u0456\u0434\u043e\u0432\u0438\u0447",
+        "address": "\u043c. \u0422\u0435\u0440\u043d\u043e\u043f\u0456\u043b\u044c, \u0432\u0443\u043b. \u041c\u0438\u0442\u0440\u043e\u043f\u043e\u043b\u0438\u0442\u0430 \u0428\u0435\u043f\u0442\u0438\u0446\u044c\u043a\u043e\u0433\u043e, 20",
+        "email": "admin@tmgaz.te.ua"
+    },
+    "model": "flowstands.customer",
+    "pk": 13
+},
+{
+    "fields": {
+        "name": "\u041f\u0410\u0422 \"\u041e\u0434\u0435\u0441\u0430\u0433\u0430\u0437\"",
+        "contacts": "711-12-14",
+        "region": 18,
+        "agent": "\u0423\u0447\u0438\u0442\u0435\u043b\u044c \u0406\u0433\u043e\u0440 \u041b\u0435\u043e\u043d\u0456\u0434\u043e\u0432\u0438\u0447",
+        "address": "\u043c. \u041e\u0434\u0435\u0441\u0430, \u0432\u0443\u043b. \u041e\u0434\u0430\u0440\u0456\u044f, 1",
+        "email": ""
+    },
+    "model": "flowstands.customer",
+    "pk": 14
+},
+{
+    "fields": {
+        "name": "\u041f\u0410\u0422 \"\u0427\u0435\u0440\u043a\u0430\u0441\u0438\u0433\u0430\u0437\"",
+        "contacts": "",
+        "region": 26,
+        "agent": "\u0411\u0443\u044f\u043d \u0421 .I.",
+        "address": "\u043c. \u0427\u0435\u0440\u043a\u0430\u0441\u0438, \u0432\u0443\u043b. \u041c\u0430\u043a\u0441\u0438\u043c\u0430 \u0417\u0430\u043b\u0456\u0437\u043d\u044f\u043a\u0430, 142",
+        "email": ""
+    },
+    "model": "flowstands.customer",
+    "pk": 15
+},
+{
+    "fields": {
+        "name": "\u0414\u043e\u043b\u0438\u043d\u0441\u044c\u043a\u0435 \u0423\u0415\u0413\u0413 \u041f\u0410\u0422 \"\u0406\u0432\u0430\u043d\u043e-\u0424\u0440\u0430\u043d\u043a\u0456\u0432\u0441\u044c\u043a\u0433\u0430\u0437\"",
+        "contacts": "(099)238-74-18 ",
+        "region": 11,
+        "agent": "\u0432\u0456\u0434\u0434\u0456\u043b \u043c\u0435\u0442\u0440\u043e\u043b\u043e\u0433\u0456\u0457",
+        "address": "\u043c. \u0414\u043e\u043b\u0438\u043d\u0430, \u0432\u0443\u043b. \u0411\u043e\u0433\u0434\u0430\u043d\u0430 \u0425\u043c\u0435\u043b\u044c\u043d\u0438\u0446\u044c\u043a\u043e\u0433\u043e, 10",
+        "email": ""
+    },
+    "model": "flowstands.customer",
+    "pk": 16
+},
+{
+    "fields": {
+        "name": "\u0413\u043e\u0440\u043e\u0434\u0435\u043d\u043a\u0456\u0432\u0441\u044c\u043a\u0435 \u0423\u0415\u0413\u0413 \u041f\u0410\u0422 \"\u0406\u0432\u0430\u043d\u043e-\u0424\u0440\u0430\u043d\u043a\u0456\u0432\u0441\u044c\u043a\u0433\u0430\u0437\"",
+        "contacts": "343022778",
+        "region": 11,
+        "agent": "\u0432\u0456\u0434\u0434\u0456\u043b \u043c\u0435\u0442\u0440\u043e\u043b\u043e\u0433\u0456\u0457",
+        "address": "\u043c. \u0413\u043e\u0440\u043e\u0434\u0435\u043d\u043a\u0430, \u0432\u0443\u043b. \u0411\u043e\u0433\u0434\u0430\u043d\u0430 \u0425\u043c\u0435\u043b\u044c\u043d\u0438\u0446\u044c\u043a\u043e\u0433\u043e, 45",
+        "email": ""
+    },
+    "model": "flowstands.customer",
+    "pk": 17
+},
+{
+    "fields": {
+        "name": "\u041f\u0410\u0422 \"\u0406\u0432\u0430\u043d\u043e-\u0424\u0440\u0430\u043d\u043a\u0456\u0432\u0441\u044c\u043a\u0438\u0439 \u0437\u0430\u0432\u043e\u0434 \"\u041f\u0440\u043e\u043c\u043f\u0440\u0438\u043b\u0430\u0434\"",
+        "contacts": "0342-75-05-92",
+        "region": 11,
+        "agent": "\u041a\u043e\u043b\u0456\u0441\u043d\u0438\u043a \u0412.\u0406.",
+        "address": "\u043c. \u0406\u0432\u0430\u043d\u043e-\u0424\u0440\u0430\u043d\u043a\u0456\u0432\u0441\u044c\u043a, \u0432\u0443\u043b. \u0421\u0430\u0445\u0430\u0440\u043e\u0432\u0430, 23",
+        "email": "prylad@prylad.com.ua"
+    },
+    "model": "flowstands.customer",
+    "pk": 18
+},
+{
+    "fields": {
+        "name": "\u041d\u0412\u0424 \"\u0422\u0435\u043c\u043f\"",
+        "contacts": "",
+        "region": 11,
+        "agent": "\u0420\u0443\u0434\u0435\u043d\u043a\u043e \u041c\u0438\u0445\u0430\u0439\u043b\u043e \u0412\u0430\u0441\u0438\u043b\u044c\u043e\u0432\u0438\u0447",
+        "address": "\u043c. \u0406\u0432\u0430\u043d\u043e-\u0424\u0440\u0430\u043d\u043a\u0456\u0432\u0441\u044c\u043a, \u0432\u0443\u043b. \u0421\u0430\u0445\u0430\u0440\u043e\u0432\u0430, 23",
+        "email": "tempo_if@ukr.net"
+    },
+    "model": "flowstands.customer",
+    "pk": 19
+},
+{
+    "fields": {
+        "name": "\u0422\u0437\u041e\u0412 \"\u0406\u0412\u0424 \"\u0422\u0435\u043c\u043f\u043e\"",
+        "contacts": "",
+        "region": 11,
+        "agent": "\u0420\u0443\u0434\u0435\u043d\u043a\u043e \u041c\u0438\u0445\u0430\u0439\u043b\u043e \u0412\u0430\u0441\u0438\u043b\u044c\u043e\u0432\u0438\u0447",
+        "address": "\u043c. \u0406\u0432\u0430\u043d\u043e-\u0424\u0440\u0430\u043d\u043a\u0456\u0432\u0441\u044c\u043a, \u0432\u0443\u043b. \u0421\u0430\u0445\u0430\u0440\u043e\u0432\u0430, 23",
+        "email": "tempo_if@ukr.net"
+    },
+    "model": "flowstands.customer",
+    "pk": 20
+},
+{
+    "fields": {
+        "name": "\u041f\u0410\u0422 \"\u0422\u0438\u0441\u043c\u0435\u043d\u0438\u0446\u044f\u0433\u0430\u0437\"",
+        "contacts": "03436 21255",
+        "region": 11,
+        "agent": "\u0412\u0456\u0442\u044e\u043a \u0412\u0430\u0441\u0438\u043b\u044c \u0412\u0430\u0441\u0438\u043b\u044c\u043e\u0432\u0438\u0447",
+        "address": "\u043c. \u0422\u0438\u0441\u043c\u0435\u043d\u0438\u0446\u044f, \u0432\u0443\u043b. \u0412\u0456\u0441\u043a\u043e\u043d\u0442\u0430, 3",
+        "email": "tysgaz@ukrpost.net"
+    },
+    "model": "flowstands.customer",
+    "pk": 21
+},
+{
+    "fields": {
+        "name": "\u0422\u041e\u0412 \u041d\u0412\u0426 \"\u0406\u043d\u0444\u043e\u0440\u043c\u0430\u0446\u0456\u0439\u043d\u043e-\u0432\u0438\u043c\u0456\u0440\u044e\u0432\u0430\u043b\u044c\u043d\u0456 \u0442\u0435\u0445\u043d\u043e\u043b\u043e\u0433\u0456\u0457\"",
+        "contacts": "",
+        "region": 11,
+        "agent": "\u0428\u0430\u0448\u043a\u043e\u0432 \u0422\u0430\u0440\u0430\u0441",
+        "address": "\u043c. \u0406\u0432\u0430\u043d\u043e-\u0424\u0440\u0430\u043d\u043a\u0456\u0432\u0441\u044c\u043a, \u0432\u0443\u043b. \u0423\u043a\u0440\u0430\u0457\u043d\u0441\u044c\u043a\u043e\u0457 \u0414\u0438\u0432\u0456\u0437\u0456\u0457",
+        "email": ""
+    },
+    "model": "flowstands.customer",
+    "pk": 22
+},
+{
+    "fields": {
+        "name": "\u0422\u041e\u0412 \"\u0421\u0430\u043c\u0433\u0430\u0437-\u0420\u0456\u0432\u043d\u0435\"",
+        "contacts": "",
+        "region": 20,
+        "agent": "\u0411\u0456\u0433\u0443\u043d",
+        "address": "\u043c. \u0420\u0456\u0432\u043d\u0435, \u0432\u0443\u043b. \u0411\u0443\u0434\u0456\u0432\u0435\u043b\u044c\u043d\u0438\u043a\u0456\u0432, 6\u0410",
+        "email": ""
+    },
+    "model": "flowstands.customer",
+    "pk": 23
+},
+{
+    "fields": {
+        "action_flag": 1,
+        "action_time": "2016-06-14T07:56:56.386Z",
+        "object_repr": "Flowstand object",
+        "object_id": "1",
+        "change_message": "",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "flowstands",
+            "flowstand"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1
+},
+{
+    "fields": {
+        "action_flag": 1,
+        "action_time": "2016-06-14T08:13:16.348Z",
+        "object_repr": "PVT-6M, \u2116 006, \u041f\u0410\u0422 \"\u0406\u0432\u0430\u043d\u043e-\u0424\u0440\u0430\u043d\u043a\u0456\u0432\u0441\u044c\u043a\u0433\u0430\u0437\"",
+        "object_id": "2",
+        "change_message": "",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "flowstands",
+            "flowstand"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 2
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2016-06-14T08:18:12.110Z",
+        "object_repr": "\u041f\u0423\u041b\u0413-7\u0410, \u2116 001, \u041f\u0410\u0422 \"\u0406\u0432\u0430\u043d\u043e-\u0424\u0440\u0430\u043d\u043a\u0456\u0432\u0441\u044c\u043a\u0433\u0430\u0437\"",
+        "object_id": "1",
+        "change_message": "\u041f\u043e\u043b\u044f \u043d\u0435 \u0437\u043c\u0456\u043d\u0435\u043d\u0456.",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "flowstands",
+            "flowstand"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 3
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2016-06-14T08:35:05.542Z",
+        "object_repr": "PVT-6M, \u2116 006, \u041f\u0410\u0422 \"\u0406\u0432\u0430\u043d\u043e-\u0424\u0440\u0430\u043d\u043a\u0456\u0432\u0441\u044c\u043a\u0433\u0430\u0437\"",
+        "object_id": "2",
+        "change_message": "\u0417\u043c\u0456\u043d\u0435\u043d\u043e certificate.",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "flowstands",
+            "flowstand"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 4
+},
+{
+    "fields": {
+        "action_flag": 1,
+        "action_time": "2016-06-14T13:44:10.947Z",
+        "object_repr": "\u0423\u041f\u041b\u0413-1000, \u2116 006, \u041f\u0410\u0422 \"\u0425\u043c\u0435\u043b\u044c\u043d\u0438\u0446\u044c\u043a\u0433\u0430\u0437\"",
+        "object_id": "3",
+        "change_message": "",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "flowstands",
+            "flowstand"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 5
+},
+{
+    "fields": {
+        "action_flag": 1,
+        "action_time": "2016-06-14T13:44:59.946Z",
+        "object_repr": "\u0420\u0415\u041e\u0412\u0413-0,2, \u2116 012, \u041f\u0410\u0422 \"\u0425\u043c\u0435\u043b\u044c\u043d\u0438\u0446\u044c\u043a\u0433\u0430\u0437\"",
+        "object_id": "4",
+        "change_message": "",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "flowstands",
+            "flowstand"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 6
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2016-07-14T07:07:04.293Z",
+        "object_repr": "\u0420\u0415\u041e\u0412\u0413-0,2, \u2116 012, \u041f\u0410\u0422 \"\u0425\u043c\u0435\u043b\u044c\u043d\u0438\u0446\u044c\u043a\u0433\u0430\u0437\"",
+        "object_id": "4",
+        "change_message": "\u0417\u043c\u0456\u043d\u0435\u043d\u043e calibr_type.",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "flowstands",
+            "flowstand"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 7
+},
+{
+    "fields": {
+        "action_flag": 1,
+        "action_time": "2016-07-20T05:33:45.050Z",
+        "object_repr": "\u0422\u0437\u041e\u0412 \"\u0406\u0412\u0424 \"\u0422\u0435\u043c\u043f\u043e\"",
+        "object_id": "1",
+        "change_message": "",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "flowstands",
+            "manufactor"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 8
+},
+{
+    "fields": {
+        "action_flag": 1,
+        "action_time": "2016-07-20T05:34:08.528Z",
+        "object_repr": "\u0406\u0432\u0430\u043d\u043e-\u0424\u0440\u0430\u043d\u043a\u0456\u0432\u0441\u044c\u043a\u0430",
+        "object_id": "1",
+        "change_message": "",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "flowstands",
+            "region"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 9
+},
+{
+    "fields": {
+        "action_flag": 1,
+        "action_time": "2016-07-20T05:34:29.432Z",
+        "object_repr": "\u041f\u0410\u0422 \"\u0406\u0432\u0430\u043d\u043e-\u0424\u0440\u0430\u043d\u043a\u0456\u0432\u0441\u044c\u043a\u0433\u0430\u0437\"",
+        "object_id": "1",
+        "change_message": "",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "flowstands",
+            "customer"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 10
+},
+{
+    "fields": {
+        "action_flag": 1,
+        "action_time": "2016-07-20T05:34:41.288Z",
+        "object_repr": "\u0412\u0456\u043d\u043d\u0438\u0446\u044c\u043a\u0430",
+        "object_id": "2",
+        "change_message": "",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "flowstands",
+            "region"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 11
+},
+{
+    "fields": {
+        "action_flag": 1,
+        "action_time": "2016-07-20T05:37:31.688Z",
+        "object_repr": "\u0412\u043e\u043b\u0438\u043d\u0441\u044c\u043a\u0430",
+        "object_id": "3",
+        "change_message": "",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "flowstands",
+            "region"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 12
+},
+{
+    "fields": {
+        "action_flag": 3,
+        "action_time": "2016-07-20T05:40:30.136Z",
+        "object_repr": "\u041f\u0410\u0422 \"\u0406\u0432\u0430\u043d\u043e-\u0424\u0440\u0430\u043d\u043a\u0456\u0432\u0441\u044c\u043a\u0433\u0430\u0437\"",
+        "object_id": "1",
+        "change_message": "",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "flowstands",
+            "customer"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 13
+},
+{
+    "fields": {
+        "action_flag": 3,
+        "action_time": "2016-07-20T05:40:40.744Z",
+        "object_repr": "\u0412\u043e\u043b\u0438\u043d\u0441\u044c\u043a\u0430",
+        "object_id": "3",
+        "change_message": "",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "flowstands",
+            "region"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 14
+},
+{
+    "fields": {
+        "action_flag": 3,
+        "action_time": "2016-07-20T05:40:40.838Z",
+        "object_repr": "\u0412\u0456\u043d\u043d\u0438\u0446\u044c\u043a\u0430",
+        "object_id": "2",
+        "change_message": "",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "flowstands",
+            "region"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 15
+},
+{
+    "fields": {
+        "action_flag": 3,
+        "action_time": "2016-07-20T05:40:41.072Z",
+        "object_repr": "\u0406\u0432\u0430\u043d\u043e-\u0424\u0440\u0430\u043d\u043a\u0456\u0432\u0441\u044c\u043a\u0430",
+        "object_id": "1",
+        "change_message": "",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "flowstands",
+            "region"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 16
+},
+{
+    "fields": {
+        "action_flag": 1,
+        "action_time": "2016-07-20T05:51:50.817Z",
+        "object_repr": "\u0412\u0456\u043d\u043d\u0438\u0446\u044c\u043a\u0430",
+        "object_id": "4",
+        "change_message": "",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "flowstands",
+            "region"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 17
+},
+{
+    "fields": {
+        "action_flag": 1,
+        "action_time": "2016-07-20T05:52:05.793Z",
+        "object_repr": "\u0412\u043e\u043b\u0438\u043d\u0441\u044c\u043a\u0430",
+        "object_id": "5",
+        "change_message": "",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "flowstands",
+            "region"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 18
+},
+{
+    "fields": {
+        "action_flag": 1,
+        "action_time": "2016-07-20T05:52:22.766Z",
+        "object_repr": "\u0414\u043d\u0456\u043f\u0440\u043e\u043f\u0435\u0442\u0440\u043e\u0432\u0441\u044c\u043a\u0430",
+        "object_id": "6",
+        "change_message": "",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "flowstands",
+            "region"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 19
+},
+{
+    "fields": {
+        "action_flag": 1,
+        "action_time": "2016-07-20T05:52:33.592Z",
+        "object_repr": "\u0414\u043e\u043d\u0435\u0446\u044c\u043a\u0430",
+        "object_id": "7",
+        "change_message": "",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "flowstands",
+            "region"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 20
+},
+{
+    "fields": {
+        "action_flag": 1,
+        "action_time": "2016-07-20T05:52:44.091Z",
+        "object_repr": "\u0416\u0438\u0442\u043e\u043c\u0438\u0440\u0441\u044c\u043a\u0430",
+        "object_id": "8",
+        "change_message": "",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "flowstands",
+            "region"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 21
+},
+{
+    "fields": {
+        "action_flag": 1,
+        "action_time": "2016-07-20T05:52:58.724Z",
+        "object_repr": "\u0417\u0430\u043a\u0430\u0440\u043f\u0430\u0442\u0441\u044c\u043a\u0430",
+        "object_id": "9",
+        "change_message": "",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "flowstands",
+            "region"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 22
+},
+{
+    "fields": {
+        "action_flag": 1,
+        "action_time": "2016-07-20T05:53:10.486Z",
+        "object_repr": "\u0417\u0430\u043f\u043e\u0440\u0456\u0437\u044c\u043a\u0430",
+        "object_id": "10",
+        "change_message": "",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "flowstands",
+            "region"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 23
+},
+{
+    "fields": {
+        "action_flag": 1,
+        "action_time": "2016-07-20T05:53:17.210Z",
+        "object_repr": "\u0406\u0432\u0430\u043d\u043e-\u0424\u0440\u0430\u043d\u043a\u0456\u0432\u0441\u044c\u043a\u0430",
+        "object_id": "11",
+        "change_message": "",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "flowstands",
+            "region"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 24
+},
+{
+    "fields": {
+        "action_flag": 1,
+        "action_time": "2016-07-20T05:53:26.804Z",
+        "object_repr": "\u041a\u0438\u0457\u0432\u0441\u044c\u043a\u0430",
+        "object_id": "12",
+        "change_message": "",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "flowstands",
+            "region"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 25
+},
+{
+    "fields": {
+        "action_flag": 1,
+        "action_time": "2016-07-20T05:54:10.811Z",
+        "object_repr": "\u041a\u0438\u0457\u0432",
+        "object_id": "13",
+        "change_message": "",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "flowstands",
+            "region"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 26
+},
+{
+    "fields": {
+        "action_flag": 1,
+        "action_time": "2016-07-20T05:54:31.247Z",
+        "object_repr": "\u041a\u0456\u0440\u043e\u0432\u043e\u0433\u0440\u0430\u0434\u0441\u044c\u043a\u0430",
+        "object_id": "14",
+        "change_message": "",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "flowstands",
+            "region"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 27
+},
+{
+    "fields": {
+        "action_flag": 1,
+        "action_time": "2016-07-20T05:54:43.150Z",
+        "object_repr": "\u041b\u0443\u0433\u0430\u043d\u0441\u044c\u043a\u0430",
+        "object_id": "15",
+        "change_message": "",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "flowstands",
+            "region"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 28
+},
+{
+    "fields": {
+        "action_flag": 1,
+        "action_time": "2016-07-20T05:54:53.087Z",
+        "object_repr": "\u041b\u044c\u0432\u0456\u0432\u0441\u044c\u043a\u0430",
+        "object_id": "16",
+        "change_message": "",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "flowstands",
+            "region"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 29
+},
+{
+    "fields": {
+        "action_flag": 1,
+        "action_time": "2016-07-20T05:55:00.388Z",
+        "object_repr": "\u041c\u0438\u043a\u043e\u043b\u0430\u0457\u0432\u0441\u044c\u043a\u0430",
+        "object_id": "17",
+        "change_message": "",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "flowstands",
+            "region"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 30
+},
+{
+    "fields": {
+        "action_flag": 1,
+        "action_time": "2016-07-20T05:55:16.035Z",
+        "object_repr": "\u041e\u0434\u0435\u0441\u044c\u043a\u0430",
+        "object_id": "18",
+        "change_message": "",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "flowstands",
+            "region"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 31
+},
+{
+    "fields": {
+        "action_flag": 1,
+        "action_time": "2016-07-20T05:55:22.415Z",
+        "object_repr": "\u041f\u043e\u043b\u0442\u0430\u0432\u0441\u044c\u043a\u0430",
+        "object_id": "19",
+        "change_message": "",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "flowstands",
+            "region"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 32
+},
+{
+    "fields": {
+        "action_flag": 1,
+        "action_time": "2016-07-20T05:55:40.948Z",
+        "object_repr": "\u0420\u0456\u0432\u043d\u0435\u043d\u0441\u044c\u043a\u0430",
+        "object_id": "20",
+        "change_message": "",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "flowstands",
+            "region"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 33
+},
+{
+    "fields": {
+        "action_flag": 1,
+        "action_time": "2016-07-20T05:55:51.229Z",
+        "object_repr": "\u0421\u0443\u043c\u0441\u044c\u043a\u0430",
+        "object_id": "21",
+        "change_message": "",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "flowstands",
+            "region"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 34
+},
+{
+    "fields": {
+        "action_flag": 1,
+        "action_time": "2016-07-20T05:55:58.732Z",
+        "object_repr": "\u0422\u0435\u0440\u043d\u043e\u043f\u0456\u043b\u044c\u0441\u044c\u043a\u0430",
+        "object_id": "22",
+        "change_message": "",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "flowstands",
+            "region"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 35
+},
+{
+    "fields": {
+        "action_flag": 1,
+        "action_time": "2016-07-20T05:56:08.311Z",
+        "object_repr": "\u0425\u0430\u0440\u043a\u0456\u0432\u0441\u044c\u043a\u0430",
+        "object_id": "23",
+        "change_message": "",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "flowstands",
+            "region"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 36
+},
+{
+    "fields": {
+        "action_flag": 1,
+        "action_time": "2016-07-20T05:56:14.972Z",
+        "object_repr": "\u0425\u0435\u0440\u0441\u043e\u043d\u0441\u044c\u043a\u0430",
+        "object_id": "24",
+        "change_message": "",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "flowstands",
+            "region"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 37
+},
+{
+    "fields": {
+        "action_flag": 1,
+        "action_time": "2016-07-20T05:56:25.143Z",
+        "object_repr": "\u0425\u043c\u0435\u043b\u044c\u043d\u0438\u0446\u044c\u043a\u0430",
+        "object_id": "25",
+        "change_message": "",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "flowstands",
+            "region"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 38
+},
+{
+    "fields": {
+        "action_flag": 1,
+        "action_time": "2016-07-20T05:56:34.456Z",
+        "object_repr": "\u0427\u0435\u0440\u043a\u0430\u0441\u044c\u043a\u0430",
+        "object_id": "26",
+        "change_message": "",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "flowstands",
+            "region"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 39
+},
+{
+    "fields": {
+        "action_flag": 1,
+        "action_time": "2016-07-20T05:56:41.601Z",
+        "object_repr": "\u0427\u0435\u0440\u043d\u0456\u0432\u0435\u0446\u044c\u043a\u0430",
+        "object_id": "27",
+        "change_message": "",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "flowstands",
+            "region"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 40
+},
+{
+    "fields": {
+        "action_flag": 1,
+        "action_time": "2016-07-20T05:56:55.516Z",
+        "object_repr": "\u0427\u0435\u0440\u043d\u0456\u0433\u0456\u0432\u0441\u044c\u043a\u0430",
+        "object_id": "28",
+        "change_message": "",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "flowstands",
+            "region"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 41
+},
+{
+    "fields": {
+        "action_flag": 1,
+        "action_time": "2016-07-20T05:57:32.333Z",
+        "object_repr": "\u041f\u0410\u0422 \"\u0406\u0432\u0430\u043d\u043e-\u0424\u0440\u0430\u043d\u043a\u0456\u0432\u0441\u044c\u043a\u0433\u0430\u0437\"",
+        "object_id": "2",
+        "change_message": "",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "flowstands",
+            "customer"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 42
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2016-07-20T05:57:40.928Z",
+        "object_repr": "\u041f\u0410\u0422 \"\u0406\u0432\u0430\u043d\u043e-\u0424\u0440\u0430\u043d\u043a\u0456\u0432\u0441\u044c\u043a\u0433\u0430\u0437\"",
+        "object_id": "2",
+        "change_message": "\u0417\u043c\u0456\u043d\u0435\u043d\u043e agent.",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "flowstands",
+            "customer"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 43
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2016-07-20T06:47:26.666Z",
+        "object_repr": "\u0420\u0415\u041e\u0412\u0413-0,2, \u2116 012",
+        "object_id": "4",
+        "change_message": "\u0417\u043c\u0456\u043d\u0435\u043d\u043e region.",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "flowstands",
+            "flowstand"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 44
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2016-07-20T06:47:33.889Z",
+        "object_repr": "\u0423\u041f\u041b\u0413-1000, \u2116 006",
+        "object_id": "3",
+        "change_message": "\u0417\u043c\u0456\u043d\u0435\u043d\u043e region.",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "flowstands",
+            "flowstand"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 45
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2016-07-20T06:47:40.300Z",
+        "object_repr": "PVT-6M, \u2116 006",
+        "object_id": "2",
+        "change_message": "\u0417\u043c\u0456\u043d\u0435\u043d\u043e region.",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "flowstands",
+            "flowstand"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 46
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2016-07-20T06:47:45.370Z",
+        "object_repr": "\u041f\u0423\u041b\u0413-7\u0410, \u2116 001",
+        "object_id": "1",
+        "change_message": "\u0417\u043c\u0456\u043d\u0435\u043d\u043e region.",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "flowstands",
+            "flowstand"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 47
+},
+{
+    "fields": {
+        "action_flag": 1,
+        "action_time": "2016-07-20T06:50:49.170Z",
+        "object_repr": "\u041f\u0410\u0422 \"\u0425\u043c\u0435\u043b\u044c\u043d\u0438\u0446\u044c\u043a\u0433\u0430\u0437\"",
+        "object_id": "3",
+        "change_message": "",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "flowstands",
+            "customer"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 48
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2016-07-20T06:50:59.138Z",
+        "object_repr": "\u0420\u0415\u041e\u0412\u0413-0,2, \u2116 012",
+        "object_id": "4",
+        "change_message": "\u0417\u043c\u0456\u043d\u0435\u043d\u043e customer.",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "flowstands",
+            "flowstand"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 49
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2016-07-20T06:51:04.458Z",
+        "object_repr": "\u0423\u041f\u041b\u0413-1000, \u2116 006",
+        "object_id": "3",
+        "change_message": "\u0417\u043c\u0456\u043d\u0435\u043d\u043e customer.",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "flowstands",
+            "flowstand"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 50
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2016-07-20T06:51:11.010Z",
+        "object_repr": "PVT-6M, \u2116 006",
+        "object_id": "2",
+        "change_message": "\u0417\u043c\u0456\u043d\u0435\u043d\u043e customer.",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "flowstands",
+            "flowstand"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 51
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2016-07-20T06:51:16.985Z",
+        "object_repr": "\u041f\u0423\u041b\u0413-7\u0410, \u2116 001",
+        "object_id": "1",
+        "change_message": "\u0417\u043c\u0456\u043d\u0435\u043d\u043e customer.",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "flowstands",
+            "flowstand"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 52
+},
+{
+    "fields": {
+        "action_flag": 1,
+        "action_time": "2016-07-20T06:54:56.789Z",
+        "object_repr": "\u0422\u0437\u041e\u0412 \"\u0406\u0432\u0430\u043d\u043e-\u0424\u0440\u0430\u043d\u043a\u0456\u0432\u0441\u044c\u043a\u0435 \u0421\u041a\u0411 \u0417\u0410\"",
+        "object_id": "2",
+        "change_message": "",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "flowstands",
+            "manufactor"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 53
+},
+{
+    "fields": {
+        "action_flag": 1,
+        "action_time": "2016-07-20T06:55:20.985Z",
+        "object_repr": "\u0422\u0437\u041e\u0412 \"\u041d\u0412\u0426 \"\u041d\u043e\u0432\u0430\u0442\u043e\u0440\"",
+        "object_id": "3",
+        "change_message": "",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "flowstands",
+            "manufactor"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 54
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2016-07-20T06:55:31.608Z",
+        "object_repr": "\u0420\u0415\u041e\u0412\u0413-0,2, \u2116 012",
+        "object_id": "4",
+        "change_message": "\u0417\u043c\u0456\u043d\u0435\u043d\u043e manufactor.",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "flowstands",
+            "flowstand"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 55
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2016-07-20T06:55:37.256Z",
+        "object_repr": "\u0423\u041f\u041b\u0413-1000, \u2116 006",
+        "object_id": "3",
+        "change_message": "\u0417\u043c\u0456\u043d\u0435\u043d\u043e manufactor.",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "flowstands",
+            "flowstand"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 56
+},
+{
+    "fields": {
+        "action_flag": 1,
+        "action_time": "2016-07-20T06:55:53.823Z",
+        "object_repr": "\u041f\u0410\u0422 \"\u0406\u0432\u0430\u043d\u043e-\u0424\u0440\u0430\u043d\u043a\u0456\u0432\u0441\u044c\u043a\u0433\u0430\u0437\"",
+        "object_id": "4",
+        "change_message": "",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "flowstands",
+            "manufactor"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 57
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2016-07-20T06:56:02.933Z",
+        "object_repr": "PVT-6M, \u2116 006",
+        "object_id": "2",
+        "change_message": "\u0417\u043c\u0456\u043d\u0435\u043d\u043e manufactor.",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "flowstands",
+            "flowstand"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 58
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2016-07-20T06:56:09.969Z",
+        "object_repr": "\u041f\u0423\u041b\u0413-7\u0410, \u2116 001",
+        "object_id": "1",
+        "change_message": "\u0417\u043c\u0456\u043d\u0435\u043d\u043e manufactor.",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "flowstands",
+            "flowstand"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 59
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2016-07-20T10:06:33.911Z",
+        "object_repr": "\u041f\u0410\u0422 \"\u0406\u0432\u0430\u043d\u043e-\u0424\u0440\u0430\u043d\u043a\u0456\u0432\u0441\u044c\u043a\u0433\u0430\u0437\"",
+        "object_id": "4",
+        "change_message": "\u0417\u043c\u0456\u043d\u0435\u043d\u043e address.",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "flowstands",
+            "manufactor"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 60
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2016-07-20T10:07:25.922Z",
+        "object_repr": "\u0422\u0437\u041e\u0412 \"\u0406\u0412\u0424 \"\u0422\u0435\u043c\u043f\u043e\"",
+        "object_id": "1",
+        "change_message": "\u0417\u043c\u0456\u043d\u0435\u043d\u043e address.",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "flowstands",
+            "manufactor"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 61
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2016-07-20T10:11:17.457Z",
+        "object_repr": "\u041f\u0410\u0422 \"\u0406\u0432\u0430\u043d\u043e-\u0424\u0440\u0430\u043d\u043a\u0456\u0432\u0441\u044c\u043a\u0433\u0430\u0437\"",
+        "object_id": "2",
+        "change_message": "\u0417\u043c\u0456\u043d\u0435\u043d\u043e agent, address, contacts \u0442\u0430 email.",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "flowstands",
+            "customer"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 62
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2016-07-20T10:17:19.267Z",
+        "object_repr": "\u041f\u0410\u0422 \"\u0425\u043c\u0435\u043b\u044c\u043d\u0438\u0446\u044c\u043a\u0433\u0430\u0437\"",
+        "object_id": "3",
+        "change_message": "\u0417\u043c\u0456\u043d\u0435\u043d\u043e agent, address, contacts \u0442\u0430 email.",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "flowstands",
+            "customer"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 63
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2016-07-20T10:24:40.415Z",
+        "object_repr": "\u0422\u0437\u041e\u0412 \"\u041d\u0412\u0426 \"\u041d\u043e\u0432\u0430\u0442\u043e\u0440\"",
+        "object_id": "3",
+        "change_message": "\u0417\u043c\u0456\u043d\u0435\u043d\u043e agent \u0442\u0430 address.",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "flowstands",
+            "manufactor"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 64
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2016-07-20T10:25:09.680Z",
+        "object_repr": "\u0422\u0437\u041e\u0412 \"\u0406\u0432\u0430\u043d\u043e-\u0424\u0440\u0430\u043d\u043a\u0456\u0432\u0441\u044c\u043a\u0435 \u0421\u041a\u0411 \u0417\u0410\"",
+        "object_id": "2",
+        "change_message": "\u0417\u043c\u0456\u043d\u0435\u043d\u043e agent \u0442\u0430 address.",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "flowstands",
+            "manufactor"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 65
+},
+{
+    "fields": {
+        "action_flag": 1,
+        "action_time": "2016-07-20T10:30:12.216Z",
+        "object_repr": "\u041f\u0410\u0422 \"\u0412\u0456\u043d\u043d\u0438\u0446\u044f\u0433\u0430\u0437\"",
+        "object_id": "4",
+        "change_message": "",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "flowstands",
+            "customer"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 66
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2016-07-20T10:30:56.255Z",
+        "object_repr": "\u041f\u0410\u0422 \"\u0412\u0456\u043d\u043d\u0438\u0446\u044f\u0433\u0430\u0437\"",
+        "object_id": "4",
+        "change_message": "\u0417\u043c\u0456\u043d\u0435\u043d\u043e contacts.",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "flowstands",
+            "customer"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 67
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2016-07-20T10:31:15.696Z",
+        "object_repr": "\u041f\u0410\u0422 \"\u0412\u0456\u043d\u043d\u0438\u0446\u044f\u0433\u0430\u0437\"",
+        "object_id": "4",
+        "change_message": "\u0417\u043c\u0456\u043d\u0435\u043d\u043e contacts.",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "flowstands",
+            "customer"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 68
+},
+{
+    "fields": {
+        "action_flag": 1,
+        "action_time": "2016-07-20T10:51:17.074Z",
+        "object_repr": "\u041f\u0410\u0422 \"\u0412\u043e\u043b\u0438\u043d\u044c\u0433\u0430\u0437\"",
+        "object_id": "5",
+        "change_message": "",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "flowstands",
+            "customer"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 69
+},
+{
+    "fields": {
+        "action_flag": 1,
+        "action_time": "2016-07-20T10:54:35.791Z",
+        "object_repr": "\u0422\u0437\u041e\u0412 \"\u041d\u0412\u041f \"\u0412\u0435\u043a\u0442\u043e\u0440\"",
+        "object_id": "5",
+        "change_message": "",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "flowstands",
+            "manufactor"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 70
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2016-07-20T10:54:58.832Z",
+        "object_repr": "\u0422\u0437\u041e\u0412 \"\u041d\u0412\u041f \"\u0412\u0435\u043a\u0442\u043e\u0440\"",
+        "object_id": "5",
+        "change_message": "\u0417\u043c\u0456\u043d\u0435\u043d\u043e contacts.",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "flowstands",
+            "manufactor"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 71
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2016-07-20T10:56:23.821Z",
+        "object_repr": "\u041f\u0410\u0422 \"\u0406\u0432\u0430\u043d\u043e-\u0424\u0440\u0430\u043d\u043a\u0456\u0432\u0441\u044c\u043a\u0433\u0430\u0437\"",
+        "object_id": "4",
+        "change_message": "\u0417\u043c\u0456\u043d\u0435\u043d\u043e agent, address, contacts \u0442\u0430 email.",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "flowstands",
+            "manufactor"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 72
+},
+{
+    "fields": {
+        "action_flag": 1,
+        "action_time": "2016-07-20T11:03:38.471Z",
+        "object_repr": "\u041f\u0410\u0422 \"\u0417\u0430\u043a\u0430\u0440\u043f\u0430\u0442\u0433\u0430\u0437\"",
+        "object_id": "6",
+        "change_message": "",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "flowstands",
+            "customer"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 73
+},
+{
+    "fields": {
+        "action_flag": 1,
+        "action_time": "2016-07-20T11:06:48.158Z",
+        "object_repr": "\u041f\u0410\u0422 \"\u0422\u0435\u0440\u043d\u043e\u043f\u0456\u043b\u044c\u0433\u0430\u0437\"",
+        "object_id": "7",
+        "change_message": "",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "flowstands",
+            "customer"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 74
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2016-07-20T11:08:16.427Z",
+        "object_repr": "\u041f\u0410\u0422 \"\u0422\u0435\u0440\u043d\u043e\u043f\u0456\u043b\u044c\u0433\u0430\u0437\"",
+        "object_id": "7",
+        "change_message": "\u0417\u043c\u0456\u043d\u0435\u043d\u043e agent.",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "flowstands",
+            "customer"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 75
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2016-07-20T11:08:38.395Z",
+        "object_repr": "\u041f\u0410\u0422 \"\u0422\u0435\u0440\u043d\u043e\u043f\u0456\u043b\u044c\u0433\u0430\u0437\"",
+        "object_id": "7",
+        "change_message": "\u0417\u043c\u0456\u043d\u0435\u043d\u043e email.",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "flowstands",
+            "customer"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 76
+},
+{
+    "fields": {
+        "action_flag": 1,
+        "action_time": "2016-07-20T11:12:28.126Z",
+        "object_repr": "\u041f\u0410\u0422 \"\u0427\u0435\u0440\u043d\u0456\u0432\u0446\u0456\u0433\u0430\u0437\"",
+        "object_id": "8",
+        "change_message": "",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "flowstands",
+            "customer"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 77
+},
+{
+    "fields": {
+        "action_flag": 1,
+        "action_time": "2016-07-20T11:14:14.373Z",
+        "object_repr": "\u041f\u0410\u0422 \"\u0420\u0456\u0432\u043d\u0435\u0433\u0430\u0437\"",
+        "object_id": "9",
+        "change_message": "",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "flowstands",
+            "customer"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 78
+},
+{
+    "fields": {
+        "action_flag": 1,
+        "action_time": "2016-07-20T11:17:11.541Z",
+        "object_repr": "\u041f\u0410\u0422 \"\u0416\u0438\u0442\u043e\u043c\u0438\u0440\u0433\u0430\u0437\"",
+        "object_id": "10",
+        "change_message": "",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "flowstands",
+            "customer"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 79
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2016-07-20T11:19:21.647Z",
+        "object_repr": "\u041f\u0410\u0422 \"\u0420\u0456\u0432\u043d\u0435\u0433\u0430\u0437\"",
+        "object_id": "9",
+        "change_message": "\u0417\u043c\u0456\u043d\u0435\u043d\u043e contacts.",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "flowstands",
+            "customer"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 80
+},
+{
+    "fields": {
+        "action_flag": 1,
+        "action_time": "2016-07-20T11:22:57.739Z",
+        "object_repr": "\u041f\u0410\u0422 \"\u041a\u0438\u0457\u0432\u043e\u0431\u043b\u0433\u0430\u0437\"",
+        "object_id": "11",
+        "change_message": "",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "flowstands",
+            "customer"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 81
+},
+{
+    "fields": {
+        "action_flag": 1,
+        "action_time": "2016-07-20T11:28:11.736Z",
+        "object_repr": "\u041f\u0410\u0422 \"\u041a\u0438\u0457\u0432\u0433\u0430\u0437\"",
+        "object_id": "12",
+        "change_message": "",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "flowstands",
+            "customer"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 82
+},
+{
+    "fields": {
+        "action_flag": 1,
+        "action_time": "2016-07-20T11:31:13.884Z",
+        "object_repr": "\u041f\u0410\u0422 \"\u0422\u0435\u0440\u043d\u043e\u043f\u0456\u043b\u044c\u043c\u0456\u0441\u044c\u043a\u0433\u0430\u0437\"",
+        "object_id": "13",
+        "change_message": "",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "flowstands",
+            "customer"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 83
+},
+{
+    "fields": {
+        "action_flag": 1,
+        "action_time": "2016-07-20T11:35:19.579Z",
+        "object_repr": "\u041f\u0410\u0422 \"\u041e\u0434\u0435\u0441\u0430\u0433\u0430\u0437\"",
+        "object_id": "14",
+        "change_message": "",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "flowstands",
+            "customer"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 84
+},
+{
+    "fields": {
+        "action_flag": 1,
+        "action_time": "2016-07-20T11:39:06.400Z",
+        "object_repr": "\u041f\u0410\u0422 \"\u0427\u0435\u0440\u043a\u0430\u0441\u0438\u0433\u0430\u0437\"",
+        "object_id": "15",
+        "change_message": "",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "flowstands",
+            "customer"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 85
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2016-07-21T05:26:52.147Z",
+        "object_repr": "\u0420\u0415\u041e\u0412\u0413-0,2, \u2116 012",
+        "object_id": "4",
+        "change_message": "\u0417\u043c\u0456\u043d\u0435\u043d\u043e traceability.",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "flowstands",
+            "flowstand"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 86
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2016-07-21T05:30:46.958Z",
+        "object_repr": "\u0423\u041f\u041b\u0413-1000, \u2116 006 \u041f\u0410\u0422 \"\u0425\u043c\u0435\u043b\u044c\u043d\u0438\u0446\u044c\u043a\u0433\u0430\u0437\"",
+        "object_id": "3",
+        "change_message": "\u0417\u043c\u0456\u043d\u0435\u043d\u043e traceability.",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "flowstands",
+            "flowstand"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 87
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2016-07-21T05:30:54.025Z",
+        "object_repr": "PVT-6M, \u2116 006 \u041f\u0410\u0422 \"\u0406\u0432\u0430\u043d\u043e-\u0424\u0440\u0430\u043d\u043a\u0456\u0432\u0441\u044c\u043a\u0433\u0430\u0437\"",
+        "object_id": "2",
+        "change_message": "\u0417\u043c\u0456\u043d\u0435\u043d\u043e traceability.",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "flowstands",
+            "flowstand"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 88
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2016-07-21T05:30:59.438Z",
+        "object_repr": "\u041f\u0423\u041b\u0413-7\u0410, \u2116 001 \u041f\u0410\u0422 \"\u0406\u0432\u0430\u043d\u043e-\u0424\u0440\u0430\u043d\u043a\u0456\u0432\u0441\u044c\u043a\u0433\u0430\u0437\"",
+        "object_id": "1",
+        "change_message": "\u0417\u043c\u0456\u043d\u0435\u043d\u043e traceability.",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "flowstands",
+            "flowstand"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 89
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2016-07-21T08:09:20.090Z",
+        "object_repr": "PVT-6M, \u2116 \u0431/\u043d \u041f\u0410\u0422 \"\u0406\u0432\u0430\u043d\u043e-\u0424\u0440\u0430\u043d\u043a\u0456\u0432\u0441\u044c\u043a\u0433\u0430\u0437\"",
+        "object_id": "2",
+        "change_message": "\u0417\u043c\u0456\u043d\u0435\u043d\u043e serial_number \u0442\u0430 certificate.",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "flowstands",
+            "flowstand"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 90
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2016-07-21T08:10:09.074Z",
+        "object_repr": "\u041f\u0423\u041b\u0413-1, \u2116 \u0431/\u043d \u041f\u0410\u0422 \"\u0406\u0432\u0430\u043d\u043e-\u0424\u0440\u0430\u043d\u043a\u0456\u0432\u0441\u044c\u043a\u0433\u0430\u0437\"",
+        "object_id": "1",
+        "change_message": "\u0417\u043c\u0456\u043d\u0435\u043d\u043e name, serial_number \u0442\u0430 certificate.",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "flowstands",
+            "flowstand"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 91
+},
+{
+    "fields": {
+        "action_flag": 1,
+        "action_time": "2016-07-21T08:11:47.401Z",
+        "object_repr": "\u0406\u0424\u0413\u0410\u0417-1, \u2116 \u0431/\u043d \u041f\u0410\u0422 \"\u0406\u0432\u0430\u043d\u043e-\u0424\u0440\u0430\u043d\u043a\u0456\u0432\u0441\u044c\u043a\u0433\u0430\u0437\"",
+        "object_id": "5",
+        "change_message": "",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "flowstands",
+            "flowstand"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 92
+},
+{
+    "fields": {
+        "action_flag": 1,
+        "action_time": "2016-07-21T08:12:44.965Z",
+        "object_repr": "\u0406\u0424\u0413\u0410\u0417-2, \u2116 \u0431/\u043d \u041f\u0410\u0422 \"\u0406\u0432\u0430\u043d\u043e-\u0424\u0440\u0430\u043d\u043a\u0456\u0432\u0441\u044c\u043a\u0433\u0430\u0437\"",
+        "object_id": "6",
+        "change_message": "",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "flowstands",
+            "flowstand"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 93
+},
+{
+    "fields": {
+        "action_flag": 1,
+        "action_time": "2016-07-21T08:16:45.564Z",
+        "object_repr": "\u0414\u043e\u043b\u0438\u043d\u0441\u044c\u043a\u0435 \u0423\u0415\u0413\u0413 \u041f\u0410\u0422 \"\u0406\u0432\u0430\u043d\u043e-\u0424\u0440\u0430\u043d\u043a\u0456\u0432\u0441\u044c\u043a\u0433\u0430\u0437\"",
+        "object_id": "16",
+        "change_message": "",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "flowstands",
+            "customer"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 94
+},
+{
+    "fields": {
+        "action_flag": 1,
+        "action_time": "2016-07-21T08:17:34.829Z",
+        "object_repr": "\u0406\u0424\u0413\u0410\u0417-PVT, \u2116 \u0431/\u043d \u0414\u043e\u043b\u0438\u043d\u0441\u044c\u043a\u0435 \u0423\u0415\u0413\u0413 \u041f\u0410\u0422 \"\u0406\u0432\u0430\u043d\u043e-\u0424\u0440\u0430\u043d\u043a\u0456\u0432\u0441\u044c\u043a\u0433\u0430\u0437\"",
+        "object_id": "7",
+        "change_message": "",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "flowstands",
+            "flowstand"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 95
+},
+{
+    "fields": {
+        "action_flag": 1,
+        "action_time": "2016-07-21T08:41:18.791Z",
+        "object_repr": "\u0413\u043e\u0440\u043e\u0434\u0435\u043d\u043a\u0456\u0432\u0441\u044c\u043a\u0435 \u0423\u0415\u0413\u0413",
+        "object_id": "17",
+        "change_message": "",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "flowstands",
+            "customer"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 96
+},
+{
+    "fields": {
+        "action_flag": 1,
+        "action_time": "2016-07-21T08:42:04.943Z",
+        "object_repr": "\u0406\u0424\u0413\u0410\u0417-PVT, \u2116 \u0431/\u043d \u0413\u043e\u0440\u043e\u0434\u0435\u043d\u043a\u0456\u0432\u0441\u044c\u043a\u0435 \u0423\u0415\u0413\u0413",
+        "object_id": "8",
+        "change_message": "",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "flowstands",
+            "flowstand"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 97
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2016-07-21T08:42:23.306Z",
+        "object_repr": "\u0413\u043e\u0440\u043e\u0434\u0435\u043d\u043a\u0456\u0432\u0441\u044c\u043a\u0435 \u0423\u0415\u0413\u0413 \u041f\u0410\u0422 \"\u0406\u0432\u0430\u043d\u043e-\u0424\u0440\u0430\u043d\u043a\u0456\u0432\u0441\u044c\u043a\u0433\u0430\u0437\"",
+        "object_id": "17",
+        "change_message": "\u0417\u043c\u0456\u043d\u0435\u043d\u043e name.",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "flowstands",
+            "customer"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 98
+},
+{
+    "fields": {
+        "action_flag": 1,
+        "action_time": "2016-07-21T08:45:06.986Z",
+        "object_repr": "\u041f\u0410\u0422 \"\u0406\u0432\u0430\u043d\u043e-\u0424\u0440\u0430\u043d\u043a\u0456\u0432\u0441\u044c\u043a\u0438\u0439 \u0437\u0430\u0432\u043e\u0434 \"\u041f\u0440\u043e\u043c\u043f\u0440\u0438\u043b\u0430\u0434\"",
+        "object_id": "18",
+        "change_message": "",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "flowstands",
+            "customer"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 99
+},
+{
+    "fields": {
+        "action_flag": 1,
+        "action_time": "2016-07-21T08:46:10.057Z",
+        "object_repr": "\u0423\u0441\u0442\u0430\u043d\u043e\u0432\u043a\u0430 \u0434\u043b\u044f \u043f\u043e\u0432\u0456\u0440\u043a\u0438 \u043f\u0440\u043e\u043c\u0438\u0441\u043b\u043e\u0432\u0438\u0445 \u043b\u0456\u0447\u0438\u043b\u044c\u043d\u0438\u043a\u0456\u0432 \u0433\u0430\u0437\u0443 \u0442\u0438\u043f\u0443 \u0420\u0413 \"\u0422\u0415\u041c\u041f\u041e-11\", \u2116 \u041f\u041c-08-001 \u041f\u0410\u0422 \"\u0406\u0432\u0430\u043d\u043e-\u0424\u0440\u0430\u043d\u043a\u0456\u0432\u0441\u044c\u043a\u0438\u0439 \u0437\u0430\u0432\u043e\u0434 \"\u041f\u0440\u043e\u043c\u043f\u0440\u0438\u043b\u0430\u0434\"",
+        "object_id": "9",
+        "change_message": "",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "flowstands",
+            "flowstand"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 100
+},
+{
+    "fields": {
+        "action_flag": 1,
+        "action_time": "2016-07-21T08:48:03.953Z",
+        "object_repr": "\u041f\u0410\u0422 \"\u0406\u0432\u0430\u043d\u043e-\u0424\u0440\u0430\u043d\u043a\u0456\u0432\u0441\u044c\u043a\u0438\u0439 \u0437\u0430\u0432\u043e\u0434 \"\u041f\u0440\u043e\u043c\u043f\u0440\u0438\u043b\u0430\u0434\"",
+        "object_id": "6",
+        "change_message": "",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "flowstands",
+            "manufactor"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 101
+},
+{
+    "fields": {
+        "action_flag": 1,
+        "action_time": "2016-07-21T08:48:20.551Z",
+        "object_repr": "\u0420\u043e\u0431\u043e\u0447\u0438\u0439 \u0435\u0442\u0430\u043b\u043e\u043d \u0434\u0437\u0432\u043e\u043d\u043e\u0432\u043e\u0433\u043e \u0442\u0438\u043f\u0443 \u0420\u041a\u0414\u0423-2,8, \u2116 \u0431/\u043d \u041f\u0410\u0422 \"\u0406\u0432\u0430\u043d\u043e-\u0424\u0440\u0430\u043d\u043a\u0456\u0432\u0441\u044c\u043a\u0438\u0439 \u0437\u0430\u0432\u043e\u0434 \"\u041f\u0440\u043e\u043c\u043f\u0440\u0438\u043b\u0430\u0434\"",
+        "object_id": "10",
+        "change_message": "",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "flowstands",
+            "flowstand"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 102
+},
+{
+    "fields": {
+        "action_flag": 1,
+        "action_time": "2016-07-21T08:49:38.754Z",
+        "object_repr": "\u0420\u043e\u0431\u043e\u0447\u0438\u0439 \u0435\u0442\u0430\u043b\u043e\u043d \u0434\u0437\u0432\u043e\u043d\u043e\u0432\u043e\u0433\u043e \u0442\u0438\u043f\u0443 \u0420\u041a\u0414\u0423-0,44, \u2116 \u0431/\u043d \u041f\u0410\u0422 \"\u0406\u0432\u0430\u043d\u043e-\u0424\u0440\u0430\u043d\u043a\u0456\u0432\u0441\u044c\u043a\u0438\u0439 \u0437\u0430\u0432\u043e\u0434 \"\u041f\u0440\u043e\u043c\u043f\u0440\u0438\u043b\u0430\u0434\"",
+        "object_id": "11",
+        "change_message": "",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "flowstands",
+            "flowstand"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 103
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2016-07-21T08:50:01.499Z",
+        "object_repr": "\"\u0422\u0415\u041c\u041f\u041e-11\", \u2116 \u041f\u041c-08-001 \u041f\u0410\u0422 \"\u0406\u0432\u0430\u043d\u043e-\u0424\u0440\u0430\u043d\u043a\u0456\u0432\u0441\u044c\u043a\u0438\u0439 \u0437\u0430\u0432\u043e\u0434 \"\u041f\u0440\u043e\u043c\u043f\u0440\u0438\u043b\u0430\u0434\"",
+        "object_id": "9",
+        "change_message": "\u0417\u043c\u0456\u043d\u0435\u043d\u043e name.",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "flowstands",
+            "flowstand"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 104
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2016-07-21T08:50:18.425Z",
+        "object_repr": "\u0420\u041a\u0414\u0423-2,8, \u2116 \u0431/\u043d \u041f\u0410\u0422 \"\u0406\u0432\u0430\u043d\u043e-\u0424\u0440\u0430\u043d\u043a\u0456\u0432\u0441\u044c\u043a\u0438\u0439 \u0437\u0430\u0432\u043e\u0434 \"\u041f\u0440\u043e\u043c\u043f\u0440\u0438\u043b\u0430\u0434\"",
+        "object_id": "10",
+        "change_message": "\u0417\u043c\u0456\u043d\u0435\u043d\u043e name.",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "flowstands",
+            "flowstand"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 105
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2016-07-21T08:50:26.646Z",
+        "object_repr": "\u0420\u041a\u0414\u0423-0,44, \u2116 \u0431/\u043d \u041f\u0410\u0422 \"\u0406\u0432\u0430\u043d\u043e-\u0424\u0440\u0430\u043d\u043a\u0456\u0432\u0441\u044c\u043a\u0438\u0439 \u0437\u0430\u0432\u043e\u0434 \"\u041f\u0440\u043e\u043c\u043f\u0440\u0438\u043b\u0430\u0434\"",
+        "object_id": "11",
+        "change_message": "\u0417\u043c\u0456\u043d\u0435\u043d\u043e name.",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "flowstands",
+            "flowstand"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 106
+},
+{
+    "fields": {
+        "action_flag": 1,
+        "action_time": "2016-07-21T09:05:42.680Z",
+        "object_repr": "\u0420\u0415\u041e\u0412\u0413-0,5, \u2116 \u0431/\u043d \u041f\u0410\u0422 \"\u0406\u0432\u0430\u043d\u043e-\u0424\u0440\u0430\u043d\u043a\u0456\u0432\u0441\u044c\u043a\u0438\u0439 \u0437\u0430\u0432\u043e\u0434 \"\u041f\u0440\u043e\u043c\u043f\u0440\u0438\u043b\u0430\u0434\"",
+        "object_id": "12",
+        "change_message": "",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "flowstands",
+            "flowstand"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 107
+},
+{
+    "fields": {
+        "action_flag": 1,
+        "action_time": "2016-07-21T09:07:08.168Z",
+        "object_repr": "\u0423\u041f\u041a - 2500, \u2116 003 \u041f\u0410\u0422 \"\u0406\u0432\u0430\u043d\u043e-\u0424\u0440\u0430\u043d\u043a\u0456\u0432\u0441\u044c\u043a\u0438\u0439 \u0437\u0430\u0432\u043e\u0434 \"\u041f\u0440\u043e\u043c\u043f\u0440\u0438\u043b\u0430\u0434\"",
+        "object_id": "13",
+        "change_message": "",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "flowstands",
+            "flowstand"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 108
+},
+{
+    "fields": {
+        "action_flag": 1,
+        "action_time": "2016-07-21T09:08:07.136Z",
+        "object_repr": "\u041d\u0412\u0424 \"\u0422\u0435\u043c\u043f\"",
+        "object_id": "19",
+        "change_message": "",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "flowstands",
+            "customer"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 109
+},
+{
+    "fields": {
+        "action_flag": 1,
+        "action_time": "2016-07-21T09:08:52.033Z",
+        "object_repr": "\u0422\u0435\u043c\u043f-6, \u2116 01 \u041d\u0412\u0424 \"\u0422\u0435\u043c\u043f\"",
+        "object_id": "14",
+        "change_message": "",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "flowstands",
+            "flowstand"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 110
+},
+{
+    "fields": {
+        "action_flag": 1,
+        "action_time": "2016-07-21T09:10:59.064Z",
+        "object_repr": "\u0422\u0437\u041e\u0412 \"\u0406\u0412\u0424 \"\u0422\u0435\u043c\u043f\u043e\"",
+        "object_id": "20",
+        "change_message": "",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "flowstands",
+            "customer"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 111
+},
+{
+    "fields": {
+        "action_flag": 1,
+        "action_time": "2016-07-21T09:11:39.249Z",
+        "object_repr": "\u0422\u0435\u043c\u043f\u043e-1, \u2116 1 \u0422\u0437\u041e\u0412 \"\u0406\u0412\u0424 \"\u0422\u0435\u043c\u043f\u043e\"",
+        "object_id": "15",
+        "change_message": "",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "flowstands",
+            "flowstand"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 112
+},
+{
+    "fields": {
+        "action_flag": 1,
+        "action_time": "2016-07-21T09:12:27.563Z",
+        "object_repr": "\u0422\u0435\u043c\u043f\u043e-2, \u2116 2 \u0422\u0437\u041e\u0412 \"\u0406\u0412\u0424 \"\u0422\u0435\u043c\u043f\u043e\"",
+        "object_id": "16",
+        "change_message": "",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "flowstands",
+            "flowstand"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 113
+},
+{
+    "fields": {
+        "action_flag": 1,
+        "action_time": "2016-07-21T09:15:12.833Z",
+        "object_repr": "\u041f\u0410\u0422 \"\u0422\u0438\u0441\u043c\u0435\u043d\u0438\u0446\u044f\u0433\u0430\u0437\"",
+        "object_id": "21",
+        "change_message": "",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "flowstands",
+            "customer"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 114
+},
+{
+    "fields": {
+        "action_flag": 1,
+        "action_time": "2016-07-21T09:15:59.322Z",
+        "object_repr": "\u0422\u0435\u043c\u043f\u043e-3 \u041c\u0420, \u2116 05-07 \u041f\u0410\u0422 \"\u0422\u0438\u0441\u043c\u0435\u043d\u0438\u0446\u044f\u0433\u0430\u0437\"",
+        "object_id": "17",
+        "change_message": "",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "flowstands",
+            "flowstand"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 115
+},
+{
+    "fields": {
+        "action_flag": 1,
+        "action_time": "2016-07-21T09:20:45.478Z",
+        "object_repr": "\u0422\u041e\u0412 \u041d\u0412\u0426 \"\u0406\u043d\u0444\u043e\u0440\u043c\u0430\u0446\u0456\u0439\u043d\u043e-\u0432\u0438\u043c\u0456\u0440\u044e\u0432\u0430\u043b\u044c\u043d\u0456 \u0442\u0435\u0445\u043d\u043e\u043b\u043e\u0433\u0456\u0457\"",
+        "object_id": "22",
+        "change_message": "",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "flowstands",
+            "customer"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 116
+},
+{
+    "fields": {
+        "action_flag": 1,
+        "action_time": "2016-07-21T09:21:45.273Z",
+        "object_repr": "\u0422\u041e\u0412 \u041d\u0412\u0426 \"\u0406\u043d\u0444\u043e\u0440\u043c\u0430\u0446\u0456\u0439\u043d\u043e-\u0432\u0438\u043c\u0456\u0440\u044e\u0432\u0430\u043b\u044c\u043d\u0456 \u0442\u0435\u0445\u043d\u043e\u043b\u043e\u0433\u0456\u0457\"",
+        "object_id": "7",
+        "change_message": "",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "flowstands",
+            "manufactor"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 117
+},
+{
+    "fields": {
+        "action_flag": 1,
+        "action_time": "2016-07-21T09:22:02.526Z",
+        "object_repr": "\u0423\u041f\u041b\u0413 - 1200, \u2116 001 \u0422\u041e\u0412 \u041d\u0412\u0426 \"\u0406\u043d\u0444\u043e\u0440\u043c\u0430\u0446\u0456\u0439\u043d\u043e-\u0432\u0438\u043c\u0456\u0440\u044e\u0432\u0430\u043b\u044c\u043d\u0456 \u0442\u0435\u0445\u043d\u043e\u043b\u043e\u0433\u0456\u0457\"",
+        "object_id": "18",
+        "change_message": "",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "flowstands",
+            "flowstand"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 118
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2016-07-21T10:30:09.502Z",
+        "object_repr": "\u041f\u0410\u0422 \"\u0422\u0435\u0440\u043d\u043e\u043f\u0456\u043b\u044c\u0433\u0430\u0437\"",
+        "object_id": "7",
+        "change_message": "\u0417\u043c\u0456\u043d\u0435\u043d\u043e contacts.",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "flowstands",
+            "customer"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 119
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2016-07-27T05:30:50.585Z",
+        "object_repr": "\u0423\u041f\u041b\u0413 - 1200, \u2116 001 \u0422\u041e\u0412 \u041d\u0412\u0426 \"\u0406\u043d\u0444\u043e\u0440\u043c\u0430\u0446\u0456\u0439\u043d\u043e-\u0432\u0438\u043c\u0456\u0440\u044e\u0432\u0430\u043b\u044c\u043d\u0456 \u0442\u0435\u0445\u043d\u043e\u043b\u043e\u0433\u0456\u0457\"",
+        "object_id": "18",
+        "change_message": "\u0417\u043c\u0456\u043d\u0435\u043d\u043e date_calibr.",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "flowstands",
+            "flowstand"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 120
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2016-07-27T05:31:01.801Z",
+        "object_repr": "\u0422\u0435\u043c\u043f\u043e-1, \u2116 1 \u0422\u0437\u041e\u0412 \"\u0406\u0412\u0424 \"\u0422\u0435\u043c\u043f\u043e\"",
+        "object_id": "15",
+        "change_message": "\u0417\u043c\u0456\u043d\u0435\u043d\u043e date_calibr.",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "flowstands",
+            "flowstand"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 121
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2016-07-27T05:51:38.043Z",
+        "object_repr": "\u0423\u041f\u041b\u0413 - 1200, \u2116 001 \u0422\u041e\u0412 \u041d\u0412\u0426 \"\u0406\u043d\u0444\u043e\u0440\u043c\u0430\u0446\u0456\u0439\u043d\u043e-\u0432\u0438\u043c\u0456\u0440\u044e\u0432\u0430\u043b\u044c\u043d\u0456 \u0442\u0435\u0445\u043d\u043e\u043b\u043e\u0433\u0456\u0457\"",
+        "object_id": "18",
+        "change_message": "\u0417\u043c\u0456\u043d\u0435\u043d\u043e date_calibr.",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "flowstands",
+            "flowstand"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 122
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2016-07-27T05:51:45.968Z",
+        "object_repr": "\u0423\u041f\u041b\u0413 - 1200, \u2116 001 \u0422\u041e\u0412 \u041d\u0412\u0426 \"\u0406\u043d\u0444\u043e\u0440\u043c\u0430\u0446\u0456\u0439\u043d\u043e-\u0432\u0438\u043c\u0456\u0440\u044e\u0432\u0430\u043b\u044c\u043d\u0456 \u0442\u0435\u0445\u043d\u043e\u043b\u043e\u0433\u0456\u0457\"",
+        "object_id": "18",
+        "change_message": "\u0417\u043c\u0456\u043d\u0435\u043d\u043e certificate.",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "flowstands",
+            "flowstand"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 123
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2016-07-27T06:11:57.276Z",
+        "object_repr": "\u0422\u0435\u043c\u043f\u043e-3 \u041c\u0420, \u2116 05-07 \u041f\u0410\u0422 \"\u0422\u0438\u0441\u043c\u0435\u043d\u0438\u0446\u044f\u0433\u0430\u0437\"",
+        "object_id": "17",
+        "change_message": "\u0417\u043c\u0456\u043d\u0435\u043d\u043e date_calibr \u0442\u0430 certificate.",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "flowstands",
+            "flowstand"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 124
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2016-07-27T06:12:13.518Z",
+        "object_repr": "\u0422\u0435\u043c\u043f\u043e-2, \u2116 2 \u0422\u0437\u041e\u0412 \"\u0406\u0412\u0424 \"\u0422\u0435\u043c\u043f\u043e\"",
+        "object_id": "16",
+        "change_message": "\u0417\u043c\u0456\u043d\u0435\u043d\u043e date_calibr \u0442\u0430 certificate.",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "flowstands",
+            "flowstand"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 125
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2016-07-27T06:12:26.728Z",
+        "object_repr": "\u0422\u0435\u043c\u043f-6, \u2116 01 \u041d\u0412\u0424 \"\u0422\u0435\u043c\u043f\"",
+        "object_id": "14",
+        "change_message": "\u0417\u043c\u0456\u043d\u0435\u043d\u043e date_calibr \u0442\u0430 certificate.",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "flowstands",
+            "flowstand"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 126
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2016-07-27T06:12:38.428Z",
+        "object_repr": "\u0423\u041f\u041a - 2500, \u2116 003 \u041f\u0410\u0422 \"\u0406\u0432\u0430\u043d\u043e-\u0424\u0440\u0430\u043d\u043a\u0456\u0432\u0441\u044c\u043a\u0438\u0439 \u0437\u0430\u0432\u043e\u0434 \"\u041f\u0440\u043e\u043c\u043f\u0440\u0438\u043b\u0430\u0434\"",
+        "object_id": "13",
+        "change_message": "\u0417\u043c\u0456\u043d\u0435\u043d\u043e date_calibr \u0442\u0430 certificate.",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "flowstands",
+            "flowstand"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 127
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2016-07-27T06:12:50.674Z",
+        "object_repr": "\u0420\u0415\u041e\u0412\u0413-0,5, \u2116 \u0431/\u043d \u041f\u0410\u0422 \"\u0406\u0432\u0430\u043d\u043e-\u0424\u0440\u0430\u043d\u043a\u0456\u0432\u0441\u044c\u043a\u0438\u0439 \u0437\u0430\u0432\u043e\u0434 \"\u041f\u0440\u043e\u043c\u043f\u0440\u0438\u043b\u0430\u0434\"",
+        "object_id": "12",
+        "change_message": "\u0417\u043c\u0456\u043d\u0435\u043d\u043e date_calibr \u0442\u0430 certificate.",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "flowstands",
+            "flowstand"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 128
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2016-07-27T06:13:15.291Z",
+        "object_repr": "\u0420\u0415\u041e\u0412\u0413-0,5, \u2116 \u0431/\u043d \u041f\u0410\u0422 \"\u0406\u0432\u0430\u043d\u043e-\u0424\u0440\u0430\u043d\u043a\u0456\u0432\u0441\u044c\u043a\u0438\u0439 \u0437\u0430\u0432\u043e\u0434 \"\u041f\u0440\u043e\u043c\u043f\u0440\u0438\u043b\u0430\u0434\"",
+        "object_id": "12",
+        "change_message": "\u041f\u043e\u043b\u044f \u043d\u0435 \u0437\u043c\u0456\u043d\u0435\u043d\u0456.",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "flowstands",
+            "flowstand"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 129
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2016-07-27T06:13:27.506Z",
+        "object_repr": "\u0420\u041a\u0414\u0423-0,44, \u2116 \u0431/\u043d \u041f\u0410\u0422 \"\u0406\u0432\u0430\u043d\u043e-\u0424\u0440\u0430\u043d\u043a\u0456\u0432\u0441\u044c\u043a\u0438\u0439 \u0437\u0430\u0432\u043e\u0434 \"\u041f\u0440\u043e\u043c\u043f\u0440\u0438\u043b\u0430\u0434\"",
+        "object_id": "11",
+        "change_message": "\u0417\u043c\u0456\u043d\u0435\u043d\u043e date_calibr \u0442\u0430 certificate.",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "flowstands",
+            "flowstand"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 130
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2016-07-27T06:13:39.643Z",
+        "object_repr": "\u0420\u041a\u0414\u0423-2,8, \u2116 \u0431/\u043d \u041f\u0410\u0422 \"\u0406\u0432\u0430\u043d\u043e-\u0424\u0440\u0430\u043d\u043a\u0456\u0432\u0441\u044c\u043a\u0438\u0439 \u0437\u0430\u0432\u043e\u0434 \"\u041f\u0440\u043e\u043c\u043f\u0440\u0438\u043b\u0430\u0434\"",
+        "object_id": "10",
+        "change_message": "\u0417\u043c\u0456\u043d\u0435\u043d\u043e date_calibr \u0442\u0430 certificate.",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "flowstands",
+            "flowstand"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 131
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2016-07-27T06:13:51.218Z",
+        "object_repr": "\"\u0422\u0415\u041c\u041f\u041e-11\", \u2116 \u041f\u041c-08-001 \u041f\u0410\u0422 \"\u0406\u0432\u0430\u043d\u043e-\u0424\u0440\u0430\u043d\u043a\u0456\u0432\u0441\u044c\u043a\u0438\u0439 \u0437\u0430\u0432\u043e\u0434 \"\u041f\u0440\u043e\u043c\u043f\u0440\u0438\u043b\u0430\u0434\"",
+        "object_id": "9",
+        "change_message": "\u0417\u043c\u0456\u043d\u0435\u043d\u043e date_calibr \u0442\u0430 certificate.",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "flowstands",
+            "flowstand"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 132
+},
+{
+    "fields": {
+        "action_flag": 1,
+        "action_time": "2016-07-27T08:54:18.732Z",
+        "object_repr": "\u0422\u041e\u0412 \"\u0421\u0430\u043c\u0433\u0430\u0437-\u0420\u0456\u0432\u043d\u0435\"",
+        "object_id": "23",
+        "change_message": "",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "flowstands",
+            "customer"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 133
+}
+]
