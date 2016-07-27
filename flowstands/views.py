@@ -64,5 +64,5 @@ def customers_list(request):
 def manufactors_list(request):
 	manufactors = Manufactor.objects.all()
 	# apply pagination, 6 students per page
-	context = paginate(manufactors, 8, request, {}, var_name='manufactors')
+	context = paginate(manufactors, 6, request, {}, var_name='manufactors')
 	return render(request, 'flowstands/manufactors_list.html', context)

@@ -94,6 +94,6 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 try:
-	from db_settings import *
+	from db import *
 except ImportError:
 	pass
