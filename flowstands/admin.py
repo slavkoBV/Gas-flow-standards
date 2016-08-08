@@ -8,11 +8,11 @@ from django.core.urlresolvers import reverse
 
 class FlowAdmin(admin.ModelAdmin):
 	fieldsets = [
-		(None, {'fields':['name','serial_number','flow_range','region','customer', 'manufactor']}),
+		(None, {'fields':['name','serial_number','flow_range','region','customer', 'manufactor', 'placeholder']}),
 		(u'Калібрування', {'fields':['date_calibr', 'certificate', 'traceability']})
 		]
 	
-	list_display = ['name', 'customer','serial_number', 'flow_range', 'date_calibr']
+	list_display = ['name', 'serial_number', 'customer', 'placeholder','flow_range', 'date_calibr', 'certificate']
 	ordering = ['region']
 	list_filter = ['region', 'customer', 'manufactor','date_calibr']
 	list_per_page = 20

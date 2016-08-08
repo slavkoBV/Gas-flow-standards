@@ -2,6 +2,8 @@
 
 {% load static from staticfiles %}
 
+{% load digg_paginate %}
+
 {% block meta_title %}База еталонів{% endblock meta_title %}
 
 {% block title %}Робочі еталони{% endblock title %}
@@ -60,10 +62,29 @@
 				<li class="arrow unavailable"><a href="">&laquo;</a></li>
 			{% endif %}
 		</li>
-		{% for p in flowstands.paginator.page_range %}
-		<li {% if flowstands.number == p %}class="active"{% endif %}>
-			<a href="{% url "home" %}?page={{ p }}"> {{ p }} </a>
-		</li>
+		{% for page_number in flowstands.paginator.page_range %}
+		
+				{% if flowstands.number > 4 and page_number < flowstands.number|subtract:3 %}
+						{# nothing to show #}
+				{% elif flowstands.number > 4 and page_number == flowstands.number|subtract:3 %}
+						{# show '...' #}
+					<li class="disabled">
+						<a href="#">...</a>
+					</li>
+			
+				{% elif flowstands.number < flowstands.paginator.num_pages|subtract:4 and page_number > flowstands.number|add:3 %}
+					{# nothing to show #}
+				{% elif flowstands.number < flowstands.paginator.num_pages|subtract:4 and page_number == flowstands.number|add:3 %}
+					{# show '...' #}
+					<li class="disabled">
+						<a href="#">...</a>
+					</li>
+				{% else %}
+					{# show the page number as normal #}
+					<li {% if flowstands.number == page_number %}class="active"{% endif %}>
+						<a href="{% url "home" %}?page={{ page_number }}"> {{ page_number }} </a>
+					</li>
+		{% endif %}
 		{% endfor %}
 		<li class="arrow">
 			{% if flowstands.has_next %}

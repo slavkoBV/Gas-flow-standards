@@ -2,6 +2,8 @@
 
 {% load static from staticfiles %}
 
+{% load digg_paginate %}
+
 {% block meta_title %}Еталони витрати газу{% endblock meta_title %}
 
 {% block title %}Власники{% endblock title %}
@@ -28,7 +30,7 @@
 		<tr>
 			<td>{{ forloop.counter0|add:customers.start_index }}</td>
 			<td>{{ customer.region }}</td>
-			<td><a title="Редагувати" href=""> {{ customer.name }}</a></td>
+			<td> {{ customer.name }}</td>
 			<td>{{ customer.address }}</td>
 			<td>{{ customer.agent }}</td>
 			<td>{{ customer.contacts }}</br>{{ customer.email }}</td>
@@ -40,27 +42,51 @@
 </table>
 						
 					<!-- End Content Columns -->
+
+					
 <!-- Pagination -->
-					{% if customers.has_other_pages %}
+
+
+{% if customers.has_other_pages %}
+
 <nav>
 	<ul class="pagination">
 		<li class="arrow">
 			{% if customers.has_previous %}
-				<a href="?page={{ customers.previous_page_number }}">
+				<a href="{% url "home" %}?page={{ customers.previous_page_number }}">
 					&laquo;
 				</a>
 			{% else %}
 				<li class="arrow unavailable"><a href="">&laquo;</a></li>
 			{% endif %}
 		</li>
-		{% for p in customers.paginator.page_range %}
-		<li {% if customers.number == p %}class="active"{% endif %}>
-			<a href="?page={{ p }}"> {{ p }} </a>
-		</li>
+		{% for page_number in customers.paginator.page_range %}
+		
+				{% if customers.number > 4 and page_number < customers.number|subtract:3 %}
+						{# nothing to show #}
+				{% elif customers.number > 4 and page_number == customers.number|subtract:3 %}
+						{# show '...' #}
+					<li class="disabled">
+						<a href="#">...</a>
+					</li>
+			
+				{% elif customers.number < customers.paginator.num_pages|subtract:4 and page_number > customers.number|add:3 %}
+					{# nothing to show #}
+				{% elif customers.number < customers.paginator.num_pages|subtract:4 and page_number == customers.number|add:3 %}
+					{# show '...' #}
+					<li class="disabled">
+						<a href="#">...</a>
+					</li>
+				{% else %}
+					{# show the page number as normal #}
+					<li {% if customers.number == page_number %}class="active"{% endif %}>
+						<a href="{% url "home" %}?page={{ page_number }}"> {{ page_number }} </a>
+					</li>
+		{% endif %}
 		{% endfor %}
 		<li class="arrow">
 			{% if customers.has_next %}
-				<a href="?page={{ customers.next_page_number }}">
+				<a href="{% url "home" %}?page={{ customers.next_page_number }}">
 					&raquo;
 				</a>
 			{% else %}
@@ -70,6 +96,8 @@
 		</ul>
 </nav>
 {% endif %}
-<!-- End of Pagination-->
-					
-{% endblock content %}
+
+	<!-- End of Pagination-->
+
+{% endblock content %}				
+

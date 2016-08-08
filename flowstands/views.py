@@ -17,7 +17,7 @@ def flowstands_list(request):
 		flowstands = Flowstand.objects.all()
 
 # apply pagination
-	paginator = Paginator(flowstands, 6)
+	paginator = Paginator(flowstands, 15)
 	
 	# try to get page number from request
 	page = request.GET.get('page')
@@ -43,7 +43,7 @@ def customers_list(request):
 		customers = Customer.objects.all()
 	
 	# apply pagination
-	paginator = Paginator(customers, 6)
+	paginator = Paginator(customers, 15)
 	
 	# try to get page number from request
 	page = request.GET.get('page')
@@ -64,5 +64,5 @@ def customers_list(request):
 def manufactors_list(request):
 	manufactors = Manufactor.objects.all()
 	# apply pagination, 6 students per page
-	context = paginate(manufactors, 6, request, {}, var_name='manufactors')
+	context = paginate(manufactors, 15, request, {}, var_name='manufactors')
 	return render(request, 'flowstands/manufactors_list.html', context)

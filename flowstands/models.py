@@ -23,6 +23,7 @@ class Region(models.Model):
 class Flowstand(models.Model):
 
 		class Meta(object):
+			ordering = ['region', 'date_calibr']
 			verbose_name = u"Робочий еталон"
 			verbose_name_plural = u"Робочі еталони"
 			app_label = 'flowstands'
@@ -31,13 +32,13 @@ class Flowstand(models.Model):
 			blank = False,
 			null = True,
 			verbose_name = u"Область",
-			on_delete=models.PROTECT)
+			on_delete=models.SET_NULL)
 		
 		customer = models.ForeignKey('Customer',
 			blank = False,
 			null = True,
 			verbose_name = u"Власник",
-			on_delete=models.PROTECT)
+			on_delete=models.SET_NULL)
 		
 		name = models.CharField(
 			max_length = 256,
@@ -52,30 +53,37 @@ class Flowstand(models.Model):
 		serial_number = models.CharField(
 			max_length = 20,
 			blank = False,
-			verbose_name = u"Заводський номер")
+			verbose_name = u"Зав.номер")
 		
 		manufactor = models.ForeignKey('Manufactor',
-			blank = False,
+			blank = True,
 			null = True,
 			verbose_name = u"Виробник",
 			on_delete=models.PROTECT)
-		
+			
+		certificate = models.CharField(
+			max_length = 50,
+			blank = True,
+			null = True,
+			unique = True,
+			verbose_name = u"Сертифікат")	
+			
 		date_calibr = models.DateField(
 			blank = True,
 			null = True,
 			verbose_name = u"Дата калібрування")
-		
-		certificate = models.CharField(
-			max_length = 256,
-			blank = True,
-			null = True,
-			verbose_name = u"Сертифікат")
-		
+				
 		traceability = models.CharField(
 			max_length = 256,
 			blank = True,
 			null = True,
 			verbose_name = u"Простежуваність")
+		
+		placeholder = models.CharField(
+			max_length = 80,
+			blank = True,
+			null = True,
+			verbose_name = u"Адреса розміщення")
 		
 		def __unicode__(self):
 			return u"%s, № %s %s" % (self.name, self.serial_number, self.customer)
@@ -94,7 +102,7 @@ class Manufactor(models.Model):
 	
 	agent = models.CharField(
 		max_length = 100,
-		blank = False,
+		blank = True,
 		null = True,
 		verbose_name = u"Контактна особа")
 
@@ -123,6 +131,7 @@ class Manufactor(models.Model):
 
 class Customer(models.Model):
 	class Meta(object):
+		ordering = ['region']
 		verbose_name = u"Власник"
 		verbose_name_plural = u"Власники"
 	
@@ -130,7 +139,7 @@ class Customer(models.Model):
 			blank = False,
 			null = True,
 			verbose_name = u"Область",
-			on_delete=models.PROTECT)
+			on_delete=models.SET_NULL)
 			
 	name = models.CharField(
 		max_length = 50,
