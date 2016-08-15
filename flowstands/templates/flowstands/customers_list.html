@@ -53,7 +53,7 @@
 	<ul class="pagination">
 		<li class="arrow">
 			{% if customers.has_previous %}
-				<a href="{% url "home" %}?page={{ customers.previous_page_number }}">
+				<a href="{% url "customers" %}?page={{ customers.previous_page_number }}">
 					&laquo;
 				</a>
 			{% else %}
@@ -80,13 +80,13 @@
 				{% else %}
 					{# show the page number as normal #}
 					<li {% if customers.number == page_number %}class="active"{% endif %}>
-						<a href="{% url "home" %}?page={{ page_number }}"> {{ page_number }} </a>
+						<a href="{% url "customers" %}?page={{ page_number }}"> {{ page_number }} </a>
 					</li>
 		{% endif %}
 		{% endfor %}
 		<li class="arrow">
 			{% if customers.has_next %}
-				<a href="{% url "home" %}?page={{ customers.next_page_number }}">
+				<a href="{% url "customers" %}?page={{ customers.next_page_number }}">
 					&raquo;
 				</a>
 			{% else %}

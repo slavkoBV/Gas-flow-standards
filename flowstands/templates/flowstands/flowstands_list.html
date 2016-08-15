@@ -9,7 +9,11 @@
 {% block title %}Робочі еталони{% endblock title %}
 
 	{% block content %}
-			
+			<form class="form-inline"
+					action="{% url "home" %}" method="get">
+					<input type="text" class="form-control" id="search" placeholder="Назва еталона або власник" name="q">
+					<input type="submit" class="btn btn-primary" value="Пошук">
+			</form>
 			<!-- Start Flow Standards Listing -->
 			<table class="table table-hover table-striped table-condensed">
 				<thead>

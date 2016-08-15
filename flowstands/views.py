@@ -3,6 +3,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from .models import Region, Flowstand, Manufactor, Customer
+from django.db.models import Q
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 
 from .util import paginate, get_current_region
@@ -15,9 +16,20 @@ def flowstands_list(request):
 		flowstands = Flowstand.objects.filter(region = current_region)
 	else:
 		flowstands = Flowstand.objects.all()
-
-# apply pagination
-	paginator = Paginator(flowstands, 15)
+	# реалізація пошуку
+	if request.GET.get('q') <> None:
+		p = 15
+		q = request.GET['q']
+		flowstands = flowstands.filter(Q(customer__name__icontains=q) 
+			| Q(name__icontains=q))
+		if len(flowstands) > 0:
+			p = len(flowstands)
+	
+	else:
+		p = 15
+		
+	# apply pagination
+	paginator = Paginator(flowstands, p)
 	
 	# try to get page number from request
 	page = request.GET.get('page')
@@ -31,7 +43,9 @@ def flowstands_list(request):
 		# deliver last page of results
 		flowstands = paginator.page(paginator.num_pages)		
 		
-	return render(request, 'flowstands/flowstands_list.html', {'flowstands': flowstands})
+	return render(request, 'flowstands/flowstands_list.html', 
+		{'flowstands': flowstands})
+########################################################################
 
 # Customers Views
 
@@ -57,12 +71,13 @@ def customers_list(request):
 		# deliver last page of results
 		customers = paginator.page(paginator.num_pages)	
 	
-	return render(request, 'flowstands/customers_list.html', {'customers': customers})
+	return render(request, 'flowstands/customers_list.html', 
+		{'customers': customers})
+#############################################################
 
 #Manufactors Views
 
 def manufactors_list(request):
 	manufactors = Manufactor.objects.all()
-	# apply pagination, 6 students per page
 	context = paginate(manufactors, 15, request, {}, var_name='manufactors')
 	return render(request, 'flowstands/manufactors_list.html', context)

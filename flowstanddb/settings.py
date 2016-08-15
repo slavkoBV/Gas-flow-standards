@@ -19,8 +19,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.8/howto/deployment/checklist/
 
-# SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '8y2!mth@ry2ek$3#+*3a@hu%b&3yd+k^7yd@lbebg-tzsp_n27'
+
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -81,7 +80,7 @@ WSGI_APPLICATION = 'flowstanddb.wsgi.application'
 
 LANGUAGE_CODE = 'uk'
 
-TIME_ZONE = 'kiev-Europe'
+TIME_ZONE = 'Europe/Kiev'
 
 USE_I18N = True
 

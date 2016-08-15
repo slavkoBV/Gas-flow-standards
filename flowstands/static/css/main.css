@@ -47,7 +47,9 @@ min-height: 97%;
 	}
 /* End hide from IE-mac */
 
-
+#search {
+	width: 220px;
+}
 
 h1, h2, h3, h4, h5, h6 {
 color: brown;
