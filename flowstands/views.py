@@ -11,25 +11,23 @@ from .util import paginate, get_current_region
 # Flow standarts Views 
 
 def flowstands_list(request):
+	flowstands = Flowstand.objects.all()
+	# кількість еталонів у базі
+	count = len(flowstands)
+	# визначення поточного регіону
 	current_region = get_current_region(request)
 	if current_region:
 		flowstands = Flowstand.objects.filter(region = current_region)
 	else:
 		flowstands = Flowstand.objects.all()
 	# реалізація пошуку
+	q = ''
 	if request.GET.get('q') <> None:
-		p = 15
 		q = request.GET['q']
-		flowstands = flowstands.filter(Q(customer__name__icontains=q) 
-			| Q(name__icontains=q))
-		if len(flowstands) > 0:
-			p = len(flowstands)
-	
-	else:
-		p = 15
+		flowstands = flowstands.filter(Q(customer__name__icontains=q) | Q(name__icontains=q))
 		
-	# apply pagination
-	paginator = Paginator(flowstands, p)
+	# пагінація
+	paginator = Paginator(flowstands, 15)
 	
 	# try to get page number from request
 	page = request.GET.get('page')
@@ -44,7 +42,7 @@ def flowstands_list(request):
 		flowstands = paginator.page(paginator.num_pages)		
 		
 	return render(request, 'flowstands/flowstands_list.html', 
-		{'flowstands': flowstands})
+		{'flowstands': flowstands, 'q': q, 'count': count})
 ########################################################################
 
 # Customers Views

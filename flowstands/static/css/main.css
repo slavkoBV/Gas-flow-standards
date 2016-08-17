@@ -51,6 +51,10 @@ min-height: 97%;
 	width: 220px;
 }
 
+#count {
+	color: green;
+}
+
 h1, h2, h3, h4, h5, h6 {
 color: brown;
 font-weight: bold;

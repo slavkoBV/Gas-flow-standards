@@ -15,11 +15,10 @@
 <table class="table table-hover table-striped table-condensed">
 	<thead>
 		<tr>
-			<th width="2%">№</th>
-			<th width="25%">Назва</th>
-			<th width="30%">Адреса</th>
-			<th width="27%">Представник</th>
-			<th width="25%">Контакти</th>
+			<th width="5%">№</th>
+			<th width="35%">Назва</th>
+			<th width="40%">Адреса</th>
+			<th width="20%">Контакти</th>
 
 	</thead>
 						
@@ -35,7 +34,6 @@
 				{% endif %}</td>
 			<td> {{ manufactor.name }}</td>
 			<td>{{ manufactor.address }}</td>
-			<td>{{ manufactor.agent }}</td>
 			<td>{{ manufactor.contacts }}</br>{{ manufactor.email }}</td>
 		</tr>
 		{% endfor %}

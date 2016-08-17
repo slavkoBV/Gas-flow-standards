@@ -54,16 +54,17 @@
 	<!-- End Content Columns -->	
 
 	<!-- Pagination -->
+<div id="pager_and_count ">
 {% if flowstands.has_other_pages %}
 <nav>
 	<ul class="pagination">
 		<li class="arrow">
 			{% if flowstands.has_previous %}
-				<a href="{% url "home" %}?page={{ flowstands.previous_page_number }}">
+				<a href="{% url "home" %}?page={{ flowstands.previous_page_number }}&q={{ q }}"">
 					&laquo;
 				</a>
 			{% else %}
-				<li class="arrow unavailable"><a href="">&laquo;</a></li>
+				<li class="arrow unavailable"><a href="#">&laquo;</a></li>
 			{% endif %}
 		</li>
 		{% for page_number in flowstands.paginator.page_range %}
@@ -86,21 +87,23 @@
 				{% else %}
 					{# show the page number as normal #}
 					<li {% if flowstands.number == page_number %}class="active"{% endif %}>
-						<a href="{% url "home" %}?page={{ page_number }}"> {{ page_number }} </a>
+						<a href="{% url "home" %}?page={{ page_number }}&q={{ q }}""> {{ page_number }} </a>
 					</li>
 		{% endif %}
 		{% endfor %}
 		<li class="arrow">
 			{% if flowstands.has_next %}
-				<a href="{% url "home" %}?page={{ flowstands.next_page_number }}">
+				<a href="{% url "home" %}?page={{ flowstands.next_page_number }}&q={{ q }}"">
 					&raquo;
 				</a>
 			{% else %}
-				<li class="arrow unavailable"><a href="">&raquo;</a></li>
+				<li class="arrow unavailable"><a href="#">&raquo;</a></li>
 			{% endif %}
 			</li>
 		</ul>
 </nav>
 {% endif %}
+<p><b>Загальна кількість еталонів у базі:  <span id="count">{{ count}}<span></b></p>
+</div>
 	<!-- End of Pagination-->
 	{% endblock content %}
