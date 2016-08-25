@@ -67,30 +67,19 @@
 				<li class="arrow unavailable"><a href="#">&laquo;</a></li>
 			{% endif %}
 		</li>
-		{% for page_number in flowstands.paginator.page_range %}
 		
-				{% if flowstands.number > 4 and page_number < flowstands.number|subtract:3 %}
-						{# nothing to show #}
-				{% elif flowstands.number > 4 and page_number == flowstands.number|subtract:3 %}
-						{# show '...' #}
-					<li class="disabled">
-						<a href="#">...</a>
-					</li>
-			
-				{% elif flowstands.number < flowstands.paginator.num_pages|subtract:4 and page_number > flowstands.number|add:3 %}
-					{# nothing to show #}
-				{% elif flowstands.number < flowstands.paginator.num_pages|subtract:4 and page_number == flowstands.number|add:3 %}
-					{# show '...' #}
-					<li class="disabled">
-						<a href="#">...</a>
-					</li>
-				{% else %}
-					{# show the page number as normal #}
-					<li {% if flowstands.number == page_number %}class="active"{% endif %}>
-						<a href="{% url "home" %}?page={{ page_number }}&q={{ q }}""> {{ page_number }} </a>
-					</li>
-		{% endif %}
+		{% for i in page_range %}
+			{% if i == DOT %}
+				<li><span>...</span></li>
+			{% elif i == flowstands.number %}
+				<li class="active"> {% if flowstands.number == page_number %}{% endif %}<span>{{ i }}</span></li>
+			{% else %}
+				<li> <a href="{% url "home" %}?page={{ i }}&q={{ q }}""> {{ i }} </a>
+				</li>
+			{% endif%}
 		{% endfor %}
+		
+	
 		<li class="arrow">
 			{% if flowstands.has_next %}
 				<a href="{% url "home" %}?page={{ flowstands.next_page_number }}&q={{ q }}"">
