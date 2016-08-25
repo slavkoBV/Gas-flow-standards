@@ -5,6 +5,7 @@ from django.http import HttpResponse
 from .models import Region, Flowstand, Manufactor, Customer
 from django.db.models import Q
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
+from datetime import date
 
 from .util import paginate, get_current_region
 
@@ -25,7 +26,8 @@ def flowstands_list(request):
 	if request.GET.get('q') <> None:
 		q = request.GET['q']
 		flowstands = flowstands.filter(Q(customer__name__icontains=q) | Q(name__icontains=q))
-		
+	today = date.today()
+	
 	# пагінація
 	paginator = Paginator(flowstands, 15)
 	
@@ -42,7 +44,7 @@ def flowstands_list(request):
 		flowstands = paginator.page(paginator.num_pages)		
 		
 	return render(request, 'flowstands/flowstands_list.html', 
-		{'flowstands': flowstands, 'q': q, 'count': count})
+		{'flowstands': flowstands, 'q': q, 'count': count, 'today':today})
 ########################################################################
 
 # Customers Views
