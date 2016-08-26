@@ -58,30 +58,22 @@
 				<li class="arrow unavailable"><a href="">&laquo;</a></li>
 			{% endif %}
 		</li>
-		{% for page_number in customers.paginator.page_range %}
-		
-				{% if customers.number > 4 and page_number < customers.number|subtract:3 %}
-						{# nothing to show #}
-				{% elif customers.number > 4 and page_number == customers.number|subtract:3 %}
-						{# show '...' #}
-					<li class="disabled">
-						<a href="#">...</a>
-					</li>
 			
-				{% elif customers.number < customers.paginator.num_pages|subtract:4 and page_number > customers.number|add:3 %}
-					{# nothing to show #}
-				{% elif customers.number < customers.paginator.num_pages|subtract:4 and page_number == customers.number|add:3 %}
-					{# show '...' #}
-					<li class="disabled">
-						<a href="#">...</a>
-					</li>
-				{% else %}
-					{# show the page number as normal #}
-					<li {% if customers.number == page_number %}class="active"{% endif %}>
-						<a href="{% url "customers" %}?page={{ page_number }}"> {{ page_number }} </a>
-					</li>
-		{% endif %}
-		{% endfor %}
+	{% for i in page_range %}
+			{% if i == DOT %}
+				<li><span>...</span></li>
+			{% elif i == customers.number %}
+				<li class="active"> <span>{{ i }}</span></li>
+			{% else %}
+				<li>
+					<a href="{% url "customers" %}?page={{ i }}&q={{ q }}""> {{ i }} </a>
+				</li>
+			{% endif%}
+	{% endfor %}
+		
+		
+		
+		
 		<li class="arrow">
 			{% if customers.has_next %}
 				<a href="{% url "customers" %}?page={{ customers.next_page_number }}">
