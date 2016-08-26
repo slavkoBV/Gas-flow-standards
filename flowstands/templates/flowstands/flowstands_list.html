@@ -60,11 +60,11 @@
 	<ul class="pagination">
 		<li class="arrow">
 			{% if flowstands.has_previous %}
-				<a href="{% url "home" %}?page={{ flowstands.previous_page_number }}&q={{ q }}"">
+				<a href="{% url "home" %}?page={{ flowstands.previous_page_number }}&q={{ q }}">
 					&laquo;
 				</a>
 			{% else %}
-				<li class="arrow unavailable"><a href="#">&laquo;</a></li>
+				<li class="arrow unavailable"><span>&laquo;</span></li>
 			{% endif %}
 		</li>
 		
@@ -74,7 +74,7 @@
 			{% elif i == flowstands.number %}
 				<li class="active"> <span>{{ i }}</span></li>
 			{% else %}
-				<li> <a href="{% url "home" %}?page={{ i }}&q={{ q }}""> {{ i }} </a>
+				<li> <a href="{% url "home" %}?page={{ i }}&q={{ q }}"> {{ i }} </a>
 				</li>
 			{% endif%}
 		{% endfor %}
@@ -82,11 +82,11 @@
 	
 		<li class="arrow">
 			{% if flowstands.has_next %}
-				<a href="{% url "home" %}?page={{ flowstands.next_page_number }}&q={{ q }}"">
+				<a href="{% url "home" %}?page={{ flowstands.next_page_number }}&q={{ q }}">
 					&raquo;
 				</a>
 			{% else %}
-				<li class="arrow unavailable"><a href="#">&raquo;</a></li>
+				<li class="arrow unavailable"><span>&raquo;</span></li>
 			{% endif %}
 			</li>
 		</ul>

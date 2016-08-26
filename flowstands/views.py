@@ -121,7 +121,6 @@ def customers_list(request):
 		else:
 			page_range.extend(range(page_num + 1, paginator.num_pages+1))
 	
-	
 	return render(request, 'flowstands/customers_list.html', {
 		'customers': customers,
 		'page_range': page_range,
