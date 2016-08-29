@@ -1,0 +1,58 @@
+{% extends "flowstands/base.html" %}
+
+{% block meta_title %}Еталони витрати газу{% endblock meta_title %}
+
+{% block title %}Робочий еталон: {{flowstand.name}},  №{{flowstand.serial_number}}{% endblock title %}
+
+{%block selector%}{%endblock selector%}
+
+{% block content %}
+	
+<!-- Start Customers Listing -->
+<table class="table table-hover table-striped">
+	<colgroup>
+		<col class="col-xs-2">
+		<col class="col-xs-4">
+	<tbody>
+		<tr>
+			<th>Діапазон витрат</th>
+			<td>{{ flowstand.flow_range }}</td>
+		</tr>
+		
+		<tr>
+			<th>Власник</th>
+			<td>{{ flowstand.customer }}</td>
+		</tr>
+		
+		<tr>
+			<th>Виробник</th>
+			<td>{{ flowstand.manufactor }}</td>
+		</tr>
+		
+		<tr>
+			<th>Адреса розташування</th>
+			<td>{{ flowstand.placeholder }}</td>
+		</tr>
+		
+		<tr>
+			<th>Дата калібрування</th>
+			<td>{{ flowstand.date_calibr }}</td>
+		</tr>
+		
+		<tr>
+			<th>Сертифікат</th>
+			<td>{{ flowstand.certificate }}</td>
+		</tr>
+		<tr>
+			<th>Простежуваність</th>
+			<td>{{ flowstand.traceability }}</td>
+		</tr>
+		
+	</tbody>
+					
+</table>
+
+<!-- End Content Columns -->
+{% endblock content %}				
+
+	

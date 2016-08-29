@@ -78,6 +78,14 @@ def flowstands_list(request):
 	)
 ########################################################################
 
+# Flowstand Detail Views
+
+def flowstand_view(request, pk):
+	flowstand = Flowstand.objects.get(id = pk)
+	return render(request, 'flowstands/flowstand_view.html', {'flowstand':flowstand})
+
+##########################################################################
+
 # Customers Views
 
 def customers_list(request):

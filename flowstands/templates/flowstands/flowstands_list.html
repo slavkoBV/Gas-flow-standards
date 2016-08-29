@@ -2,8 +2,6 @@
 
 {% load static from staticfiles %}
 
-{% load digg_paginate %}
-
 {% block meta_title %}База еталонів{% endblock meta_title %}
 
 {% block title %}Робочі еталони{% endblock title %}
@@ -24,7 +22,6 @@
 						<th width="10%">Назва</th>
 						<th width="10%">Діапазон</th>
 						<th width="12%">Зав. номер</th>
-						<th width="5%">Сертифікат</th>
 						<th width="15%">Дата калібрування</th>
 					</tr>
 				</thead>
@@ -41,10 +38,10 @@
 						</td>
 						<td>{{ flowstand.region }}</td>
 						<td>{{ flowstand.customer }} </td>
-						<td>{{ flowstand.name }}</td>
+						<td><a href="{% url "flowstand_view" flowstand.id %}"class="flowstand_show-link">
+							{{ flowstand.name }}</td>
 						<td>{{ flowstand.flow_range }}</td>
 						<td>{{ flowstand.serial_number }}</td>
-						<td>{{ flowstand.certificate }}</td>
 						<td>{{ flowstand.date_calibr }}</td>
 					</tr>
 				{% endfor %}
@@ -98,3 +95,5 @@
 </div>
 	<!-- End of Pagination-->
 	{% endblock content %}
+
+	
