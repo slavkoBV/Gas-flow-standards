@@ -142,7 +142,7 @@ class Customer(models.Model):
 			on_delete=models.SET_NULL)
 			
 	name = models.CharField(
-		max_length = 50,
+		max_length = 200,
 		blank = False,
 		verbose_name = u"Назва")
 	

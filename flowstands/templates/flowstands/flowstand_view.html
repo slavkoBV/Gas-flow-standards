@@ -41,7 +41,14 @@
 		
 		<tr>
 			<th>Сертифікат</th>
-			<td>{{ flowstand.certificate }}</td>
+
+			<td>{% if today > expir_date %}
+					<font color="red">Термін дії сертифікату вийшов</font>
+				{% else %}
+					{{ flowstand.certificate }}</br>
+					до закінчення дії сертифіката залишилось <strong>{{diff}}</strong> дн.
+				{% endif %}
+			</td>
 		</tr>
 		<tr>
 			<th>Простежуваність</th>

@@ -5,7 +5,7 @@ from django.http import HttpResponse
 from .models import Region, Flowstand, Manufactor, Customer
 from django.db.models import Q
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
-from datetime import date
+from datetime import date, timedelta
 
 from .util import paginate, get_current_region
 
@@ -77,13 +77,24 @@ def flowstands_list(request):
 		}
 	)
 ########################################################################
-
 # Flowstand Detail Views
 
 def flowstand_view(request, pk):
 	flowstand = Flowstand.objects.get(id = pk)
-	return render(request, 'flowstands/flowstand_view.html', {'flowstand':flowstand})
+	today = date.today()
+	# calculation of certificate expiration date
+	delta = timedelta(days=365)
+	expir_date = flowstand.date_calibr + delta
+	diff = (today - flowstand.date_calibr).days
+	diff = 365 - int(diff)
 
+	return render(request, 'flowstands/flowstand_view.html', {
+		'flowstand':flowstand,
+		'today':today,
+		'expir_date': expir_date,
+		'diff': diff
+		}
+	)
 ##########################################################################
 
 # Customers Views
