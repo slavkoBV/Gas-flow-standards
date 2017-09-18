@@ -2,12 +2,19 @@
 
 {% load static from staticfiles %}
 
+{% load search_tags %}
+
 {% block meta_title %}База еталонів{% endblock meta_title %}
 
 {% block title %}Робочі еталони{% endblock title %}
 
+{% block search %}
+    <div class="col-xs-12 col-sm-12 col-md-12">
+        {% search_box request %}
+    </div>
+{% endblock search %}
+
 	{% block content %}
-			
 
 			<!-- Start Flow Standards Listing -->
 			<table class="table table-hover table-striped table-condensed">

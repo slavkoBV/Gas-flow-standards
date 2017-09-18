@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
+from django.db.models import Q
 
 
 def paginate(objects, size, request, context, var_name='object_list'):
@@ -79,3 +80,22 @@ def get_current_region(request):
             return region
     else:
         return None
+
+
+STRIP_SYMBOLS = ('+', ',', ';')
+
+
+def flowstand_search(search_text, object_list):
+
+    for char in search_text.strip():
+        if char in STRIP_SYMBOLS:
+            search_text = search_text.replace(char, ' ')
+    words = search_text.split()
+    results = {}
+    results['objects'] = set()
+    for word in words:
+        objects = object_list.filter(Q(name__icontains=word) | Q(customer__name__icontains=word))
+        for obj in objects:
+            results['objects'].add(obj)
+    results['objects'] = list(results['objects'])
+    return results

@@ -4,7 +4,6 @@ from django.shortcuts import render
 from django import forms
 from django.http import HttpResponse, HttpResponseRedirect
 from .models import Flowstand, Manufactor, Customer, NationalStandard
-from django.db.models import Q
 from datetime import date, timedelta
 from django.core.urlresolvers import reverse
 from django.contrib import messages
@@ -13,6 +12,7 @@ from crispy_forms.helper import FormHelper
 from crispy_forms.layout import Layout, Div, Submit
 
 from .util import paginate, get_current_region
+from .util import flowstand_search
 
 import sendgrid
 from sendgrid.helpers.mail import *
@@ -35,9 +35,15 @@ def flowstands_list(request):
         flowstands = Flowstand.objects.all()
 
     # TODO: search engine update!!!
+    q = request.GET.get('q', '')
+    if len(q) >= 3:
+        results = flowstand_search(q, flowstands)
+        if results:
+            flowstands = results.get('objects')
 
     today = date.today()
     context = paginate(flowstands, 15, request, {}, var_name='flowstands')
+    context['q'] = q
     context['count'] = count
     context['today'] = today
 
