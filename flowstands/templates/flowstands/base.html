@@ -5,57 +5,38 @@
 	<head>
 		<meta charset='UTF-8'/>
 		<title>Еталони витрати газу України - {% block meta_title %}{% endblock meta_title %}</title>
-		<meta name="description" value="Еталони витрати газу України" />
-		<meta name="viewport" content="width=device-width, initial-sale=1">
-	
+		<meta name="description" value="Еталони витрати газу України" content="База даних робочих еталонів об'єму та об'ємної
+		витрати газу України, та інформація про їх власників, виробників та калібрування"/>
+		<meta name="keywords" content="еталон об'єму газу, калібрування, база даних еталонів, витрата газу"/>
+		<meta name="viewport" content="width=device-width, initial-sale=1"/>
+
 		<!-- Include Styles -->
-		
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" 
+
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
 		integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-		
+
 		<link rel="stylesheet" href="{{ PORTAL_URL }}{% static "css/main.css" %}">
-	
-		{% block extra_css %}{% endblock extra_css %}		
-	
+
+		{% block extra_css %}{% endblock extra_css %}
+
 	</head>
-	
+
 	<body>
-		
+	    <!-- Google Tag Manager (noscript) -->
+            <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MRPRDTF"
+            height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+        <!-- End Google Tag Manager (noscript) -->
+
 		<!-- Start Container -->
-		<div class="container">
-		
-			<!-- Start Header -->
-			<div class="row" id="header">
-				
+		<div class="container wrap">
 				<!-- Start Logo -->
 				<div class="col-xs-8">
-					<h1>Еталони витрати газу</h1>
+					<h1>Еталони витрати газу України</h1>
 				</div>
-			
-			</div>	
-			<!-- End Header -->
-			
-			<!-- Start SubHeader -->
-			<div class="row" id="sub-header">
-			
-					<div class="col-xs-6">
-						<ul class="nav nav-pills nav-justified" role="tablist"> 
-							<li role="presentation" {% if request.path == '/' %}class="active"{% endif %}>
-								<a href="{% url "home" %}">Робочі еталони</a>
-							</li>
-							<li role="presentation" {% if '/manufactors' in request.path %}class="active"{% endif %}>
-								<a href="{% url "manufactors" %}">Виробники</a>
-							</li>
-							<li role="presentation" {% if '/customers' in request.path %}class="active" {% endif %}>
-								<a href="{% url "customers" %}">Власники</a>
-							</li>
-						</ul>
-					</div>
-				
-					<!-- Region Selector -->
-					{% block selector %}
-			
-					<div class="col-xs-6" id="region-selector">
+
+				<!-- Region Selector -->
+				{% block selector %}
+					<div class="col-xs-4" id="region-selector">
 						<strong>Область: </strong>
 						<select>
 							<option value="">Усі області</option>
@@ -65,60 +46,106 @@
 							{% endfor %}
 						</select>
 					</div>
-					{% endblock selector %}
-				
-			</div>
-			<!-- End SubHeader -->
-			
-			<!-- Start Content Columns -->
-					
-			<div class="row clearfix" id="content-columns">
-				
-				<div class="col-xs-12" id="content-column">
-					
-					<h2>{% block title %}{% endblock title %}</h2> 
+				{% endblock selector %}
+
+				<!-- Navigation -->
+					<div class="col-xs-12">
+						<ul class="nav nav-tabs" role="tablist">
+							<li role="presentation" {% if request.path == '/' %}class="active"{% endif %}>
+								<a href="{% url "home" %}">Робочі еталони</a>
+							</li>
+                            <li role="presentation" {% if '/national_standards' in request.path %}class="active"{% endif %}>
+								<a href="{% url "national_standards" %}">Національні еталони</a>
+							</li>
+							<li role="presentation" {% if '/manufactors' in request.path %}class="active"{% endif %}>
+								<a href="{% url "manufactors" %}">Виробники</a>
+							</li>
+							<li role="presentation" {% if '/customers' in request.path %}class="active" {% endif %}>
+								<a href="{% url "customers" %}">Власники</a>
+							</li>
+                            <li role="presentation" {% if 'contact' in request.path %}class="active" {% endif %}>
+								<a href="{% url "contact" %}">Контакти</a>
+							</li>
+							{% if perms.flowstands.add_flowstand %}
+							<li role="presentation" {% if '/admin' in request.path %}class="active" {% endif %}>
+								<a href="/admin">Адміністрування</a>
+							</li>
+							{% endif %}
+						</ul>
+					</div>
+
+				<div class="col-xs-6 title">
+					<h2>{% block title %}{% endblock title %}</h2>
+				</div>
+
+
+				{% block search %}{% endblock search %}
+
+				<!-- Start Content Columns -->
+				<div class="col-xs-12 content">
+				    {% block status_message %}
+				    {% if messages %}
+                        {% for message in messages %}
+                            <div class="alert alert-{% if message.tags == 'warning' %}warning{% elif message.tags == 'success' %}success{% else %}danger{% endif %}" role="alert">{{ message }}</div>
+                        {% endfor %}
+                	{% endif %}
+                	{% endblock status_message %}
 					{% block content %}{% endblock content %}
 				</div>
-			</div>			
-			<!-- End Content Columns -->
-			
-		</div>
-		<!-- End Container -->
-		
-		<!-- Start Footer -->
-		<div class="row" id="footer">
-			<div class="col-xs-12">
-				&copy; 2016 ДП "Івано-Франківськстандартметрологія"
-			</div>				
-		</div>
-		<!-- End Footer -->
-		
-		<!-- Modal Boilerplate -->
-		<div class="modal fade" id="myModal" tabindex="-1" role="dialog" 
-			aria-labelledby="myModalLabel" aria-hidden="true">
-		<div class="modal-dialog">
-			<div class="modal-content">
-				<div class="modal-header">
-					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-					<span aria-hidden="true">&times;</span></button>
-					<h4 class="modal-title" id="myModalLabel"><!-- --></h4>
+				<!-- End Content Columns -->
+
+
+				<!-- Footer -->
+				<div class="container footer">
+						{% block pagination %}{% endblock pagination %}
+					<div class="col-xs-12 copyright">
+						&copy; 2017 <a href="http://www.ifdcsms.com.ua">ДП "Івано-Франківськстандартметрологія"</a>
+					</div>
+					<div id="scrollup" style="display: none; opacity: 0.8;">
+						<img class="up" alt="to top" src="/static/images/scrollUp.png">
+					</div>
 				</div>
-				<div class="modal-body"><!-- --></div>
-				<div class="modal-footer"><!-- --></div>
+				<!-- End Footer -->
+		<!-- End Container -->
+		</div>
+
+
+		<!-- Modal Boilerplate -->
+		<div class="modal fade" id="myModal" tabindex="-1" role="dialog"
+			aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span></button>
+						<h3 class="modal-title" id="myModalLabel"><!-- --></h3>
+					</div>
+					<div class="modal-body"><!-- --></div>
+					<div class="modal-footer">
+					    <button type="button" class="btn btn-default" data-dismiss="modal">Закрити</button>
+					</div>
+				</div>
 			</div>
 		</div>
-		</div>
-		
-			
+
+
 		<!-- Javascripts Section -->
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 		<script src ="{{ PORTAL_URL }}{% static "js/jquery.cookie.js" %}"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"
 		integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
 		crossorigin="anonymous"></script>
-		<script src="{{ PORTAL_URL }}{% static "js/main.js" %}"></script>
+        <script src="{{ PORTAL_URL }}{% static "js/main.js" %}"></script>
+		<script type="text/javascript">
+		    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    		})
+	    	(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+		        ga('create', 'UA-88279337-1', 'auto');
+		        ga('send', 'pageview');
+		</script>
 		{% block extra_js %}{% endblock extra_js %}
-	
+
 	</body>
-	
+
 </html>

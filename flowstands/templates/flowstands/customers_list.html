@@ -2,8 +2,6 @@
 
 {% load static from staticfiles %}
 
-{% load digg_paginate %}
-
 {% block meta_title %}Еталони витрати газу{% endblock meta_title %}
 
 {% block title %}Власники{% endblock title %}
@@ -43,51 +41,10 @@
 
 					
 <!-- Pagination -->
+					{% with object_list=customers %}
+						{% include "flowstands/pagination.html" %}
+					{% endwith %}
 
-
-{% if customers.has_other_pages %}
-
-<nav>
-	<ul class="pagination">
-		<li class="arrow">
-			{% if customers.has_previous %}
-				<a href="{% url "customers" %}?page={{ customers.previous_page_number }}">
-					&laquo;
-				</a>
-			{% else %}
-				<li class="arrow unavailable"><span>&laquo;</span></li>
-			{% endif %}
-		</li>
-			
-	{% for i in page_range %}
-			{% if i == DOT %}
-				<li><span>...</span></li>
-			{% elif i == customers.number %}
-				<li class="active"> <span>{{ i }}</span></li>
-			{% else %}
-				<li>
-					<a href="{% url "customers" %}?page={{ i }}"> {{ i }} </a>
-				</li>
-			{% endif%}
-	{% endfor %}
-		
-		
-		
-		
-		<li class="arrow">
-			{% if customers.has_next %}
-				<a href="{% url "customers" %}?page={{ customers.next_page_number }}">
-					&raquo;
-				</a>
-			{% else %}
-				<li class="arrow unavailable"><span>&raquo;</span></li>
-			{% endif %}
-		</li>
-	</ul>
-</nav>
-{% endif %}
-
-	<!-- End of Pagination-->
 
 {% endblock content %}				
 

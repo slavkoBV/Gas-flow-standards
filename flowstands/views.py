@@ -1,156 +1,164 @@
 ﻿# -*- coding: utf-8 -*-
 
 from django.shortcuts import render
-from django.http import HttpResponse
-from .models import Region, Flowstand, Manufactor, Customer
+from django import forms
+from django.http import HttpResponse, HttpResponseRedirect
+from .models import Flowstand, Manufactor, Customer, NationalStandard
 from django.db.models import Q
-from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from datetime import date, timedelta
+from django.core.urlresolvers import reverse
+from django.contrib import messages
+
+from crispy_forms.helper import FormHelper
+from crispy_forms.layout import Layout, Div, Submit
 
 from .util import paginate, get_current_region
+
+import sendgrid
+from sendgrid.helpers.mail import *
+from flowstanddb.settings import ADMIN_EMAIL, SENDGRID_API_KEY
 
 
 ##########################################################################
 
-# Flow standarts Views 
+# Flow standards Views
 
 def flowstands_list(request):
-	flowstands = Flowstand.objects.all()
-	# кількість еталонів у базі
-	count = len(flowstands)
-	# визначення поточного регіону
-	current_region = get_current_region(request)
-	if current_region:
-		flowstands = Flowstand.objects.filter(region = current_region)
-	else:
-		flowstands = Flowstand.objects.all()
-	# реалізація пошуку
-	q = ''
-	if request.GET.get('q') <> None:
-		q = request.GET['q']
-		flowstands = flowstands.filter(Q(customer__name__icontains=q)
-		| Q(name__icontains=q))
-	today = date.today()
-	
-	# пагінація
-	paginator = Paginator(flowstands, 15)
-	page = request.GET.get('page')
-	try:
-		flowstands = paginator.page(page)
-	except PageNotAnInteger:
-		flowstands = paginator.page(1)
-	except EmptyPage:
-		flowstands = paginator.page(paginator.num_pages)		
-	
-	# digg-paginator realization
-	page_range = []
-	ON_EACH_SIDE = 2
-	ON_ENDS = 3
-	DOT = '...'
-	page_num = flowstands.number
-	page_range = []
-	
-	if paginator.num_pages <= 5:
-		page_range = range(1, paginator.num_pages + 1)
-	else:
-		page_range = []
-		if page_num > (ON_EACH_SIDE + ON_ENDS):
-			page_range.extend(range(1, ON_ENDS))
-			page_range.append(DOT)
-			page_range.extend(range(page_num - ON_EACH_SIDE, page_num + 1))
-		else:
-			page_range.extend(range(1, page_num + 1))
-		if page_num < (paginator.num_pages - ON_EACH_SIDE - ON_ENDS - 1):
-			page_range.extend(range(page_num + 1, page_num + ON_EACH_SIDE + 1))
-			page_range.append(DOT)
-			page_range.extend(range(paginator.num_pages - ON_ENDS, paginator.num_pages+1))
-		else:
-			page_range.extend(range(page_num + 1, paginator.num_pages+1))
-	
-	return render(request, 'flowstands/flowstands_list.html', {
-		'flowstands': flowstands,
-		'q': q,
-		'count': count,
-		'today': today,
-		'page_range': page_range,
-		'DOT': DOT
-		}
-	)
+    flowstands = Flowstand.objects.all()
+    # кількість еталонів у базі
+    count = len(flowstands)
+    # визначення поточного регіону
+    current_region = get_current_region(request)
+    if current_region:
+        flowstands = Flowstand.objects.filter(region=current_region)
+    else:
+        flowstands = Flowstand.objects.all()
+
+    # TODO: search engine update!!!
+
+    today = date.today()
+    context = paginate(flowstands, 15, request, {}, var_name='flowstands')
+    context['count'] = count
+    context['today'] = today
+
+    return render(request, 'flowstands/flowstands_list.html', context)
+
+
 ########################################################################
 # Flowstand Detail Views
 
 def flowstand_view(request, pk):
-	flowstand = Flowstand.objects.get(id = pk)
-	today = date.today()
-	# calculation of certificate expiration date
-	delta = timedelta(days=365)
-	expir_date = flowstand.date_calibr + delta
-	diff = (today - flowstand.date_calibr).days
-	diff = 365 - int(diff)
+    flowstand = Flowstand.objects.get(id=pk)
+    today = date.today()
+    # calculation of certificate expiration date
+    delta = timedelta(days=365)
+    expir_date = flowstand.date_calibr + delta
+    diff = (today - flowstand.date_calibr).days
+    diff = 365 - int(diff)
 
-	return render(request, 'flowstands/flowstand_view.html', {
-		'flowstand':flowstand,
-		'today':today,
-		'expir_date': expir_date,
-		'diff': diff
-		}
-	)
+    return render(request, 'flowstands/flowstand_view.html', {
+        'flowstand': flowstand,
+        'today': today,
+        'expir_date': expir_date,
+        'diff': diff
+    }
+                  )
+
 ##########################################################################
-
 # Customers Views
 
 def customers_list(request):
-	current_region = get_current_region(request)
-	if current_region:
-		customers = Customer.objects.filter(region = current_region)
-	else:
-		customers = Customer.objects.all()
-	
-	paginator = Paginator(customers, 15)
-	page = request.GET.get('page')
-	try:
-		customers = paginator.page(page)
-	except PageNotAnInteger:
-		customers = paginator.page(1)
-	except EmptyPage:
-		customers = paginator.page(paginator.num_pages)	
-	
-	# digg-paginator realization
-	page_range = []
-	ON_EACH_SIDE = 2
-	ON_ENDS = 3
-	DOT = '...'
-	page_num = customers.number
-	page_range = []
-	
-	if paginator.num_pages <= 5:
-		page_range = range(1, paginator.num_pages + 1)
-	else:
-   		page_range = []
-		if page_num > (ON_EACH_SIDE + ON_ENDS):
-			page_range.extend(range(1, ON_ENDS))
-			page_range.append(DOT)
-			page_range.extend(range(page_num - ON_EACH_SIDE, page_num + 1))
-		else:
-			page_range.extend(range(1, page_num + 1))
-		if page_num < (paginator.num_pages - ON_EACH_SIDE - ON_ENDS - 1):
-			page_range.extend(range(page_num + 1, page_num + ON_EACH_SIDE + 1))
-			page_range.append(DOT)
-			page_range.extend(range(paginator.num_pages - ON_ENDS, paginator.num_pages+1))
-		else:
-			page_range.extend(range(page_num + 1, paginator.num_pages+1))
-	
-	return render(request, 'flowstands/customers_list.html', {
-		'customers': customers,
-		'page_range': page_range,
-		'DOT': DOT
-		}
-	)
-#############################################################
+    current_region = get_current_region(request)
+    if current_region:
+        customers = Customer.objects.filter(region=current_region)
+    else:
+        customers = Customer.objects.all()
+    context = paginate(customers, 10, request, {}, var_name='customers')
 
-#Manufactors Views
+    return render(request, 'flowstands/customers_list.html', context)
+
+#############################################################
+# Manufactors Views
 
 def manufactors_list(request):
-	manufactors = Manufactor.objects.all()
-	context = paginate(manufactors, 15, request, {}, var_name='manufactors')
-	return render(request, 'flowstands/manufactors_list.html', context)
+    manufactors = Manufactor.objects.all()
+    context = paginate(manufactors, 15, request, {}, var_name='manufactors')
+    return render(request, 'flowstands/manufactors_list.html', context)
+
+
+# National Standards list #################################################
+def national_standards(request):
+    nat_standards = NationalStandard.objects.all()
+    return render(request, 'flowstands/nat_standards.html', {'nat_standards': nat_standards})
+
+
+# View of selected National Standard
+def national_standard(request, pk):
+    nat_standard = NationalStandard.objects.get(id=pk)
+    return render(request, 'flowstands/nat_standard.html', {'nat_standard': nat_standard})
+
+
+# Contact Admin ###################
+class ContactForm(forms.Form):
+    def __init__(self, *args, **kwargs):
+        super(ContactForm, self).__init__(*args, **kwargs)
+
+        self.helper = FormHelper()
+
+        self.helper.form_class = 'form-horizontal'
+        self.helper.form_method = 'post'
+        self.helper.form_action = reverse('contact')
+
+        self.helper.help_text_inline = True
+        self.helper.html5_required = True
+        self.helper.label_class = 'col-sm-4 control-label'
+        self.helper.field_class = 'col-sm-8'
+        self.helper.layout = Layout(
+            'from_email',
+            'subject',
+            'message',
+            Div(
+                Div(
+                    Submit('send_button', u'Надіслати'),
+                    css_class='col-sm-offset-4 col-sm-12'
+                ),
+                css_class='form-group'
+            )
+        )
+
+    from_email = forms.EmailField(
+        label=u'Ваш Е-мейл')
+    subject = forms.CharField(
+        label=u'Заголовок',
+        max_length=128)
+    message = forms.CharField(
+        label=u'Текст повідомлення',
+        max_length=2560,
+        widget=forms.Textarea)
+
+
+def contact_admin(request):
+    if request.method == 'POST':
+        form = ContactForm(request.POST)
+
+        if form.is_valid():
+            sg = sendgrid.SendGridAPIClient(apikey=SENDGRID_API_KEY)
+            subject = form.cleaned_data['subject']
+            message = form.cleaned_data['message']
+            content = Content("text/plain", message)
+            from_email = Email(form.cleaned_data['from_email'])
+            to_email = Email(ADMIN_EMAIL)
+
+            try:
+                mail = Mail(from_email, subject, to_email, content)
+                response = sg.client.mail.send.post(request_body=mail.get())
+            except Exception:
+                message = u'Під час відправки листа виникла помилка'
+                messages.warning(request, message)
+            else:
+                message = u'Повідомлення успішно надіслане!'
+                messages.success(request, message)
+                return HttpResponseRedirect(reverse('contact'))
+    else:
+        form = ContactForm()
+    return render(request, 'contact_admin/form.html', {'form': form})

@@ -1,63 +1,26 @@
 /* Global Styles */
 
-/*Реалізація прилипаючого футера рядки з 4 по 32 */
-html, body, .container {
-height: 100%;}
-
-body > .container {
-height: auto;
-min-height: 97%;
+html {
+	height: 100%;
 }
 
-#content-columns {
-	
-  	padding-bottom: 80px;}  /* відступ повинен бути рівним висоті футера */
+body {
+	margin: 0;
+	font-size: 16px;
+	height: 100%;
+}
 
-#footer {
+.wrap {
 	position: relative;
-	margin-top: -80px; /* від'ємне значення висоти футера */
-	display: block;
-	display: inline-block;
-   	height: 80px;
-	width: 90%;
-	clear:both;
-	margin-left: 50px;
-	margin-right: 0px;
-	padding-left: 3%;
-	padding-top: 15px;
-	border-top: 2px solid #ddd;
+	min-height: 100%;
 }
 
- 
-/*Клас clearfix присвоєно блоку основного контенту content-columns */
-.clearfix:after {
-	content: ".";
-	display: block;
-	height: 0;
-	clear: both;
-	visibility: hidden;
-	}
-.clearfix {
-	display: inline-block;
-	}
-	/* Hides from IE-mac \*/
-* html .clearfix { height: 1%;}
-.clearfix {
-	display: block;
-	}
-/* End hide from IE-mac */
-
-#search {
-	width: 220px;
+.content h2 {
+	width: 300px;
 }
 
-#count {
-	color: green;
-}
-
-h1, h2, h3, h4, h5, h6 {
-color: brown;
-font-weight: bold;
+h1, h2, h3 {
+	text-shadow: 1px 2px 3px rgba(0,0,0,0.8);
 }
 
 th, td {
@@ -65,19 +28,45 @@ text-align: center;
 height: 70px;
 }
 
-/* знайшли елемент футера по його унікальному ідентифікатору footer */
-/*#footer {*/
-/* задаємо верхню межу елемента: ширина лінії, тип лінії, колір лінії */
-/*border-top: 1px solid #ddd;*/
-/* задаємо внутрішню відстань елемента до верхнього краю */
-/*padding-top: 10px;*/
-/*}*/
+.content {
+	padding-bottom: 150px;
+}
 
-/* Groups Selector */
+.footer {
+	position: absolute;
+	bottom: 0;
+}
+
+.pagination {
+	margin: 0 0 20px 30px;
+}
+
+.copyright {
+	margin-top: 10px;
+	padding: 20px 0 0 30px;
+	height: 80px;
+	border-top: 1px solid lightgrey;
+}
+
+.search {
+	margin-left: 0;
+}
+
+.search #search {
+	width: 240px;
+}
+
+.count {
+	margin: 20px 0 30px 30px;
+}
+
+.count .db_info {
+	color: green;
+}
 
 #region-selector {
-margin-top: 5px;
-padding-left: 200px;
+margin-top: 30px;
+padding-left: 50px;
 }
 
 #region-selector select {
@@ -88,4 +77,72 @@ border: 1px solid #cccccc;
 height: 30px;
 line-height: 30px;
 color: #555555;
+}
+
+#scrollup {
+position: fixed; /* фиксированная позиция */
+opacity: 0.8; /* прозрачность */
+padding: 15px 10px 10px; /* отступы */
+left: 94%; /* отступ слева */
+bottom: 10px; /* отступ снизу */
+display: none; /* спрятать блок */
+cursor: pointer;
+}
+
+#scrollup img{
+	width: 30px;
+	height: 30px;
+}
+
+#user-toolbar {
+	margin-top: 20px;
+	text-align: right;
+}
+
+figure {
+    width: 200px;
+    height: auto;
+    margin: 20px;
+    position: relative;
+}
+figure img {
+    width: 200px;
+    height: auto;
+}
+figcaption {
+    position: absolute;
+    top: 15%;
+    bottom: 15%;
+    left: 0;
+    right: 0;
+    background-color: rgba(153, 153, 153, 0.8);
+    padding: 20px;
+    font-weight: 400;
+    font-size: 0.9em;
+    color: white;
+    opacity: 0;
+    transition: opacity 0.75s ease-out;
+}
+figcaption p {
+    margin-top: 20px;
+    font-size: 0.8em;
+}
+figure:hover figcaption {
+    opacity: 1;
+}
+.photo {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.standard-description {
+    padding: 5px 20px 10px 0px;
+    text-indent: 30px;
+    text-align: justify;
+}
+#underline {
+    display: block;
+    border-bottom: 1px solid lightgrey;
 }

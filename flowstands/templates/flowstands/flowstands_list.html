@@ -2,18 +2,13 @@
 
 {% load static from staticfiles %}
 
-{% load digg_paginate %}
-
 {% block meta_title %}База еталонів{% endblock meta_title %}
 
 {% block title %}Робочі еталони{% endblock title %}
 
 	{% block content %}
-			<form class="form-inline"
-					action="{% url "home" %}" method="get">
-					<input type="text" class="form-control" id="search" placeholder="Назва еталона або власник" name="q">
-					<input type="submit" class="btn btn-primary" value="Пошук">
-			</form>
+			
+
 			<!-- Start Flow Standards Listing -->
 			<table class="table table-hover table-striped table-condensed">
 				<thead>
@@ -54,43 +49,9 @@
 
 	<!-- Pagination -->
 <div id="pager_and_count ">
-{% if flowstands.has_other_pages %}
-<nav>
-	<ul class="pagination">
-		<li class="arrow">
-			{% if flowstands.has_previous %}
-				<a href="{% url "home" %}?page={{ flowstands.previous_page_number }}&q={{ q }}">
-					&laquo;
-				</a>
-			{% else %}
-				<li class="arrow unavailable"><span>&laquo;</span></li>
-			{% endif %}
-		</li>
-		
-		{% for i in page_range %}
-			{% if i == DOT %}
-				<li><span>...</span></li>
-			{% elif i == flowstands.number %}
-				<li class="active"> <span>{{ i }}</span></li>
-			{% else %}
-				<li> <a href="{% url "home" %}?page={{ i }}&q={{ q }}"> {{ i }} </a>
-				</li>
-			{% endif%}
-		{% endfor %}
-		
-	
-		<li class="arrow">
-			{% if flowstands.has_next %}
-				<a href="{% url "home" %}?page={{ flowstands.next_page_number }}&q={{ q }}">
-					&raquo;
-				</a>
-			{% else %}
-				<li class="arrow unavailable"><span>&raquo;</span></li>
-			{% endif %}
-			</li>
-		</ul>
-</nav>
-{% endif %}
+    {% with object_list=flowstands %}
+        {% include "flowstands/pagination.html" %}
+    {% endwith %}
 <p><b>Загальна кількість еталонів у базі:  <span id="count">{{ count}}<span></b></p>
 <p><b>станом на {{ today }}</b></p>
 

@@ -1,0 +1,31 @@
+{% extends "flowstands/base.html" %}
+
+{% load static from staticfiles %}
+
+{% block meta_title %}База еталонів{% endblock meta_title %}
+
+{% block title %}Національні еталони{% endblock title %}
+
+{% block selector %}{% endblock %}
+
+{% block content %}
+    <div class="container">
+    <div class="row">
+        {% for standard in nat_standards %}
+            <div class="col-lg-3 col-sm-6  col-xs-12">
+                <figure class="images">
+                    {% if standard.image %}
+                        <img src="{{ standard.image.url }}" oncontextmenu="return false;">
+                    {% endif %}
+                    <a href="{% url "national_standard" standard.id %}" >
+                        <figcaption>
+                            <strong>{{ standard.short_name }}</strong>
+                            <p>{{ standard.name }}</p>
+                        </figcaption>
+                    </a>
+                </figure>
+            </div>
+        {% endfor %}
+    </div>
+    </div>
+{% endblock content %}

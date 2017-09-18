@@ -1,33 +1,37 @@
 {% if is_paginated %}
 
-<nav>
-	<ul class="pagination">
-		<li class="arrow">
-			{% if object_list.has_previous %}
-				<a href="?page={{ object_list.previous_page_number }}">
-					&laquo;
-				</a>
-			{% else %}
-				<li class="arrow unavailable"><span>&laquo;</span></li>
-			{% endif %}
-		</li>
-		{% for p in paginator.page_range %}
-		<li {% if object_list.number == p %}class="active"{% endif %}>
-			<a href="?page={{ p }}">
-				{{ p }}
-			</a>
-		</li>
-		{% endfor %}
-		<li class="arrow">
-			{% if object_list.has_next %}
-				<a href="?page={{ object_list.next_page_number }}">
-					&raquo;
-				</a>
-			{% else %}
-				<li class="arrow unavailable"><span>&raquo;</span></li>
-			{% endif %}
+		<ul class="pagination">
+			<li>
+				{% if object_list.has_previous %}
+					<a href="?page={{ object_list.previous_page_number }}{% if q %}&q={{ q }}{% endif %}">
+							&laquo;
+					</a>
+				{% else %}
+					<li><span>&laquo;</span></li>
+				{% endif %}
+			</li>
+				{% for i in page_range %}
+					{% if i == DOT %}
+						<li><span>...</span></li>
+					{% elif i == object_list.number %}
+						<li class="active"><span>{{ i }}</span></li>
+					{% else %}
+						<li>
+							<a href="?page={{ i }}{% if q %}&q={{ q }}{% endif %}">
+								{{ i }}
+							</a>
+						</li>
+					{% endif%}
+				{% endfor %}
+			<li>
+				{% if object_list.has_next %}
+					<a href="?page={{ object_list.next_page_number }}{% if q %}&q={{ q }}{% endif %}">
+						&raquo;
+					</a>
+				{% else %}
+					<li><span>&raquo;</span></li>
+				{% endif %}
 			</li>
 		</ul>
-</nav>
 
 {% endif %}

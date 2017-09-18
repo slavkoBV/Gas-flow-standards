@@ -1,0 +1,30 @@
+{% extends "flowstands/base.html" %}
+
+{% load staticfiles %}
+{% load crispy_forms_tags %}
+
+{% block meta_title %}Контакти{% endblock meta_title %}
+{% block title %}Контакти{% endblock title %}
+
+{% block selector %}{% endblock selector %}
+
+{% block status_message %}
+{% if form.errors %}
+	<div class="alert alert-warning" role="alert">
+		Будь ласка, виправте помилки
+	</div>
+{% endif %}
+
+	{{ block.super }}
+{% endblock status_message %}
+
+{% block content %}
+<div class="col-sm-8">
+    <p class="contact-info">З питань калібрування робочих еталонів об'єму та витрати газу, звертайтесь за адресою:<br/>
+    <strong>м. Івано-Франківськ, вул. Вовчинецька, 127</strong> тел.: <strong>(03422) 6-89-89</strong>, тел./факс: <strong>(0342) 53-02-00</strong> </p>
+    <p class="contact-info">Ви можете надіслати нам повідомлення скориставшись наступною формою.</p>
+</div>
+<div class="col-sm-8">
+	{% crispy form %}
+</div>
+{% endblock content %}

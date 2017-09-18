@@ -1,0 +1,36 @@
+{% extends "flowstands/base.html" %}
+
+{% load static from staticfiles %}
+
+{% block meta_title %}База еталонів{% endblock meta_title %}
+
+{% block title %}Національні еталони{% endblock title %}
+{% block selector %}{% endblock %}
+{% block content %}
+    <div class="container">
+        <div class="row">
+            <h3 style="text-align: center; margin-top: 20px">{{ nat_standard.name }}
+                <strong>{{ nat_standard.short_name }}</strong></h3>
+            <hr>
+            <div class="col-lg-4 col-md-4 col-xs-12">
+                {% if nat_standard.image %}
+                    <img class="photo" src="{{ nat_standard.image.url }}" width="300px" height="auto" oncontextmenu="return false;">
+                {% endif %}
+            </div>
+            <div class="description col-lg-8 col-md-8 col-xs-12">
+                <span id="underline"><h4>Показники точності еталона:</h4></span>
+                <p class="standard-description">{{ nat_standard.description }}</p>
+                <span id="underline"><h4>Діапазон об'ємних витрат еталона:</h4></span>
+                <p class="standard-description"><strong>{{ nat_standard.flow_range }}</strong> (м.куб./год)</p>
+                <span id="underline"><h4>На еталоні можливо калібрувати наступні засоби:</h4></span>
+                <p class="standard-description">{{ nat_standard.artefacts }}</p>
+                <span id="underline"><h4>Під'єднувальні розміри (DN, мм):</h4></span>
+                <p class="standard-description">{{ nat_standard.diameters }}</p>
+                <span id="underline"><h4>Вчений зберігач еталона:</h4></span>
+                <p class="standard-description"><strong>{{ nat_standard.keeper }}</strong></p>
+
+            </div>
+        </div>
+        <a href="{% url "national_standards" %}">Повернутись</a>
+    </div>
+{% endblock content %}
