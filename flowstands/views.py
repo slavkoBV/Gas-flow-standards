@@ -12,7 +12,7 @@ from crispy_forms.helper import FormHelper
 from crispy_forms.layout import Layout, Div, Submit
 
 from .util import paginate, get_current_region
-from .util import flowstand_search
+from .util import search
 
 import sendgrid
 from sendgrid.helpers.mail import *
@@ -34,10 +34,10 @@ def flowstands_list(request):
     else:
         flowstands = Flowstand.objects.all()
 
-    # TODO: search engine update!!!
+    search_terms = ('name',)
     q = request.GET.get('q', '')
     if len(q) >= 3:
-        results = flowstand_search(q, flowstands)
+        results = search(q, flowstands, search_terms)
         if results:
             flowstands = results.get('objects')
 

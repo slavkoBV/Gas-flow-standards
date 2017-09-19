@@ -85,16 +85,23 @@ def get_current_region(request):
 STRIP_SYMBOLS = ('+', ',', ';')
 
 
-def flowstand_search(search_text, object_list):
+def search(search_text, object_list, search_params):
+    """
+
+    :param search_text: search phrase or word
+    :param object_list: queryset
+    :param search_params: tuple of 1 or 2 fields of object_list ORM-model
+    :return: objects that satisfy search parameters
+    """
 
     for char in search_text.strip():
         if char in STRIP_SYMBOLS:
             search_text = search_text.replace(char, ' ')
     words = search_text.split()
-    results = {}
-    results['objects'] = set()
+    results = {'objects': set()}
     for word in words:
-        objects = object_list.filter(Q(name__icontains=word) | Q(customer__name__icontains=word))
+        objects = object_list.filter(Q(**{'{}__icontains'.format(search_params[0]): word}) |
+                                     Q(**{'{}__icontains'.format(search_params[1]): word}))
         for obj in objects:
             results['objects'].add(obj)
     results['objects'] = list(results['objects'])
