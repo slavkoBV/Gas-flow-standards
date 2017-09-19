@@ -34,7 +34,7 @@ def flowstands_list(request):
     else:
         flowstands = Flowstand.objects.all()
 
-    search_terms = ('name',)
+    search_terms = ('name', 'customer__name')
     q = request.GET.get('q', '')
     if len(q) >= 3:
         results = search(q, flowstands, search_terms)

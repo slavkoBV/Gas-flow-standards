@@ -90,7 +90,7 @@ def search(search_text, object_list, search_params):
 
     :param search_text: search phrase or word
     :param object_list: queryset
-    :param search_params: tuple of 1 or 2 fields of object_list ORM-model
+    :param search_params: tuple of 2 fields of object_list ORM-model
     :return: objects that satisfy search parameters
     """
 
