@@ -67,8 +67,16 @@
 								<a href="{% url "contact" %}">Контакти</a>
 							</li>
 							{% if perms.flowstands.add_flowstand %}
-							<li role="presentation" {% if '/admin' in request.path %}class="active" {% endif %}>
-								<a href="/admin">Адміністрування</a>
+                                <li role="presentation" {% if '/admin' in request.path %}class="active" {% endif %}>
+                                    <a href="/admin">Адміністрування</a>
+                                </li>
+                            {% endif %}
+							<li role="presentation" {% if '/user_list' in request.path %}class="active" {% endif %}>
+								<a href="{% url "user_list" %}">Користувачі</a>
+							</li>
+							{% if user.is_authenticated %}
+							<li role="presentation" {% if '/profile' in request.path %}class="active" {% endif %}>
+								<a href="{% url "profile_edit" user.id %}">Мій профіль</a>
 							</li>
 							{% endif %}
 						</ul>
@@ -77,7 +85,19 @@
 				<div class="col-xs-8 title">
 					<h2>{% block title %}{% endblock title %}</h2>
 				</div>
-
+                {% if user.is_authenticated %}
+                <!-- User's toolbar for authenticated users -->
+                    <div class="col-xs-4" id="user-toolbar">
+                        <a href="{% url "profile" %}">{{ user.get_full_name|default:user.username }}</a> |
+                        <a href="{% url "users:auth_logout" %}">Вийти</a>
+                    </div>
+                {% else %}
+                <!-- User's toolbar for anonymous users -->
+                    <div class="col-xs-4" id="user-toolbar">
+                        <a href="{% url "users:auth_login" %}">Увійти</a> |
+                        <a href="{% url "users:registration_register" %}">Реєстрація</a>
+                    </div>
+                {% endif %}
 
 				{% block search %}{% endblock search %}
 

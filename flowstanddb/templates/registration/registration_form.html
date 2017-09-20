@@ -1,0 +1,55 @@
+{% extends "flowstands/base.html" %}
+
+{% block meta_title %}Реєстрація{% endblock meta_title %}
+
+{% block title %}Реєстрація{% endblock title %}
+
+
+{% block status_message %}
+
+{% if form.errors %}
+	<div class="alert alert-warning" role="alert">
+		Будь-ласка, виправте наступні помилки {{ form.non_field_errors }}
+	</div>
+{% endif %}
+{% endblock status_message %}
+
+{% block content %}
+<div class="col-xs-4">
+<form action="{% url "users:registration_register" %}" method="post">
+
+	{% csrf_token %}
+	<input type="hidden" name="next" value="{% url "home" %}"/>
+
+	<div class="form-group">
+		<label for="login">Ваш Нікнейм</label>
+		<input type="text" class="form-control" id="email" value=""
+				 name="username"/>
+		<span class="help-block">{{ form.errors.username.as_text }}</span>
+	</div>
+
+	<div class="form-group">
+		<label for="email">Ваш Е-мейл</label>
+		<input type="text" class="form-control" id="login" value=""
+				 name="email"/>
+		<span class="help-block">{{ form.errors.email.as_text }}</span>
+	</div>
+
+	<div class="form-group">
+		<label for="password">Ваш Пароль</label>
+		<input type="password" class="form-control" id="password" value=""
+				 name="password1"/>
+		<span class="help-block">{{ form.errors.password1.as_text }}</span>
+	</div>
+
+	<div class="form-group">
+		<label for="password">Підтвердіть Пароль</label>
+		<input type="password" class="form-control" id="password_confirm" value=""
+				 name="password2"/>
+		<span class="help-block">{{ form.errors.password2.as_text }}</span>
+	</div>
+	<button type="submit" class="btn btn-primary">Увійти</button>
+
+</form>
+</div>
+{% endblock content %}

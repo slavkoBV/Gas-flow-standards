@@ -35,7 +35,9 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'crispy_forms',
+    'registration',
     'flowstands',
+    'flowstanddb',
 )
 
 CRISPY_TEMPLATE_PACK = 'bootstrap3'
@@ -55,10 +57,15 @@ MIDDLEWARE_CLASSES = (
 
 ROOT_URLCONF = 'flowstanddb.urls'
 
+REGISTRATION_OPEN = True
+
+LOGIN_URL = 'users:auth_login'
+LOGOUT_URL = 'users:auth_logout'
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'flowstanddb', 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
