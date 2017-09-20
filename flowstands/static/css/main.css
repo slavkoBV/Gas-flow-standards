@@ -55,20 +55,12 @@ height: 70px;
 .search #search {
 	width: 240px;
 }
-
-.count {
-	margin: 20px 0 30px 30px;
-}
-
-.count .db_info {
-	color: green;
-}
-
+.count {margin: 20px 0 30px 30px;}
+.db_info {color: green;}
 #region-selector {
 margin-top: 30px;
 padding-left: 50px;
 }
-
 #region-selector select {
 margin: 0;
 width: 170px;
@@ -78,7 +70,6 @@ height: 30px;
 line-height: 30px;
 color: #555555;
 }
-
 #scrollup {
 position: fixed; /* фиксированная позиция */
 opacity: 0.8; /* прозрачность */
@@ -88,17 +79,14 @@ bottom: 10px; /* отступ снизу */
 display: none; /* спрятать блок */
 cursor: pointer;
 }
-
 #scrollup img{
 	width: 30px;
 	height: 30px;
 }
-
 #user-toolbar {
 	margin-top: 20px;
 	text-align: right;
 }
-
 figure {
     width: 200px;
     height: auto;
@@ -145,4 +133,7 @@ figure:hover figcaption {
 #underline {
     display: block;
     border-bottom: 1px solid lightgrey;
+}
+.breadcrumb {
+    font-size: 0.9em;
 }

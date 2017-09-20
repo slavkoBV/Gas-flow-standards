@@ -12,22 +12,49 @@
     <div class="col-xs-12 col-sm-12 col-md-12">
         {% search_box request %}
     </div>
+    {% if search_count %}
+        <div class="col-xs-12 col-sm-12 col-md-12">
+            <p style="margin: 10px 0 0 20px;">За Вашим запитом знайдено <span class="db_info">{{ search_count }}</span> еталон(-ни, -ів)</p>
+        </div>
+    {% endif %}
 {% endblock search %}
+
+{% block breadcrumb %}
+    {% if search_count %}
+        <div class="col-xs-12 col-md-12 col-lg-12">
+        <ol  class="breadcrumb">
+            <li><a href="{% url 'home' %}">Робочі еталони</a></li>
+            <li class='active'>Результати пошуку</li>
+        </ol>
+        </div>
+    {% endif %}
+{% endblock breadcrumb %}
 
 	{% block content %}
 
 			<!-- Start Flow Standards Listing -->
 			<table class="table table-hover table-striped table-condensed">
+            {% with order_by=request.GET.order_by reverse=request.GET.reverse %}
 				<thead>
 					<tr>
 						<th width="3%">№</th>
-						<th width="20%">Область</th>
-						<th width="25%">Власник</th>
+						<th width="18%">Область</th>
+						<th width="24%">Власник</th>
 						<th width="10%">Назва</th>
 						<th width="10%">Діапазон</th>
-						<th width="12%">Зав. номер</th>
-						<th width="15%">Дата калібрування</th>
+						<th width="10%">Зав. номер</th>
+						<th width="20%">
+                            <a href="{% url "home" %}?order_by=date_calibr{% if order_by == 'date_calibr' and reverse != '1' %}&amp;reverse=1{% endif %}{% if q %}&amp;q={{ q }}{% endif %}">
+                                    Дата калібрування
+								    {% if order_by == 'date_calibr' and reverse != '1' %}
+                                        <img src="{% static "images/arrow_up.png" %}" height="20" width="20"/>
+								    {% elif order_by == 'date_calibr' and reverse == '1' %}
+									    <img src="{% static "images/arrow_down.png" %}" height="20" width="20"/>
+                                    {% endif %}
+                            </a>
+                        </th>
 					</tr>
+                {% endwith %}
 				</thead>
 										
 				<!--Тіло таблиці списку еталонів-->						
@@ -59,8 +86,8 @@
     {% with object_list=flowstands %}
         {% include "flowstands/pagination.html" %}
     {% endwith %}
-<p><b>Загальна кількість еталонів у базі:  <span id="count">{{ count}}<span></b></p>
-<p><b>станом на {{ today }}</b></p>
+<p><b>Загальна кількість еталонів у базі:  <span class="db_info">{{ count}}<span></b></p>
+<p><b>станом на <span class="db_info">{{ today }}</span></b></p>
 
 </div>
 	<!-- End of Pagination-->

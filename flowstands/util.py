@@ -1,5 +1,7 @@
 # -*- coding: utf-8 -*-
 
+from operator import attrgetter
+
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from django.db.models import Q
 
@@ -85,15 +87,18 @@ def get_current_region(request):
 STRIP_SYMBOLS = ('+', ',', ';')
 
 
-def search(search_text, object_list, search_params):
+def search(search_text, object_list, search_params, sort_param, sort_flag):
     """
 
     :param search_text: search phrase or word
     :param object_list: queryset
     :param search_params: tuple of 2 fields of object_list ORM-model
+    :param sort_param: parameter on which sorting is performed
+    :param sort_flag: parameter that specifies the sort order
     :return: objects that satisfy search parameters
     """
-
+    sort_dict = {'order_by': sort_param}
+    reverse_dict = {'reverse': sort_param}
     for char in search_text.strip():
         if char in STRIP_SYMBOLS:
             search_text = search_text.replace(char, ' ')
@@ -105,4 +110,8 @@ def search(search_text, object_list, search_params):
         for obj in objects:
             results['objects'].add(obj)
     results['objects'] = list(results['objects'])
-    return results
+    if sort_flag in sort_dict:
+        return sorted(results['objects'], key=attrgetter(sort_dict[sort_flag]))
+    elif sort_flag in reverse_dict:
+        return sorted(results['objects'], key=attrgetter(reverse_dict[sort_flag]), reverse=True)
+    return results['objects']

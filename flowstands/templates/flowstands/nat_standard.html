@@ -4,13 +4,19 @@
 
 {% block meta_title %}База еталонів{% endblock meta_title %}
 
-{% block title %}Національні еталони{% endblock title %}
+{% block title %}{{ nat_standard.name }} <strong>{{ nat_standard.short_name }}</strong>{% endblock title %}
 {% block selector %}{% endblock %}
+{% block breadcrumb %}
+    <div class="col-xs-12 col-md-12 col-lg-12">
+    <ol  class="breadcrumb">
+        <li><a href="{% url 'national_standards' %}">Національні еталони</a></li>
+        <li class='active'>{{ nat_standard.short_name }}</li>
+    </ol>
+    </div>
+{% endblock breadcrumb %}
 {% block content %}
     <div class="container">
         <div class="row">
-            <h3 style="text-align: center; margin-top: 20px">{{ nat_standard.name }}
-                <strong>{{ nat_standard.short_name }}</strong></h3>
             <hr>
             <div class="col-lg-4 col-md-4 col-xs-12">
                 {% if nat_standard.image %}
@@ -31,6 +37,5 @@
 
             </div>
         </div>
-        <a href="{% url "national_standards" %}">Повернутись</a>
     </div>
 {% endblock content %}

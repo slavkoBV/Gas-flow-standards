@@ -2,7 +2,7 @@
 
 from django.shortcuts import render
 from django import forms
-from django.http import HttpResponse, HttpResponseRedirect
+from django.http import HttpResponseRedirect
 from .models import Flowstand, Manufactor, Customer, NationalStandard
 from datetime import date, timedelta
 from django.core.urlresolvers import reverse
@@ -24,28 +24,38 @@ from flowstanddb.settings import ADMIN_EMAIL, SENDGRID_API_KEY
 # Flow standards Views
 
 def flowstands_list(request):
-    flowstands = Flowstand.objects.all()
+    flowstands = Flowstand.objects.all().filter(traceability__icontains="Івано-Франківськ")
     # кількість еталонів у базі
-    count = len(flowstands)
+    count = flowstands.count()
     # визначення поточного регіону
     current_region = get_current_region(request)
     if current_region:
-        flowstands = Flowstand.objects.filter(region=current_region)
-    else:
-        flowstands = Flowstand.objects.all()
+        flowstands = flowstands.filter(region=current_region)
 
+    sort_flag = None
+    order_by = request.GET.get('order_by', '')
+    if order_by == 'date_calibr':
+        sort_flag = 'order_by'
+        flowstands = flowstands.order_by(order_by)
+        if request.GET.get('reverse', '') == '1':
+            flowstands = flowstands.reverse()
+            sort_flag = 'reverse'
+
+    search_count = None
     search_terms = ('name', 'customer__name')
     q = request.GET.get('q', '')
     if len(q) >= 3:
-        results = search(q, flowstands, search_terms)
+        results = search(q, flowstands, search_terms, 'date_calibr', sort_flag)
         if results:
-            flowstands = results.get('objects')
+            flowstands = results
+            search_count = len(flowstands)
 
     today = date.today()
     context = paginate(flowstands, 15, request, {}, var_name='flowstands')
     context['q'] = q
     context['count'] = count
     context['today'] = today
+    context['search_count'] = search_count
 
     return render(request, 'flowstands/flowstands_list.html', context)
 
