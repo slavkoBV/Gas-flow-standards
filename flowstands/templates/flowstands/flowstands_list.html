@@ -12,15 +12,15 @@
     <div class="col-xs-12 col-sm-12 col-md-12">
         {% search_box request %}
     </div>
-    {% if search_count %}
+    {% if q %}
         <div class="col-xs-12 col-sm-12 col-md-12">
-            <p style="margin: 10px 0 0 20px;">За Вашим запитом знайдено <span class="db_info">{{ search_count }}</span> еталон(-ни, -ів)</p>
+            <p style="margin: 10px 0 0 20px;">За Вашим запитом знайдено <span class="db_info">{{ search_count }}</span> {{ result_text }}</p>
         </div>
     {% endif %}
 {% endblock search %}
 
 {% block breadcrumb %}
-    {% if search_count %}
+    {% if q %}
         <div class="col-xs-12 col-md-12 col-lg-12">
         <ol  class="breadcrumb">
             <li><a href="{% url 'home' %}">Робочі еталони</a></li>

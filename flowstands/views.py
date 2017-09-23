@@ -42,13 +42,24 @@ def flowstands_list(request):
             sort_flag = 'reverse'
 
     search_count = None
+    result_text = ''
+    result_text_dict = {('1',): 'еталон',
+                        ('2', '3', '4'): 'еталони',
+                        ('0', '5', '6', '7', '8', '9'): 'еталонів'}
     search_terms = ('name', 'customer__name')
     q = request.GET.get('q', '')
-    if len(q) >= 3:
-        results = search(q, flowstands, search_terms, 'date_calibr', sort_flag)
-        if results:
-            flowstands = results
+    if q:
+        if len(q) >= 3:
+            flowstands = search(q, flowstands, search_terms, 'date_calibr', sort_flag)
             search_count = len(flowstands)
+            if len(str(search_count)) == 2 and str(search_count).startswith('1'):
+                result_text = 'еталонів'
+            else:
+                for i in result_text_dict.keys():
+                    if str(search_count)[-1] in i:
+                        result_text = result_text_dict[i]
+        else:
+            flowstands = []
 
     today = date.today()
     context = paginate(flowstands, 15, request, {}, var_name='flowstands')
@@ -56,6 +67,7 @@ def flowstands_list(request):
     context['count'] = count
     context['today'] = today
     context['search_count'] = search_count
+    context['result_text'] = result_text
 
     return render(request, 'flowstands/flowstands_list.html', context)
 
@@ -80,6 +92,7 @@ def flowstand_view(request, pk):
     }
                   )
 
+
 ##########################################################################
 # Customers Views
 
@@ -92,6 +105,7 @@ def customers_list(request):
     context = paginate(customers, 10, request, {}, var_name='customers')
 
     return render(request, 'flowstands/customers_list.html', context)
+
 
 #############################################################
 # Manufactors Views
