@@ -79,6 +79,9 @@
 								<a href="{% url "profile_edit" user.id %}">Мій профіль</a>
 							</li>
 							{% endif %}
+                            <li role="presentation" {% if '/documents' in request.path %}class="active"{% endif %}>
+								<a href="{% url "documents" %}">Нормативні документи</a>
+							</li>
 						</ul>
 					</div>
                     {% block breadcrumb %}{% endblock breadcrumb %}

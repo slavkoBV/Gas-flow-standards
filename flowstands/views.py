@@ -3,7 +3,7 @@
 from django.shortcuts import render
 from django import forms
 from django.http import HttpResponseRedirect
-from .models import Flowstand, Manufactor, Customer, NationalStandard
+from .models import Flowstand, Manufactor, Customer, NationalStandard, Documents
 from datetime import date, timedelta
 from django.core.urlresolvers import reverse
 from django.contrib import messages
@@ -192,3 +192,8 @@ def contact_admin(request):
     else:
         form = ContactForm()
     return render(request, 'contact_admin/form.html', {'form': form})
+
+# Normative documents
+def documents(request):
+    documents = Documents.objects.all()
+    return render(request, 'flowstands/documents.html', {'documents': documents})

@@ -1,0 +1,23 @@
+{% extends "flowstands/base.html" %}
+
+{% load static %}
+
+{% block title %}
+	 Нормативні документи
+{% endblock title %}
+
+{% block content %}
+<div class="container">
+
+	<ul class="document_list">
+			{% for document in documents %}
+				<li>
+					<a href="{% if document.file %}{{ document.file.url }}{% else %}#{% endif %}">{{ document.title }}</a>
+				</li>
+			{% endfor %}
+	</ul>
+
+
+
+</div>
+{% endblock content %}

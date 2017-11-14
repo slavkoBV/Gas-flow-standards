@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 from django.contrib import admin
-from .models import Region, Flowstand, Manufactor, Customer, NationalStandard
+from .models import Region, Flowstand, Manufactor, Customer, NationalStandard, Documents
 from django.contrib.admin import AdminSite
 
 from django.core.urlresolvers import reverse
@@ -33,6 +33,11 @@ class NationalStandardAdmin(admin.ModelAdmin):
     search_fields = ['short_name', 'keeper']
 
 
+class DocumentsAdmin(admin.ModelAdmin):
+    list_display = ['title', 'edition']
+    search_fields = ['title']
+
+
 AdminSite.site_header = u'База еталонів витрати газу'
 AdminSite.site_title = u'Адміністрування'
 
@@ -41,3 +46,4 @@ admin.site.register(Flowstand, FlowAdmin)
 admin.site.register(Manufactor)
 admin.site.register(Customer, CustomerAdmin)
 admin.site.register(NationalStandard, NationalStandardAdmin)
+admin.site.register(Documents, DocumentsAdmin)

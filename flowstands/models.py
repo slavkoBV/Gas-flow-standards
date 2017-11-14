@@ -228,3 +228,21 @@ class NationalStandard(models.Model):
     class Meta(object):
         verbose_name = u"Національний еталон"
         verbose_name_plural = u"Національні еталони"
+
+
+class Documents(models.Model):
+    title = models.CharField(
+        max_length=300,
+        verbose_name=u'назва'
+    )
+    edition = models.IntegerField(
+        verbose_name=u'редакція'
+    )
+    file = models.FileField(
+        upload_to='documents/',
+        verbose_name=u'файл'
+    )
+
+    class Meta(object):
+        verbose_name = u'Нормативний документ'
+        verbose_name_plural = u'Нормативні документи'

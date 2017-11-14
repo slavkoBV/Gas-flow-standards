@@ -16,6 +16,8 @@ urlpatterns = [
 
     url(r'^flowstand/(?P<pk>\d+)/$', 'flowstands.views.flowstand_view', name='flowstand_view'),
 
+    url(r'^documents/$', 'flowstands.views.documents', name='documents'),
+
     url(r'^customers/$', 'flowstands.views.customers_list', name='customers'),
 
     url(r'^manufactors/$', 'flowstands.views.manufactors_list', name='manufactors'),
