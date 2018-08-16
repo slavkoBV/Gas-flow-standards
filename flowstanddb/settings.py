@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 """
 Django settings for flowstanddb project.
 
@@ -19,7 +20,6 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/1.8/howto/deployment/checklist/
 
 
-
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
@@ -28,6 +28,8 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = (
+    'suit',
+    #'django.contrib.sites',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -42,7 +44,9 @@ INSTALLED_APPS = (
 
 CRISPY_TEMPLATE_PACK = 'bootstrap3'
 
-
+SUIT_CONFIG = {
+    'ADMIN_NAME': u'База еталонів витрати газу'
+}
 
 MIDDLEWARE_CLASSES = (
     'django.contrib.sessions.middleware.SessionMiddleware',
