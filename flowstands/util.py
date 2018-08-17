@@ -85,17 +85,16 @@ def get_current_region(request):
 STRIP_SYMBOLS = ('+', ',', ';')
 
 
-def search(search_text, object_list, search_params, sort_param, sort_flag):
+def search(search_text, object_list, search_params, sort_param):
     """
 
     :param search_text: search phrase or word
     :param object_list: queryset
     :param search_params: tuple of 2 fields of object_list ORM-model
     :param sort_param: parameter on which sorting is performed
-    :param sort_flag: parameter that specifies the sort order
     :return: objects that satisfy search parameters
     """
-    sort_dict = {'order_by': sort_param, 'reverse': '-' + sort_param}
+
     for char in search_text.strip():
         if char in STRIP_SYMBOLS:
             search_text = search_text.replace(char, ' ')
@@ -104,6 +103,6 @@ def search(search_text, object_list, search_params, sort_param, sort_flag):
     for word in words:
         results = results | object_list.filter(Q(**{'{}__icontains'.format(search_params[0]): word}) |
                                                Q(**{'{}__icontains'.format(search_params[1]): word}))
-    if sort_flag in sort_dict:
-        return results.distinct().order_by(sort_dict[sort_flag])
-    return results
+    if sort_param:
+        return results.distinct().order_by(sort_param)
+    return results.distinct()

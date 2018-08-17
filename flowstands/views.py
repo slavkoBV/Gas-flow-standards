@@ -32,14 +32,12 @@ def flowstands_list(request):
     if current_region:
         flowstands = flowstands.filter(region=current_region)
 
-    sort_flag = None
+    sort_param = 'date_calibr'
     order_by = request.GET.get('order_by', '')
-    if order_by == 'date_calibr':
-        sort_flag = 'order_by'
-        flowstands = flowstands.order_by(order_by)
+    if order_by:
         if request.GET.get('reverse', '') == '1':
-            flowstands = flowstands.reverse()
-            sort_flag = 'reverse'
+            sort_param = ''.join(('-', sort_param))
+        flowstands = flowstands.order_by(sort_param)
 
     search_count = None
     result_text = ''
@@ -50,7 +48,7 @@ def flowstands_list(request):
     q = request.GET.get('q', '')
     if q:
         if len(q) >= 3:
-            flowstands = search(q, flowstands, search_terms, 'date_calibr', sort_flag)
+            flowstands = search(q, flowstands, search_terms, sort_param)
             search_count = len(flowstands)
             if len(str(search_count)) == 2 and str(search_count).startswith('1'):
                 result_text = 'еталонів'
