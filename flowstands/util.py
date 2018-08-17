@@ -1,7 +1,5 @@
 # -*- coding: utf-8 -*-
 
-from operator import attrgetter
-
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from django.db.models import Q
 
@@ -97,21 +95,15 @@ def search(search_text, object_list, search_params, sort_param, sort_flag):
     :param sort_flag: parameter that specifies the sort order
     :return: objects that satisfy search parameters
     """
-    sort_dict = {'order_by': sort_param}
-    reverse_dict = {'reverse': sort_param}
+    sort_dict = {'order_by': sort_param, 'reverse': '-' + sort_param}
     for char in search_text.strip():
         if char in STRIP_SYMBOLS:
             search_text = search_text.replace(char, ' ')
     words = search_text.split()
-    results = {'objects': set()}
+    results = object_list.model.objects.none()  # create empty queryset to chain results of search
     for word in words:
-        objects = object_list.filter(Q(**{'{}__icontains'.format(search_params[0]): word}) |
-                                     Q(**{'{}__icontains'.format(search_params[1]): word}))
-        for obj in objects:
-            results['objects'].add(obj)
-    results['objects'] = list(results['objects'])
+        results = results | object_list.filter(Q(**{'{}__icontains'.format(search_params[0]): word}) |
+                                               Q(**{'{}__icontains'.format(search_params[1]): word}))
     if sort_flag in sort_dict:
-        return sorted(results['objects'], key=attrgetter(sort_dict[sort_flag]))
-    elif sort_flag in reverse_dict:
-        return sorted(results['objects'], key=attrgetter(reverse_dict[sort_flag]), reverse=True)
-    return results['objects']
+        return results.distinct().order_by(sort_dict[sort_flag])
+    return results
